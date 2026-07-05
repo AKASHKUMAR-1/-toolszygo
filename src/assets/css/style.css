@@ -40,6 +40,7 @@
 :root {
   --accent: #D97757;
   --accent-2: #E8A87C;
+  --accent-shadow: rgba(217, 119, 87, 0.25);
   --bg: #FAF7F2;
   --text: #3D3929;
   --text-2: #4E4636;
@@ -59,6 +60,12 @@ body {
   font-family: var(--sans);
   color: var(--text);
 }
+/* Theme accents — design ke Tweaks panel ke 4 variants */
+html[data-accent="terracotta"] { --accent: #D97757; --accent-shadow: rgba(217, 119, 87, 0.25); }
+html[data-accent="gold"]       { --accent: #C98A3B; --accent-shadow: rgba(201, 138, 59, 0.25); }
+html[data-accent="rose"]       { --accent: #B8695E; --accent-shadow: rgba(184, 105, 94, 0.25); }
+html[data-accent="olive"]      { --accent: #8FA36B; --accent-shadow: rgba(143, 163, 107, 0.25); }
+
 input:focus, textarea:focus, select:focus { outline: none; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
@@ -252,7 +259,7 @@ main.main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .btn-primary {
   background: var(--accent); color: #FFF; border-radius: 10px;
   padding: 11px 24px; font-size: 14px; font-weight: 600;
-  box-shadow: 0 4px 12px rgba(200,110,60,0.25);
+  box-shadow: 0 4px 12px var(--accent-shadow);
 }
 .btn-primary:hover { filter: brightness(1.05); }
 .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; filter: none; }
@@ -346,6 +353,28 @@ main.main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 }
 .site-footer a { color: var(--muted); text-decoration: none; }
 .site-footer a:hover { color: var(--accent); }
+
+/* ---------- Theme picker (sidebar bottom) ---------- */
+.theme-picker {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 20px; border-top: 1px solid var(--border);
+}
+.theme-picker .tp-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-right: auto;
+}
+.theme-swatch {
+  width: 20px; height: 20px; border-radius: 50%; cursor: pointer;
+  border: 2px solid transparent; padding: 0; position: relative;
+  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.55);
+}
+.theme-swatch:hover { transform: scale(1.12); }
+.theme-swatch.selected { border-color: var(--text); }
+.theme-swatch.selected::after {
+  content: '✓'; position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: #FFF; font-size: 10px; font-weight: 700;
+}
 
 /* ---------- Mobile ---------- */
 .menu-btn {

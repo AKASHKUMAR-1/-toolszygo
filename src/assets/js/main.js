@@ -17,6 +17,28 @@
     });
   }
 
+  /* ---------- Theme picker (4 accent variants from the design's Tweaks) ---------- */
+  var picker = document.getElementById('theme-picker');
+  if (picker) {
+    var swatches = picker.querySelectorAll('.theme-swatch');
+    var saved = null;
+    try { saved = localStorage.getItem('toolsdo-accent'); } catch (e) {}
+    var currentAccent = saved || 'terracotta';
+    function applyAccent(name) {
+      document.documentElement.setAttribute('data-accent', name);
+      Array.prototype.forEach.call(swatches, function (s) {
+        s.classList.toggle('selected', s.getAttribute('data-accent') === name);
+      });
+      try { localStorage.setItem('toolsdo-accent', name); } catch (e) {}
+    }
+    applyAccent(currentAccent);
+    Array.prototype.forEach.call(swatches, function (s) {
+      s.addEventListener('click', function () {
+        applyAccent(s.getAttribute('data-accent'));
+      });
+    });
+  }
+
   /* ---------- Sidebar live filter ---------- */
   var sideInput = document.getElementById('sidebar-search');
   var toolList = document.getElementById('tool-list');

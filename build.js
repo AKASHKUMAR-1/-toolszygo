@@ -61,6 +61,13 @@ ${items}
     <div class="no-results" id="no-results" style="display:none;">Koi tool nahi mila<br>&ldquo;<span class="q"></span>&rdquo; ke liye</div>
 ${groups}
   </div>
+  <div class="theme-picker" id="theme-picker">
+    <span class="tp-label">Theme</span>
+    <button class="theme-swatch" data-accent="terracotta" style="background:#D97757;" title="Terracotta" aria-label="Terracotta theme"></button>
+    <button class="theme-swatch" data-accent="gold" style="background:#C98A3B;" title="Gold" aria-label="Gold theme"></button>
+    <button class="theme-swatch" data-accent="rose" style="background:#B8695E;" title="Rose" aria-label="Rose theme"></button>
+    <button class="theme-swatch" data-accent="olive" style="background:#8FA36B;" title="Olive" aria-label="Olive theme"></button>
+  </div>
 </aside>`;
 }
 
@@ -90,6 +97,7 @@ function layout({ title, metaDesc, canonical, activeSlug, bodyMain, extraHead = 
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/source-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var a=localStorage.getItem('toolsdo-accent');if(a)document.documentElement.setAttribute('data-accent',a);}catch(e){}</script>
 <link rel="stylesheet" href="/assets/css/style.css">
 ${jsonLd}${extraHead}
 </head>
