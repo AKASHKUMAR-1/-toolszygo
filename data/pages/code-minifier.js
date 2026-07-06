@@ -34,6 +34,6 @@ module.exports = {
     { q: 'Minify karne se kya fayda hai?', a: 'File size 20–60% kam ho jaata hai — page fast load hota hai, jo SEO aur user experience dono ke liye achha hai. Browser ko formatted code ki zaroorat nahi hoti.' },
     { q: 'Kya minified code ka behavior badal sakta hai?', a: 'Ye tool safe minification karta hai — comments aur whitespace hatata hai, variable names nahi badalta. Phir bhi JS me ASI (missing semicolons) wale edge cases me test kar lena. Production builds ke liye Terser/cssnano jaise tools bhi dekh sakte ho.' },
     { q: 'Minified code wapas readable kaise banega?', a: 'Ye one-way hai — original sambhal kar rakho. Formatted version wapas chahiye to "beautifier" tools use karo.' },
-    { q: 'HTML minify me kya hota hai?', a: 'Comments (<!-- -->) aur tags ke beech ka extra whitespace hatta hai. <pre> aur <textarea> ka content preserve hota hai.' },
+    { q: 'HTML minify me kya hota hai?', a: 'HTML comments aur tags ke beech ka extra whitespace hatta hai. &lt;pre&gt; aur &lt;textarea&gt; ka content preserve hota hai.' },
   ],
 };

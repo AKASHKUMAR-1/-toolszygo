@@ -31,7 +31,7 @@ module.exports = {
   ],
   faq: [
     { q: 'Base64 kya hota hai?', a: 'Binary/text data ko sirf 64 safe characters (A-Z, a-z, 0-9, +, /) me likhne ka tarika — taaki data emails, URLs, JSON me bina kharab hue travel kare. Ye encryption NAHI hai, koi bhi decode kar sakta hai.' },
-    { q: 'Hindi/emoji encode hoga?', a: 'Haan — tool UTF-8 safe hai. "नमस्ते" → 4KS'... jaisa Base64 banega aur decode karne pe wapas sahi milega. Simple btoa() wale tools yahan fail hote hain.' },
+    { q: 'Hindi/emoji encode hoga?', a: 'Haan — tool UTF-8 safe hai. "नमस्ते" jaisa text bhi sahi Base64 banega aur decode karne pe wapas sahi milega. Simple btoa() wale tools yahan fail hote hain.' },
     { q: 'Decode pe error kyun aa raha hai?', a: 'Input valid Base64 nahi hai — usme invalid characters hain ya length galat hai. Check karo ki poora string copy hua hai, aadha nahi.' },
     { q: 'Kya passwords Base64 me store karna safe hai?', a: 'Bilkul nahi! Base64 encoding hai, encryption nahi — koi bhi ek second me decode kar sakta hai. Passwords ke liye hashing (bcrypt) use hoti hai.' },
   ],

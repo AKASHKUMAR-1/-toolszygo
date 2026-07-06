@@ -24,7 +24,7 @@
     }
     $('cur-result').textContent = '…';
     $('cur-rate').textContent = 'Rate fetch ho raha hai…';
-    fetch('https://api.frankfurter.app/latest?amount=' + amount + '&from=' + from + '&to=' + to)
+    fetch('https://api.frankfurter.dev/v1/latest?amount=' + amount + '&from=' + from + '&to=' + to)
       .then(function (r) { if (!r.ok) throw new Error('network'); return r.json(); })
       .then(function (d) {
         var val = d.rates[to];
