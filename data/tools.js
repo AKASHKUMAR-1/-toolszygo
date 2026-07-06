@@ -11,6 +11,7 @@ const palettes = [
   ['#FBE4E4', '#B84F4F'], // Student Tools
   ['#E4F0EC', '#3F8570'], // Business Documents
   ['#F6E7F0', '#A85585'], // Daily Use
+  ['#F0EDE3', '#8A7A5C'], // Banking & Investment
 ];
 
 const categories = [
@@ -247,6 +248,23 @@ const categories = [
         title: 'BMI Calculator — Body Mass Index Calculator Online Free (kg/cm)',
         metaDesc: 'Free BMI calculator. Enter your height and weight to get your Body Mass Index and category — underweight, normal, overweight or obese — instantly.',
         desc: 'Height aur weight daalo — aapka BMI aur category (underweight, normal, overweight, obese) turant pata chal jayegi, healthy weight range ke saath.' },
+    ],
+  },
+  {
+    name: 'Banking & Investment',
+    tools: [
+      { name: 'IFSC Code Finder', slug: 'ifsc-code-finder', built: false },
+      { name: 'Loan Prepayment Calculator', slug: 'loan-prepayment-calculator', built: false },
+      { name: 'Credit Card Interest Calculator', slug: 'credit-card-interest-calculator', built: false },
+      { name: 'NPS Calculator', slug: 'nps-calculator', built: false },
+      { name: 'Sukanya Samriddhi (SSY) Calculator', slug: 'sukanya-samriddhi-calculator', built: false },
+      { name: 'NSC Calculator', slug: 'nsc-calculator', built: false },
+      { name: 'KVP Calculator (Paisa Double)', slug: 'kvp-calculator', built: false },
+      { name: 'Senior Citizen Savings (SCSS) Calculator', slug: 'scss-calculator', built: false },
+      { name: 'Lumpsum Investment Calculator', slug: 'lumpsum-calculator', built: false },
+      { name: 'SWP Calculator', slug: 'swp-calculator', built: false },
+      { name: 'CAGR Calculator', slug: 'cagr-calculator', built: false },
+      { name: 'Inflation Calculator', slug: 'inflation-calculator', built: false },
     ],
   },
 ];
