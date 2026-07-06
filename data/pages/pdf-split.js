@@ -1,0 +1,44 @@
+module.exports = {
+  libs: ['/assets/js/vendor/pdf-lib.min.js'],
+  workspace: `
+<div class="workspace">
+  <div class="panel">
+    <div class="panel-label">Input</div>
+    <div class="dropzone" id="ps-drop">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0l-4 4m4-4l4 4" stroke="#A39C8B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3" stroke="#A39C8B" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <div><strong>PDF choose karo</strong> ya yahan drop karo</div>
+      <div id="ps-fileinfo" style="font-size:11.5px;">koi file selected nahi</div>
+    </div>
+    <input type="file" id="ps-file" accept="application/pdf" style="display:none;">
+    <div class="field">
+      <label for="ps-range">Kaunse pages chahiye? (e.g. 1-3,5,8-10)</label>
+      <input type="text" id="ps-range" placeholder="1-3,5" style="font-family:monospace;">
+    </div>
+    <div id="ps-error" style="display:none;font-size:13px;font-weight:600;color:#B84F4F;"></div>
+  </div>
+  <div class="panel panel-result">
+    <div class="panel-label">Result</div>
+    <div class="panel-placeholder" id="ps-placeholder">extracted PDF yahan ready hoga</div>
+    <div class="result-rows" id="ps-stats" style="display:none;">
+      <div class="result-row"><span class="k">Original pages</span><span class="v" id="ps-orig">—</span></div>
+      <div class="result-row"><span class="k">Extracted pages</span><span class="v" id="ps-extracted">—</span></div>
+      <div class="result-row"><span class="k">Output size</span><span class="v" id="ps-size">—</span></div>
+    </div>
+  </div>
+</div>
+<div class="btn-row">
+  <button class="btn btn-primary" id="ps-split" disabled>Split PDF</button>
+  <button class="btn btn-secondary" id="ps-download" disabled>Download PDF</button>
+</div>`,
+  howto: [
+    'PDF file select karo — total pages dikh jayenge.',
+    'Jo pages chahiye wo likho — e.g. <code>1-3,5</code> matlab page 1,2,3 aur 5.',
+    '<strong>Split PDF</strong> dabao — sirf chune hue pages ka naya PDF download karo.',
+  ],
+  faq: [
+    { q: 'Page range kaise likhte hain?', a: 'Commas se alag: "1-3,5,8-10" = pages 1,2,3,5,8,9,10. Sirf "2" = akela page 2. Order matter karta hai — "5,1" likhoge to page 5 pehle aayega.' },
+    { q: 'Kya meri PDF upload hoti hai?', a: 'Nahi — splitting browser me hoti hai. Bank statements, contracts sab private rehte hain.' },
+    { q: 'Har page ki alag PDF chahiye to?', a: 'Ek-ek page ka range daal kar baar-baar split karo (1, phir 2, phir 3…). Bulk single-page split feature jald aayega.' },
+    { q: 'Password-protected PDF split hogi?', a: 'Nahi — pehle password remove karna hoga. Encrypted PDFs browser me nahi khulti.' },
+  ],
+};
