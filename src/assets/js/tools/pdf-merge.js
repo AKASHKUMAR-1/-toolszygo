@@ -4,10 +4,7 @@
   var files = [];
   var resultBlob = null;
 
-  var fmtSize = function (b) {
-    if (b < 1048576) return (b / 1024).toFixed(1) + ' KB';
-    return (b / 1048576).toFixed(2) + ' MB';
-  };
+  var fmtSize = window.toolsdoFmtSize;
 
   var drop = $('pm-drop');
   var input = $('pm-file');

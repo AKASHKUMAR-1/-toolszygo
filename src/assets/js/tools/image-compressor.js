@@ -5,11 +5,7 @@
   var resultBlob = null;
   var resultName = '';
 
-  var fmtSize = function (b) {
-    if (b < 1024) return b + ' B';
-    if (b < 1048576) return (b / 1024).toFixed(1) + ' KB';
-    return (b / 1048576).toFixed(2) + ' MB';
-  };
+  var fmtSize = window.toolsdoFmtSize;
 
   var drop = $('ic-drop');
   var input = $('ic-file');

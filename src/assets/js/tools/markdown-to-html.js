@@ -2,9 +2,7 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
 
-  function esc(s) {
-    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  }
+  var esc = window.toolsdoEsc;
 
   function inline(s) {
     return s

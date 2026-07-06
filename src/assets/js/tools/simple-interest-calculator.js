@@ -2,7 +2,7 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var lastSummary = '';
-  var fmt = function (n) { return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 2 }); };
+  var fmt = function (n) { return toolsdoINR(n, 2); };
 
   function calc() {
     var P = parseFloat($('si-principal').value);

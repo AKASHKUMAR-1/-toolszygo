@@ -1,8 +1,8 @@
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var fmt = function (n) { return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 2 }); };
-  var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
+  var fmt = function (n) { return toolsdoINR(n, 2); };
+  var esc = window.toolsdoEsc;
 
   function render() {
     var basic = parseFloat($('ss-basic').value) || 0;

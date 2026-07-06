@@ -5,9 +5,7 @@
   var resultBlob = null;
   var resultName = '';
 
-  var fmtSize = function (b) {
-    return b < 1048576 ? (b / 1024).toFixed(1) + ' KB' : (b / 1048576).toFixed(2) + ' MB';
-  };
+  var fmtSize = window.toolsdoFmtSize;
   var extOf = function (mime) {
     return mime === 'image/png' ? 'PNG' : mime === 'image/webp' ? 'WEBP' : 'JPG';
   };

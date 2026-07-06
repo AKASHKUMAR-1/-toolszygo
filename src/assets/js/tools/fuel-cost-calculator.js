@@ -2,7 +2,7 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var lastSummary = '';
-  var fmt = function (n) { return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 0 }); };
+  var fmt = window.toolsdoINR;
 
   function calc() {
     var dist = parseFloat($('fc-distance').value);

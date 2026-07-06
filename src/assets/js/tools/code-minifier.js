@@ -69,9 +69,7 @@
     return code;
   }
 
-  var fmtSize = function (b) {
-    return b < 1024 ? b + ' B' : (b / 1024).toFixed(1) + ' KB';
-  };
+  var fmtSize = window.toolsdoFmtSize;
 
   function run() {
     var input = $('min-input').value;

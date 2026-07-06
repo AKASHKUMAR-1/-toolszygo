@@ -125,8 +125,18 @@
   };
 
   /* ---------- Formatters ---------- */
-  window.toolsdoINR = function (n) {
-    return '₹' + Number(n).toLocaleString('en-IN', { maximumFractionDigits: 0 });
+  window.toolsdoINR = function (n, decimals) {
+    return '₹' + Number(n).toLocaleString('en-IN', { maximumFractionDigits: decimals === undefined ? 0 : decimals });
+  };
+
+  window.toolsdoFmtSize = function (bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / 1048576).toFixed(2) + ' MB';
+  };
+
+  window.toolsdoEsc = function (s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   };
 
   /* ---------- Print helper: opens a clean window with just the document and triggers print (Save as PDF) ---------- */

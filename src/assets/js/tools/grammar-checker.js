@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
+  var esc = window.toolsdoEsc;
   var MISSPELL = {
     recieve: 'receive', seperate: 'separate', definately: 'definitely', occured: 'occurred',
     untill: 'until', wich: 'which', becuase: 'because', beleive: 'believe', freind: 'friend',

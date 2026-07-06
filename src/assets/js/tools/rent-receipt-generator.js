@@ -1,8 +1,8 @@
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
-  var fmt = function (n) { return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 0 }); };
+  var esc = window.toolsdoEsc;
+  var fmt = window.toolsdoINR;
 
   function months(fromVal, toVal) {
     if (!fromVal) return [];

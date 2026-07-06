@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
+  var esc = window.toolsdoEsc;
 
   function parseLines(val, parts) {
     return val.split('\n').map(function (l) { return l.trim(); }).filter(Boolean).map(function (l) {

@@ -2,7 +2,7 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var lastSummary = '';
-  var fmt = function (n) { return '₹' + Math.round(n).toLocaleString('en-IN'); };
+  var fmt = window.toolsdoINR;
 
   function slabTax(income, slabs) {
     var tax = 0;
