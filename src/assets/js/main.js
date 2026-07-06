@@ -128,4 +128,49 @@
   window.toolsdoINR = function (n) {
     return '₹' + Number(n).toLocaleString('en-IN', { maximumFractionDigits: 0 });
   };
+
+  /* ---------- Print helper: opens a clean window with just the document and triggers print (Save as PDF) ---------- */
+  window.toolsdoPrint = function (elementId, title) {
+    var el = document.getElementById(elementId);
+    if (!el) return;
+    var w = window.open('', '_blank');
+    if (!w) { alert('Popup block ho gaya — is site ke liye popups allow karo.'); return; }
+    w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + (title || 'Document') + '</title>' +
+      '<style>body{font-family:Arial,Helvetica,sans-serif;color:#222;margin:0;padding:24px;} table{border-collapse:collapse;} @media print{body{padding:0;}} @page{margin:14mm;}</style>' +
+      '</head><body>' + el.innerHTML + '</body></html>');
+    w.document.close();
+    setTimeout(function () { w.focus(); w.print(); }, 400);
+  };
+
+  /* ---------- Amount in words (Indian system) — shared by invoice/salary tools ---------- */
+  window.toolsdoWords = (function () {
+    var ONES = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+    var TENS = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+    function below1000(n) {
+      var out = '';
+      if (n >= 100) { out += ONES[Math.floor(n / 100)] + ' Hundred'; n %= 100; if (n) out += ' '; }
+      if (n >= 20) { out += TENS[Math.floor(n / 10)]; if (n % 10) out += ' ' + ONES[n % 10]; }
+      else if (n > 0) out += ONES[n];
+      return out;
+    }
+    function indian(n) {
+      if (n === 0) return 'Zero';
+      var parts = [];
+      var crore = Math.floor(n / 10000000); n %= 10000000;
+      var lakh = Math.floor(n / 100000); n %= 100000;
+      var thousand = Math.floor(n / 1000); n %= 1000;
+      if (crore) parts.push(below1000(crore) + ' Crore');
+      if (lakh) parts.push(below1000(lakh) + ' Lakh');
+      if (thousand) parts.push(below1000(thousand) + ' Thousand');
+      if (n) parts.push(below1000(n));
+      return parts.join(' ');
+    }
+    return function (amount) {
+      var intPart = Math.floor(amount);
+      var paise = Math.round((amount - intPart) * 100);
+      var out = 'Rupees ' + indian(intPart);
+      if (paise) out += ' and ' + below1000(paise) + ' Paise';
+      return out + ' Only';
+    };
+  })();
 })();
