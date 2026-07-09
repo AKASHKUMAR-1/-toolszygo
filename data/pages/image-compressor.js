@@ -9,7 +9,7 @@ module.exports = {
       <div style="font-size:11.5px;">JPG, PNG, WEBP — max 25 MB</div>
     </div>
     <input type="file" id="ic-file" accept="image/jpeg,image/png,image/webp" style="display:none;">
-    <div class="field">
+    <div class="field" id="ic-quality-row">
       <label>Quality: <span id="ic-quality-val">75</span>%</label>
       <div class="range-row"><input type="range" id="ic-quality" min="10" max="95" value="75"></div>
     </div>
@@ -18,9 +18,10 @@ module.exports = {
       <select id="ic-format">
         <option value="image/jpeg" selected>JPG (photos ke liye best)</option>
         <option value="image/webp">WEBP (sabse chhota size)</option>
-        <option value="image/png">PNG (lossless)</option>
+        <option value="image/png">PNG (lossless — size kam nahi hoga)</option>
       </select>
     </div>
+    <div id="ic-png-note" style="display:none;font-size:12px;color:#A98423;background:#FDF3D8;border-radius:8px;padding:8px 10px;">⚠ PNG lossless format hai — quality slider kaam nahi karta aur size kam nahi hoga (kabhi thoda badh bhi sakta hai). Real compression ke liye JPG ya WEBP choose karo.</div>
   </div>
   <div class="panel panel-result">
     <div class="panel-label">Result</div>

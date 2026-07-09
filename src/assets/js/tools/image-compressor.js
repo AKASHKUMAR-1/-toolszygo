@@ -39,6 +39,15 @@
     $('ic-quality-val').textContent = this.value;
   });
 
+  function updateFormatUI() {
+    var isPng = $('ic-format').value === 'image/png';
+    $('ic-quality-row').style.opacity = isPng ? '0.4' : '1';
+    $('ic-quality').disabled = isPng;
+    $('ic-png-note').style.display = isPng ? '' : 'none';
+  }
+  $('ic-format').addEventListener('change', updateFormatUI);
+  updateFormatUI();
+
   $('ic-compress').addEventListener('click', function () {
     if (!file) return;
     var btn = this;
@@ -72,8 +81,9 @@
         $('ic-stats').style.display = '';
         $('ic-orig').textContent = fmtSize(file.size);
         $('ic-comp').textContent = fmtSize(blob.size);
-        var saved = Math.max(0, Math.round((1 - blob.size / file.size) * 100));
-        $('ic-saved').textContent = saved + '% smaller';
+        var savedPct = Math.round((1 - blob.size / file.size) * 100);
+        $('ic-saved').textContent = savedPct > 0 ? savedPct + '% smaller' : 'Kam nahi hua (' + Math.abs(savedPct) + '% badi ho gayi) — format badalkar dekho';
+        $('ic-saved').style.color = savedPct > 0 ? '' : '#B84F4F';
         $('ic-download').disabled = false;
       }, format, quality);
     };
