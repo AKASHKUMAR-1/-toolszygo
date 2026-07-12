@@ -85,6 +85,7 @@ function layout({ title, metaDesc, canonical, activeSlug, bodyMain, extraHead = 
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="4AEUWhy_ncQiCEvB1jpJD_1glwVy_FYWz4ficA-OK6k" />
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(metaDesc)}">
 <link rel="canonical" href="${SITE_URL}${canonical}">
