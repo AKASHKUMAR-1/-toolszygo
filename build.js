@@ -6,8 +6,8 @@ const fs = require('fs');
 const path = require('path');
 const { categories, popularSlugs } = require('./data/tools');
 
-const SITE_URL = 'https://toolsdo.in'; // TODO: apna final domain yahan set karo
-const SITE_NAME = 'ToolsDo';
+const SITE_URL = 'https://toolszygo.com';
+const SITE_NAME = 'Toolszygo';
 
 const allTools = categories.flatMap(c => c.tools);
 const builtTools = allTools.filter(t => t.built);
