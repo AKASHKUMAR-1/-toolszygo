@@ -83,6 +83,14 @@ function layout({ title, metaDesc, canonical, activeSlug, bodyMain, extraHead = 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPFQVWRSFS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CPFQVWRSFS');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="4AEUWhy_ncQiCEvB1jpJD_1glwVy_FYWz4ficA-OK6k" />
