@@ -9,12 +9,12 @@
     if (!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(code)) {
       ph.style.display = '';
       $('ifsc-result').style.display = 'none';
-      ph.textContent = 'Sahi IFSC format daalo — 11 characters (e.g. SBIN0000300)';
+      ph.textContent = 'Enter a valid IFSC format — 11 characters (e.g. SBIN0000300)';
       return;
     }
     ph.style.display = '';
     $('ifsc-result').style.display = 'none';
-    ph.textContent = 'Dhoond rahe hain…';
+    ph.textContent = 'Searching…';
     fetch('https://ifsc.razorpay.com/' + encodeURIComponent(code))
       .then(function (r) {
         if (r.status === 404) throw new Error('notfound');
@@ -42,8 +42,8 @@
         ph.style.display = '';
         $('ifsc-result').style.display = 'none';
         ph.textContent = e.message === 'notfound'
-          ? 'Ye IFSC code nahi mila — code check karke dobara try karo'
-          : 'Network problem — internet check karke dobara try karo';
+          ? 'This IFSC code wasn\'t found — check the code and try again'
+          : 'Network problem — check your internet and try again';
       });
   }
 

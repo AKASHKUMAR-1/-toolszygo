@@ -16,13 +16,13 @@ module.exports = {
       <select id="cm-to"></select>
     </div>
     <div class="field">
-      <label for="cm-ingredient">Ingredient (weight-volume ke liye)</label>
+      <label for="cm-ingredient">Ingredient (for weight-volume)</label>
       <select id="cm-ingredient">
         <option value="water">Water / general liquid</option>
-        <option value="flour">Flour (maida/atta)</option>
-        <option value="sugar">Sugar (cheeni)</option>
+        <option value="flour">Flour</option>
+        <option value="sugar">Sugar</option>
         <option value="butter">Butter</option>
-        <option value="rice">Rice (chawal, uncooked)</option>
+        <option value="rice">Rice (uncooked)</option>
       </select>
     </div>
   </div>
@@ -33,12 +33,12 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Quantity daalo aur From/To units choose karo (cups, tablespoons, grams, ounces, ML).',
-    'Weight↔Volume conversion ke liye (jaise cups→grams) ingredient bhi choose karo — har cheez ki density alag hoti hai.',
+    'Enter the quantity and choose From/To units (cups, tablespoons, grams, ounces, ML).',
+    'For weight↔volume conversion (like cups→grams), also choose the ingredient — every ingredient has a different density.',
   ],
   faq: [
-    { q: 'Cup me kitne grams hote hain?', a: 'Depend karta hai ingredient pe! 1 cup flour ~120g, 1 cup sugar ~200g, 1 cup butter ~227g, 1 cup water ~240g — isliye ingredient select karna zaroori hai accurate result ke liye.' },
-    { q: 'US aur UK cup me farak hai kya?', a: 'US cup = 240 ml, UK/Imperial cup = 284 ml. Ye tool US measurement standard use karta hai jo cookbooks/recipes me sabse common hai.' },
-    { q: 'Kitchen scale nahi hai, kya karein?', a: 'Volume measurements (cups/tablespoons) use karo — measuring cups har kitchen me hote hain. Precision baking ke liye weight (grams) zyada accurate hai agar scale available ho.' },
+    { q: 'How many grams are in a cup?', a: 'It depends on the ingredient! 1 cup flour ~120g, 1 cup sugar ~200g, 1 cup butter ~227g, 1 cup water ~240g — so selecting the ingredient matters for an accurate result.' },
+    { q: 'Is there a difference between US and UK cups?', a: 'US cup = 240 ml, UK/Imperial cup = 284 ml. This tool uses the US measurement standard, which is most common in cookbooks/recipes.' },
+    { q: 'I don\'t have a kitchen scale — what should I do?', a: 'Use volume measurements (cups/tablespoons) — measuring cups are in every kitchen. For precision baking, weight (grams) is more accurate if a scale is available.' },
   ],
 };

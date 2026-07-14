@@ -17,13 +17,13 @@ module.exports = {
   <button class="btn btn-primary" id="st-start">▶ Start speed test</button>
 </div>`,
   howto: [
-    '<strong>Start speed test</strong> dabao — pehle ping, phir download speed measure hoti hai (~15 second).',
-    'Test ke dauraan downloads/streaming band rakho — sahi reading milegi.',
-    'Result Mbps me aata hai — wahi unit jo internet plans me hoti hai.',
+    'Click <strong>Start speed test</strong> — ping is measured first, then download speed (~15 seconds).',
+    'Pause downloads/streaming during the test for an accurate reading.',
+    'The result is in Mbps — the same unit used by internet plans.',
   ],
   faq: [
-    { q: 'Mbps aur MB/s me kya difference hai?', a: 'Mbps = megaBITS per second (internet plans ki unit), MB/s = megaBYTES per second (download manager wali). 8 Mbps = 1 MB/s. 100 Mbps plan = max ~12.5 MB/s download.' },
-    { q: 'Plan 100 Mbps ka hai, speed kam kyun aa rahi?', a: 'WiFi distance/interference, purana router, ek saath kai devices, ya server load. Router ke paas jaakar ya LAN cable se test karo. 80-90% speed milna normal hai.' },
-    { q: 'Ye test kaise kaam karta hai?', a: 'Cloudflare ke speed test servers se data download karke time measure hota hai. Ping chhoti requests ki latency se nikalti hai.' },
+    { q: 'What\'s the difference between Mbps and MB/s?', a: 'Mbps = megaBITS per second (the unit internet plans use), MB/s = megaBYTES per second (used by download managers). 8 Mbps = 1 MB/s. A 100 Mbps plan = max ~12.5 MB/s download.' },
+    { q: 'My plan is 100 Mbps, why is the speed lower?', a: 'WiFi distance/interference, an old router, multiple devices at once, or server load. Test near the router or with a LAN cable. Getting 80-90% of your plan speed is normal.' },
+    { q: 'How does this test work?', a: 'It downloads data from Cloudflare\'s speed test servers and measures the time taken. Ping is derived from the latency of small requests.' },
   ],
 };

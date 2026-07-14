@@ -5,7 +5,7 @@ module.exports = {
     <div class="panel-label">Courses</div>
     <div id="gpa-items"></div>
     <div class="btn-row" style="margin-top:4px;">
-      <button class="btn btn-secondary" id="gpa-add">+ Course add karo</button>
+      <button class="btn btn-secondary" id="gpa-add">+ Add course</button>
     </div>
   </div>
 </div>
@@ -19,13 +19,13 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Har course ka letter grade aur credit hours daalo.',
-    '"+ Course add karo" se aur rows add karo.',
-    'Overall GPA (4.0 scale) live calculate hota rahega.',
+    'Enter each course\'s letter grade and credit hours.',
+    'Use "+ Add course" to add more rows.',
+    'Overall GPA (4.0 scale) is calculated live.',
   ],
   faq: [
-    { q: 'Letter grades ke points kya hain?', a: 'A=4.0, A-=3.7, B+=3.3, B=3.0, B-=2.7, C+=2.3, C=2.0, C-=1.7, D=1.0, F=0.0 — ye standard US 4.0 scale hai.' },
-    { q: 'GPA kaise calculate hoti hai?', a: 'Har course ke grade-points ko uske credit hours se multiply karo (quality points), sabko jodo, phir total credit hours se divide karo.' },
-    { q: 'India ki CGPA se ye alag kaise hai?', a: 'India me zyada tar 10-point scale use hoti hai, US me 4.0-point. Humara CGPA to Percentage tool India-style ke liye hai, ye tool US-style universities ke liye hai.' },
+    { q: 'What are the points for letter grades?', a: 'A=4.0, A-=3.7, B+=3.3, B=3.0, B-=2.7, C+=2.3, C=2.0, C-=1.7, D=1.0, F=0.0 — this is the standard US 4.0 scale.' },
+    { q: 'How is GPA calculated?', a: 'Multiply each course\'s grade points by its credit hours (quality points), sum them all, then divide by total credit hours.' },
+    { q: 'How is this different from India\'s CGPA?', a: 'India mostly uses a 10-point scale, the US uses 4.0-point. Our CGPA to Percentage tool is for India-style scoring; this one is for US-style universities.' },
   ],
 };

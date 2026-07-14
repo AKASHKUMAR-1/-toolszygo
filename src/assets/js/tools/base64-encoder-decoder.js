@@ -23,7 +23,7 @@
       out.value = $('b64-mode').value === 'encode' ? encodeB64(input) : decodeB64(input);
       out.style.color = '#8A4B2A';
     } catch (e) {
-      out.value = 'Error: valid Base64 nahi hai — input check karo';
+      out.value = 'Error: not valid Base64 — check the input';
       out.style.color = '#B84F4F';
     }
   }

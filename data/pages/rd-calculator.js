@@ -31,15 +31,15 @@ module.exports = {
   <button class="btn btn-secondary" id="rd-copy">Copy result</button>
 </div>`,
   howto: [
-    'Har mahine jitna jama karoge wo amount daalo.',
-    'Bank ka RD interest rate daalo.',
-    'Tenure months me daalo (6 se 120 mahine).',
-    '<strong>Calculate</strong> dabao — maturity amount aur total interest dikh jayega.',
+    'Enter how much you\'ll deposit every month.',
+    'Enter the bank\'s RD interest rate.',
+    'Enter the tenure in months (6 to 120 months).',
+    'Click <strong>Calculate</strong> — see the maturity amount and total interest.',
   ],
   faq: [
-    { q: 'RD me interest kaise lagta hai?', a: 'Har monthly deposit pe quarterly compounding se interest lagta hai — pehli installment ko pura time milta hai, aakhri ko sirf 1 mahina. Ye calculator bank-standard quarterly compounding use karta hai.' },
-    { q: 'RD vs SIP — kya choose karein?', a: 'RD guaranteed return deta hai (~7%) — short-term goals ke liye perfect. SIP equity me hai, long-term (5+ saal) me zyada return de sakta hai lekin risk ke saath. 1–3 saal ke goal ke liye RD better hai.' },
-    { q: 'RD installment miss ho jaye to?', a: 'Banks chhoti penalty lagate hain (₹1–2 per ₹100 per month typically) aur kai baar RD default hone pe band bhi ho sakta hai. Auto-debit laga lo.' },
-    { q: 'RD ke interest pe tax lagta hai?', a: 'Haan — RD interest fully taxable hai aapke slab pe, aur FD ki tarah TDS bhi lagta hai agar saal ka total interest ₹40,000 (senior: ₹50,000) se zyada ho.' },
+    { q: 'How does interest work in an RD?', a: 'Each monthly deposit earns interest via quarterly compounding — the first installment gets the full time, the last gets just 1 month. This calculator uses the bank-standard quarterly compounding.' },
+    { q: 'RD vs SIP — which should I choose?', a: 'RD gives a guaranteed return (~7%) — perfect for short-term goals. SIP is in equity, and can give higher returns long-term (5+ years) but with risk. RD is better for a 1–3 year goal.' },
+    { q: 'What if I miss an RD installment?', a: 'Banks charge a small penalty (typically ₹1–2 per ₹100 per month) and the RD can even be discontinued after repeated defaults. Set up auto-debit.' },
+    { q: 'Is RD interest taxed?', a: 'Yes — RD interest is fully taxable at your slab rate, and like an FD, TDS applies if the year\'s total interest exceeds ₹40,000 (₹50,000 for seniors).' },
   ],
 };

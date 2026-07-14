@@ -52,10 +52,10 @@
     timer = null;
     $('tst-input').disabled = true;
     var s = stats();
-    var verdict = s.wpm >= 70 ? 'Zabardast! Professional level typing! 🏆'
-      : s.wpm >= 50 ? 'Bahut achhi speed! 👏'
-      : s.wpm >= 35 ? 'Average se upar — practice se aur badhegi 👍'
-      : 'Roz practice karo — speed zaroor badhegi 💪';
+    var verdict = s.wpm >= 70 ? 'Excellent! Professional-level typing! 🏆'
+      : s.wpm >= 50 ? 'Very good speed! 👏'
+      : s.wpm >= 35 ? 'Above average — practice will push it higher 👍'
+      : 'Practice daily — your speed will surely improve 💪';
     $('tst-verdict').textContent = 'Final: ' + s.wpm + ' WPM @ ' + s.accuracy + '% accuracy. ' + verdict;
   }
 

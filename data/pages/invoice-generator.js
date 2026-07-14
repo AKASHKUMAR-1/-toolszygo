@@ -4,8 +4,8 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Invoice Details</div>
     <div class="field-row">
-      <div class="field"><label for="inv-seller">Aapka Business Naam</label><input type="text" id="inv-seller" placeholder="e.g. Sharma Enterprises"></div>
-      <div class="field"><label for="inv-buyer">Client ka Naam</label><input type="text" id="inv-buyer" placeholder="e.g. Gupta Traders"></div>
+      <div class="field"><label for="inv-seller">Your Business Name</label><input type="text" id="inv-seller" placeholder="e.g. Sharma Enterprises"></div>
+      <div class="field"><label for="inv-buyer">Client Name</label><input type="text" id="inv-buyer" placeholder="e.g. Gupta Traders"></div>
     </div>
     <div class="field-row">
       <div class="field"><label for="inv-number">Invoice No.</label><input type="text" id="inv-number" value="INV-001"></div>
@@ -14,7 +14,7 @@ module.exports = {
     <div class="panel-label" style="margin-top:6px;">Items</div>
     <div id="inv-items"></div>
     <div class="btn-row" style="margin-top:4px;">
-      <button class="btn btn-secondary" id="inv-add-item">+ Item add karo</button>
+      <button class="btn btn-secondary" id="inv-add-item">+ Add item</button>
     </div>
     <div class="field" style="max-width:200px;">
       <label for="inv-tax">Tax % (optional)</label>
@@ -30,13 +30,13 @@ module.exports = {
   <button class="btn btn-primary" id="inv-print">🖨 Print / Save as PDF</button>
 </div>`,
   howto: [
-    'Apna business naam, client, invoice number aur date bharo.',
-    'Items add karo — naam, quantity, rate. Total khud calculate hota hai.',
-    '<strong>Print / Save as PDF</strong> dabao — print dialog me "Save as PDF" choose karo.',
+    'Fill in your business name, client, invoice number, and date.',
+    'Add items — name, quantity, rate. The total is calculated automatically.',
+    'Click <strong>Print / Save as PDF</strong> — choose "Save as PDF" in the print dialog.',
   ],
   faq: [
-    { q: 'Kya ye invoice legally valid hai?', a: 'Simple invoice non-GST businesses ke liye theek hai. GST-registered ho to GST Invoice Generator use karo jisme GSTIN, HSN aur tax breakup hota hai.' },
-    { q: 'Invoice number kaise rakhein?', a: 'Sequential rakho (INV-001, INV-002…) aur financial year ke saath bhi rakh sakte ho (2026-27/001). Har invoice ka number unique hona chahiye.' },
-    { q: 'Data save hota hai kya?', a: 'Nahi — page refresh pe form khaali ho jaata hai. PDF save karke apna record rakho.' },
+    { q: 'Is this invoice legally valid?', a: 'A simple invoice works fine for non-GST businesses. If GST-registered, use the GST Invoice Generator, which includes GSTIN, HSN, and tax breakup.' },
+    { q: 'How should I number invoices?', a: 'Keep it sequential (INV-001, INV-002…) and you can include the financial year too (2026-27/001). Every invoice number should be unique.' },
+    { q: 'Is the data saved?', a: 'No — the form empties on page refresh. Save the PDF to keep your own record.' },
   ],
 };

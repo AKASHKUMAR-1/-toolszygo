@@ -12,7 +12,7 @@ module.exports = {
       <input type="number" id="dc-off" value="25" min="0" max="100" step="1">
     </div>
     <div class="field">
-      <label for="dc-extra">Extra Discount (%) — optional, sale pe sale</label>
+      <label for="dc-extra">Extra Discount (%) — optional, stacked sale</label>
       <input type="number" id="dc-extra" value="" placeholder="e.g. 10" min="0" max="100" step="1">
     </div>
   </div>
@@ -31,15 +31,15 @@ module.exports = {
   <button class="btn btn-secondary" id="dc-copy">Copy result</button>
 </div>`,
   howto: [
-    'Item ka original price daalo.',
-    'Discount % daalo (e.g. 25% off).',
-    'Agar "extra 10% off" jaisa stacked discount hai to wo bhi daalo.',
-    '<strong>Calculate</strong> dabao — final price, saving aur effective discount dikh jayega.',
+    'Enter the item\'s original price.',
+    'Enter the discount % (e.g. 25% off).',
+    'If there\'s a stacked discount like "extra 10% off", enter that too.',
+    'Click <strong>Calculate</strong> — see the final price, savings, and effective discount.',
   ],
   faq: [
-    { q: 'Discount kaise calculate hota hai?', a: 'Final price = Original × (1 − discount/100). E.g. ₹2000 pe 25% off = ₹2000 × 0.75 = ₹1500, aur ₹500 bache.' },
-    { q: '"50% + extra 10% off" ka matlab 60% off hai?', a: 'Nahi! Extra discount pehle discount ke BAAD lagta hai: ₹1000 → 50% off = ₹500 → extra 10% = ₹450. Effective discount 55% hai, 60% nahi. Isliye ye tool effective discount bhi dikhata hai.' },
-    { q: 'Kya ye GST-inclusive price pe kaam karta hai?', a: 'Haan — discount kisi bhi price pe percentage hi hota hai. Bas dhyan rahe stores discount aam taur pe MRP pe dete hain jo GST-inclusive hota hai.' },
-    { q: 'Reverse discount kaise nikale — sale price se original?', a: 'Original = Sale price ÷ (1 − discount/100). E.g. ₹750 me mila 25% off ke baad, to original = 750 ÷ 0.75 = ₹1000.' },
+    { q: 'How is discount calculated?', a: 'Final price = Original × (1 − discount/100). E.g. ₹2000 at 25% off = ₹2000 × 0.75 = ₹1500, saving ₹500.' },
+    { q: 'Does "50% + extra 10% off" mean 60% off?', a: 'No! The extra discount applies AFTER the first discount: ₹1000 → 50% off = ₹500 → extra 10% = ₹450. The effective discount is 55%, not 60%. That\'s why this tool also shows the effective discount.' },
+    { q: 'Does this work on a GST-inclusive price?', a: 'Yes — discount is a percentage of whatever price you enter. Just note that stores usually give discounts on the MRP, which is GST-inclusive.' },
+    { q: 'How do I reverse a discount — find the original from the sale price?', a: 'Original = Sale price ÷ (1 − discount/100). E.g. if ₹750 was the price after 25% off, original = 750 ÷ 0.75 = ₹1000.' },
   ],
 };

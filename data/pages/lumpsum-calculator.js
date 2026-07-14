@@ -23,7 +23,7 @@ module.exports = {
     <div class="result-rows" style="margin-top:8px;">
       <div class="result-row"><span class="k">Investment</span><span class="v" id="ls-invested">—</span></div>
       <div class="result-row"><span class="k">Wealth gain</span><span class="v" id="ls-gain">—</span></div>
-      <div class="result-row"><span class="k">Paisa kitna guna hua</span><span class="v" id="ls-multiple">—</span></div>
+      <div class="result-row"><span class="k">Money multiplied by</span><span class="v" id="ls-multiple">—</span></div>
     </div>
   </div>
 </div>
@@ -32,15 +32,15 @@ module.exports = {
   <button class="btn btn-secondary" id="ls-copy">Copy result</button>
 </div>`,
   howto: [
-    'One-time investment amount daalo (mutual fund, stocks, kuch bhi).',
-    'Expected annual return daalo — equity ka long-term average ~12%, debt ~7%.',
-    'Kitne saal invested rahoge wo daalo.',
-    '<strong>Calculate</strong> dabao — maturity value aur wealth gain dikh jayega.',
+    'Enter the one-time investment amount (mutual fund, stocks, anything).',
+    'Enter the expected annual return — equity long-term average ~12%, debt ~7%.',
+    'Enter how many years it stays invested.',
+    'Click <strong>Calculate</strong> — see the maturity value and wealth gain.',
   ],
   faq: [
-    { q: 'Lumpsum return kaise calculate hota hai?', a: 'Compound growth formula: Maturity = P × (1 + r)^t. E.g. ₹1 lakh @ 12% × 10 saal = 1,00,000 × 3.106 = ₹3,10,585.' },
-    { q: 'Lumpsum kab better hai SIP se?', a: 'Jab paisa ready ho aur market valuations reasonable hon. Long term me jaldi invest karna = zyada compounding time. Market high lag raha ho to lumpsum ko 3–6 mahine me STP se equity me daal sakte ho.' },
-    { q: '12% return realistic hai kya?', a: 'Nifty 50 ka 20+ saal ka historical CAGR ~12% raha hai, lekin ye guarantee nahi hai. Conservative planning ke liye 10% use karo, debt funds ke liye 6.5–7.5%.' },
-    { q: 'Returns pe tax kitna lagega?', a: 'Equity funds: 1 saal+ pe LTCG 12.5% (₹1.25L/saal exempt). Debt funds: slab rate. Ye calculator pre-tax value dikhata hai.' },
+    { q: 'How is lumpsum return calculated?', a: 'Compound growth formula: Maturity = P × (1 + r)^t. E.g. ₹1 lakh @ 12% × 10 years = 1,00,000 × 3.106 = ₹3,10,585.' },
+    { q: 'When is lumpsum better than SIP?', a: 'When the money is ready and market valuations are reasonable. Investing early long-term = more compounding time. If the market looks high, you can spread the lumpsum into equity over 3–6 months via STP.' },
+    { q: 'Is a 12% return realistic?', a: 'The Nifty 50\'s 20+ year historical CAGR has been ~12%, but this isn\'t guaranteed. Use 10% for conservative planning, 6.5–7.5% for debt funds.' },
+    { q: 'How much tax applies to returns?', a: 'Equity funds: LTCG 12.5% after 1+ year (₹1.25L/year exempt). Debt funds: slab rate. This calculator shows the pre-tax value.' },
   ],
 };

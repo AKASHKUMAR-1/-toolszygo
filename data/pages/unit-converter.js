@@ -37,14 +37,14 @@ module.exports = {
   <button class="btn btn-secondary" id="uc-copy">Copy result</button>
 </div>`,
   howto: [
-    'Category choose karo — Length, Weight ya Temperature.',
-    'Value daalo aur From/To units select karo (e.g. Kilometers → Miles).',
-    'Result live update hota hai — "⇄ Swap units" se direction ulta kar sakte ho.',
+    'Choose a category — Length, Weight, or Temperature.',
+    'Enter a value and select From/To units (e.g. Kilometers → Miles).',
+    'The result updates live — use "⇄ Swap units" to reverse the direction.',
   ],
   faq: [
-    { q: '1 kilometer me kitne miles hote hain?', a: '1 km = 0.621371 miles. Ulta, 1 mile = 1.60934 km.' },
-    { q: '1 kg me kitne pounds hote hain?', a: '1 kg = 2.20462 pounds (lbs). Ulta, 1 pound = 0.453592 kg.' },
-    { q: 'Celsius se Fahrenheit kaise convert karte hain?', a: '°F = (°C × 9/5) + 32. E.g. 37°C = 98.6°F (normal body temperature).' },
-    { q: 'Kya aur units add hongi?', a: 'Haan — area, volume, speed aur data units jald aa rahi hain. Abhi length, weight aur temperature ki sab common units available hain.' },
+    { q: 'How many miles are in 1 kilometer?', a: '1 km = 0.621371 miles. Conversely, 1 mile = 1.60934 km.' },
+    { q: 'How many pounds are in 1 kg?', a: '1 kg = 2.20462 pounds (lbs). Conversely, 1 pound = 0.453592 kg.' },
+    { q: 'How do I convert Celsius to Fahrenheit?', a: '°F = (°C × 9/5) + 32. E.g. 37°C = 98.6°F (normal body temperature).' },
+    { q: 'Will more units be added?', a: 'Yes — area, volume, speed, and data units are coming soon. All common length, weight, and temperature units are available now.' },
   ],
 };

@@ -37,7 +37,7 @@
     var shuffled = filtered.slice().sort(function () { return Math.random() - 0.5; }).slice(0, 15);
     var box = $('bn2-results');
     if (!shuffled.length) {
-      box.innerHTML = '<div style="color:#A39C8B;">Is filter se koi naam nahi mila — kuch aur try karo</div>';
+      box.innerHTML = '<div style="color:#A39C8B;">No names found for this filter — try something else</div>';
       return;
     }
     box.innerHTML = shuffled.map(function (n) {

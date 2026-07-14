@@ -4,11 +4,11 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Salary Slip Details</div>
     <div class="field-row">
-      <div class="field"><label for="ss-company">Company Naam</label><input type="text" id="ss-company" placeholder="e.g. ABC Pvt Ltd"></div>
+      <div class="field"><label for="ss-company">Company Name</label><input type="text" id="ss-company" placeholder="e.g. ABC Pvt Ltd"></div>
       <div class="field"><label for="ss-month">Month</label><input type="month" id="ss-month"></div>
     </div>
     <div class="field-row">
-      <div class="field"><label for="ss-employee">Employee Naam</label><input type="text" id="ss-employee" placeholder="Employee"></div>
+      <div class="field"><label for="ss-employee">Employee Name</label><input type="text" id="ss-employee" placeholder="Employee"></div>
       <div class="field"><label for="ss-designation">Designation</label><input type="text" id="ss-designation" placeholder="e.g. Accountant"></div>
       <div class="field"><label for="ss-empid">Emp ID (optional)</label><input type="text" id="ss-empid"></div>
     </div>
@@ -32,13 +32,13 @@ module.exports = {
   <button class="btn btn-primary" id="ss-print">🖨 Print / Save as PDF</button>
 </div>`,
   howto: [
-    'Company, employee aur month bharo.',
-    'Earnings (basic, HRA, allowances) aur deductions (PF, PT) daalo.',
-    'Net pay khud calculate hota hai (words me bhi) — <strong>Print/Save as PDF</strong> karo.',
+    'Fill in the company, employee, and month.',
+    'Enter earnings (basic, HRA, allowances) and deductions (PF, PT).',
+    'Net pay is calculated automatically (in words too) — click <strong>Print/Save as PDF</strong>.',
   ],
   faq: [
-    { q: 'Salary slip me kya hona zaroori hai?', a: 'Company naam, employee details, month, earnings ka breakup, deductions aur net pay. Ye tool standard format banata hai jo loan applications, visa aur naya job — sab jagah accepted hai.' },
-    { q: 'PF deduction kitna hota hai?', a: 'Basic ka 12% employee side se katta hai (employer bhi 12% alag daalta hai). ₹15,000+ basic pe kuch companies ₹1,800 fixed bhi rakhti hain.' },
-    { q: 'Kya ye official document hai?', a: 'Format professional hai lekin official tabhi hai jab company issue kare (stamp/sign ke saath). Chhote businesses apne employees ke liye ise use kar sakte hain.' },
+    { q: 'What must a salary slip include?', a: 'Company name, employee details, month, breakup of earnings, deductions, and net pay. This tool creates a standard format accepted everywhere — loan applications, visas, and new jobs.' },
+    { q: 'How much is the PF deduction?', a: '12% of basic on the employee side (the employer also contributes 12% separately). For basic above ₹15,000, some companies keep it fixed at ₹1,800.' },
+    { q: 'Is this an official document?', a: 'The format is professional, but it\'s only official when the company issues it (with a stamp/signature). Small businesses can use this for their employees.' },
   ],
 };

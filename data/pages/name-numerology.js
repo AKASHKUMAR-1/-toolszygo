@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Input</div>
     <div class="field">
-      <label for="num-name">Apna poora naam</label>
+      <label for="num-name">Your full name</label>
       <input type="text" id="num-name" placeholder="e.g. Akash Kumar">
     </div>
   </div>
@@ -18,15 +18,15 @@ module.exports = {
 <div class="btn-row">
   <button class="btn btn-primary" id="num-calc">Calculate number</button>
 </div>
-<div style="font-size:12px;color:#A39C8B;margin-top:12px;">Note: Numerology ek belief system hai, science nahi — ise entertainment/curiosity ke liye lo.</div>`,
+<div style="font-size:12px;color:#A39C8B;margin-top:12px;">Note: Numerology is a belief system, not science — enjoy it for entertainment/curiosity.</div>`,
   howto: [
-    'Apna poora naam daalo (English letters me).',
-    '<strong>Calculate</strong> dabao — Pythagorean system se aapka name number aur uske traits dikhenge.',
+    'Enter your full name (in English letters).',
+    'Click <strong>Calculate</strong> — see your name number and its traits, using the Pythagorean system.',
   ],
   faq: [
-    { q: 'Name number kaise banta hai?', a: 'Pythagorean system: A=1, B=2 … I=9, phir J=1 se repeat. Sab letters ke numbers jodkar single digit tak reduce karte hain (11, 22, 33 master numbers chhod kar). E.g. AKASH = 1+2+1+1+8 = 13 → 1+3 = 4.' },
-    { q: 'Master numbers (11, 22, 33) kya hote hain?', a: 'Numerology me ye numbers reduce nahi kiye jaate — inhe special maana jaata hai: 11 (intuition), 22 (master builder), 33 (master teacher).' },
-    { q: 'Chaldean aur Pythagorean me kya difference hai?', a: 'Do alag systems hain — Pythagorean letters ko alphabetical order me 1-9 deta hai (ye tool yahi use karta hai); Chaldean sound-based hai aur 1-8 use karta hai. Results alag aa sakte hain.' },
-    { q: 'Kya ye scientific hai?', a: 'Nahi — numerology ek traditional belief system hai, iska koi scientific evidence nahi hai. Fun aur curiosity ke liye enjoy karo!' },
+    { q: 'How is the name number calculated?', a: 'Pythagorean system: A=1, B=2 … I=9, then repeats from J=1. All letter numbers are summed and reduced to a single digit (except master numbers 11, 22, 33). E.g. AKASH = 1+2+1+1+8 = 13 → 1+3 = 4.' },
+    { q: 'What are master numbers (11, 22, 33)?', a: 'In numerology, these numbers aren\'t reduced further — they\'re considered special: 11 (intuition), 22 (master builder), 33 (master teacher).' },
+    { q: 'What\'s the difference between Chaldean and Pythagorean systems?', a: 'Two different systems — Pythagorean assigns letters 1-9 in alphabetical order (this tool uses this); Chaldean is sound-based and uses 1-8. Results can differ.' },
+    { q: 'Is this scientific?', a: 'No — numerology is a traditional belief system with no scientific evidence. Enjoy it for fun and curiosity!' },
   ],
 };

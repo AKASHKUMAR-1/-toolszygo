@@ -4,11 +4,11 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Names</div>
     <div class="field">
-      <label for="love-name1">Pehla naam</label>
+      <label for="love-name1">First name</label>
       <input type="text" id="love-name1" placeholder="e.g. Rahul">
     </div>
     <div class="field">
-      <label for="love-name2">Doosra naam</label>
+      <label for="love-name2">Second name</label>
       <input type="text" id="love-name2" placeholder="e.g. Priya">
     </div>
   </div>
@@ -21,16 +21,16 @@ module.exports = {
 <div class="btn-row">
   <button class="btn btn-primary" id="love-calc">💘 Calculate love</button>
 </div>
-<div style="font-size:12px;color:#A39C8B;margin-top:12px;">Note: Ye sirf entertainment ke liye hai — asli rishte mehnat, samajh aur bharose se bante hain! 😄</div>`,
+<div style="font-size:12px;color:#A39C8B;margin-top:12px;">Note: This is just for entertainment — real relationships are built on effort, understanding, and trust! 😄</div>`,
   howto: [
-    'Dono naam daalo.',
-    '<strong>💘 Calculate love</strong> dabao — compatibility percentage aur message milega.',
-    'Doston ke saath try karke maza lo!',
+    'Enter both names.',
+    'Click <strong>💘 Calculate love</strong> — get a compatibility percentage and message.',
+    'Try it with friends for fun!',
   ],
   faq: [
-    { q: 'Kya ye sach me love compatibility batata hai?', a: 'Nahi! 😄 Ye purely entertainment ke liye hai — names ke letters se ek fun number banta hai. Asli compatibility values, communication aur respect se aati hai, calculators se nahi.' },
-    { q: 'Same names pe hamesha same result kyun aata hai?', a: 'Result names se mathematically banta hai (random nahi) — taaki dost same names daal kar cross-check karein to same answer mile. Warna pakde jaate! 😉' },
-    { q: 'Naam ka order matter karta hai?', a: 'Nahi — "Rahul + Priya" aur "Priya + Rahul" same result dete hain, jaisa hona chahiye.' },
-    { q: '100% kabhi aata hai kya?', a: 'Bahut rare hai — jaise real life me! Lekin kuch lucky pairs ko mil jaata hai. Try karte raho. 💕' },
+    { q: 'Does this really show love compatibility?', a: 'No! 😄 This is purely for entertainment — a fun number is generated from the letters in the names. Real compatibility comes from values, communication, and respect, not calculators.' },
+    { q: 'Why does the same pair of names always give the same result?', a: 'The result is generated mathematically from the names (not random) — so if a friend enters the same names to cross-check, they get the same answer. Otherwise you\'d get caught! 😉' },
+    { q: 'Does the order of names matter?', a: 'No — "Rahul + Priya" and "Priya + Rahul" give the same result, as they should.' },
+    { q: 'Does it ever show 100%?', a: 'Very rare — just like in real life! But some lucky pairs get it. Keep trying. 💕' },
   ],
 };

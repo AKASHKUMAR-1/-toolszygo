@@ -10,7 +10,7 @@
     err.style.display = 'none';
     if (!text) {
       err.style.display = '';
-      err.textContent = 'Pehle text/number daalo';
+      err.textContent = 'Enter text/number first';
       return;
     }
     try {
@@ -32,10 +32,10 @@
       $('bc-download').disabled = true;
       err.style.display = '';
       err.textContent = format === 'EAN13'
-        ? 'EAN-13 ke liye exactly 12-13 digits chahiye (sirf numbers)'
+        ? 'EAN-13 needs exactly 12-13 digits (numbers only)'
         : format === 'UPC'
-          ? 'UPC ke liye 11-12 digits chahiye (sirf numbers)'
-          : 'Ye text is format me encode nahi ho sakta — CODE128 try karo';
+          ? 'UPC needs 11-12 digits (numbers only)'
+          : 'This text can\'t be encoded in this format — try CODE128';
     }
   }
 

@@ -2,7 +2,7 @@ module.exports = {
   workspace: `
 <div class="workspace single">
   <div class="panel" style="min-height:0;">
-    <div class="panel-label">Weekly Timetable (cells me click karke likho)</div>
+    <div class="panel-label">Weekly Timetable (click cells to type)</div>
     <div class="field-row">
       <div class="field" style="max-width:160px;">
         <label for="tt-periods">Periods/slots per day</label>
@@ -16,7 +16,7 @@ module.exports = {
     <div id="tt-wrap" style="overflow-x:auto;">
       <table id="tt-table" style="width:100%;border-collapse:collapse;font-size:12.5px;"></table>
     </div>
-    <div style="font-size:12px;color:#A39C8B;margin-top:6px;">💾 Timetable browser me auto-save hota hai.</div>
+    <div style="font-size:12px;color:#A39C8B;margin-top:6px;">💾 The timetable auto-saves in your browser.</div>
   </div>
 </div>
 <div class="btn-row">
@@ -25,13 +25,13 @@ module.exports = {
 </div>
 <div id="tt-print-area" style="display:none;"></div>`,
   howto: [
-    'Periods ki sankhya set karo (school 8, study plan 4-6).',
-    'Har cell pe click karke subject/kaam likho — time column bhi editable hai.',
-    'Sab browser me auto-save hota hai — <strong>Print</strong> karke deewar pe laga lo!',
+    'Set the number of periods (8 for school, 4-6 for a study plan).',
+    'Click each cell to type a subject/task — the time column is editable too.',
+    'Everything auto-saves in the browser — <strong>Print</strong> it and stick it on your wall!',
   ],
   faq: [
-    { q: 'Mera timetable save rahega?', a: 'Haan — browser ke localStorage me auto-save hota hai. Wapas aane pe wahi milega (same browser/device pe).' },
-    { q: 'Study timetable kaise banau?', a: 'Subjects ko unki difficulty ke hisaab se slots do — mushkil subject subah ke fresh slots me. Har 2 slots baad break rakho aur revision ka ek slot roz.' },
-    { q: 'Sunday bhi chahiye?', a: 'Table me Monday-Sunday saato din hain — jo din khaali chhodना ho chhod do.' },
+    { q: 'Will my timetable be saved?', a: 'Yes — it auto-saves in the browser\'s localStorage. You\'ll find it again when you return (on the same browser/device).' },
+    { q: 'How do I make a study timetable?', a: 'Assign subjects to slots by difficulty — hard subjects in the fresh morning slots. Keep a break after every 2 slots and one revision slot daily.' },
+    { q: 'Do I get Sunday too?', a: 'The table has all seven days, Monday-Sunday — leave any day blank if you don\'t need it.' },
   ],
 };

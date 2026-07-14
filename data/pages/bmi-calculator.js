@@ -37,7 +37,7 @@ module.exports = {
     <div style="font-size:14px;font-weight:600;" id="bmi-category">—</div>
     <div class="result-rows" style="margin-top:8px;">
       <div class="result-row"><span class="k">Healthy BMI range</span><span class="v">18.5 – 24.9</span></div>
-      <div class="result-row"><span class="k">Aapke height ke liye healthy weight</span><span class="v" id="bmi-healthy">—</span></div>
+      <div class="result-row"><span class="k">Healthy weight for your height</span><span class="v" id="bmi-healthy">—</span></div>
     </div>
   </div>
 </div>
@@ -45,14 +45,14 @@ module.exports = {
   <button class="btn btn-primary" id="bmi-calc">Calculate BMI</button>
 </div>`,
   howto: [
-    'Apni height daalo — cm me ya feet+inches me (unit switch kar sakte ho).',
-    'Apna weight kg me daalo.',
-    '<strong>Calculate BMI</strong> dabao — BMI, category aur aapke height ke liye healthy weight range dikh jayegi.',
+    'Enter your height — in cm or feet+inches (you can switch units).',
+    'Enter your weight in kg.',
+    'Click <strong>Calculate BMI</strong> — get your BMI, category, and a healthy weight range for your height.',
   ],
   faq: [
-    { q: 'BMI kaise calculate hota hai?', a: 'BMI = weight (kg) ÷ height² (meters). E.g. 65 kg, 1.70 m: 65 ÷ 2.89 = 22.5. WHO categories: 18.5 se kam underweight, 18.5–24.9 normal, 25–29.9 overweight, 30+ obese.' },
-    { q: 'Kya BMI hamesha sahi hota hai?', a: 'BMI ek screening tool hai, diagnosis nahi. Muscular logo ka BMI zyada aa sakta hai bina fat ke. Asian populations ke liye kuch guidelines 23+ ko overweight maanti hain. Sahi assessment ke liye doctor se milo.' },
-    { q: 'Ideal weight kaise nikale?', a: 'Healthy weight range = 18.5 × height² se 24.9 × height² (meters me). Ye tool aapke height ke liye ye range automatically dikha deta hai.' },
-    { q: 'Bachon ka BMI isi se nikal sakte hain?', a: 'Formula same hai, lekin bachon (2–18 saal) me category age aur gender percentiles se decide hoti hai, adult cutoffs se nahi. Ye calculator adults ke liye hai.' },
+    { q: 'How is BMI calculated?', a: 'BMI = weight (kg) ÷ height² (meters). E.g. 65 kg, 1.70 m: 65 ÷ 2.89 = 22.5. WHO categories: under 18.5 underweight, 18.5–24.9 normal, 25–29.9 overweight, 30+ obese.' },
+    { q: 'Is BMI always accurate?', a: 'BMI is a screening tool, not a diagnosis. Muscular people can have a higher BMI without excess fat. Some guidelines for Asian populations consider 23+ as overweight. See a doctor for a proper assessment.' },
+    { q: 'How is ideal weight calculated?', a: 'Healthy weight range = 18.5 × height² to 24.9 × height² (in meters). This tool automatically shows this range for your height.' },
+    { q: 'Can I use this for a child\'s BMI?', a: 'The formula is the same, but for children (2–18 years) the category is determined by age and gender percentiles, not adult cutoffs. This calculator is for adults.' },
   ],
 };

@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel">
     <div class="panel-label">Input</div>
     <div class="field">
-      <textarea id="wc-text" placeholder="Apna text yahan paste ya type karo…" style="min-height:220px;"></textarea>
+      <textarea id="wc-text" placeholder="Paste or type your text here…" style="min-height:220px;"></textarea>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
@@ -23,14 +23,14 @@ module.exports = {
   <button class="btn btn-secondary" id="wc-clear">Clear text</button>
 </div>`,
   howto: [
-    'Apna text upar wale box me paste ya type karo.',
-    'Words, characters, sentences, paragraphs aur reading time live update hote rahenge.',
-    'Naya text check karne ke liye "Clear text" dabao.',
+    'Paste or type your text in the box above.',
+    'Words, characters, sentences, paragraphs, and reading time update live.',
+    'Click "Clear text" to check new text.',
   ],
   faq: [
-    { q: 'Reading time kaise calculate hota hai?', a: 'Average reading speed 200 words per minute maan kar: reading time = words ÷ 200. Ye ek standard estimate hai jo blogs aur articles ke liye use hota hai.' },
-    { q: 'Kya mera text kahin upload hota hai?', a: 'Nahi. Text aapke browser me hi count hota hai — koi data server pe nahi jaata, isliye confidential documents ke liye bhi safe hai.' },
-    { q: 'Word count me hyphenated words kaise count hote hain?', a: 'Space se alag hone wali har cheez ek word hai — "state-of-the-art" ek word count hoga, jaise MS Word me hota hai.' },
-    { q: 'Kya isme character limit hai?', a: 'Koi limit nahi — lambi essays, articles aur books ke chapters bhi paste kar sakte ho.' },
+    { q: 'How is reading time calculated?', a: 'Assuming an average reading speed of 200 words per minute: reading time = words ÷ 200. This is a standard estimate used for blogs and articles.' },
+    { q: 'Is my text uploaded anywhere?', a: 'No. Text is counted entirely in your browser — no data is sent to any server, so it\'s safe for confidential documents too.' },
+    { q: 'How are hyphenated words counted?', a: 'Anything separated by a space counts as one word — "state-of-the-art" counts as one word, just like in MS Word.' },
+    { q: 'Is there a character limit?', a: 'No limit — you can paste long essays, articles, and even book chapters.' },
   ],
 };

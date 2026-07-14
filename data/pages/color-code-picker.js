@@ -4,11 +4,11 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Pick Color</div>
     <div class="field">
-      <label for="cp-picker">Color choose karo</label>
+      <label for="cp-picker">Choose a color</label>
       <input type="color" id="cp-picker" value="#D97757" style="width:100%;height:64px;border:1px solid #E8E0D2;border-radius:10px;background:#FCFAF6;cursor:pointer;padding:4px;">
     </div>
     <div class="field">
-      <label for="cp-hex-input">Ya HEX code paste karo</label>
+      <label for="cp-hex-input">Or paste a HEX code</label>
       <input type="text" id="cp-hex-input" value="#D97757" placeholder="#D97757" maxlength="7" style="font-family:monospace;">
     </div>
   </div>
@@ -28,14 +28,14 @@ module.exports = {
   <button class="btn btn-secondary" id="cp-copy-hsl">Copy HSL</button>
 </div>`,
   howto: [
-    'Color picker se koi bhi color choose karo, ya HEX code (e.g. #D97757) paste karo.',
-    'HEX, RGB aur HSL — teeno codes turant update ho jaate hain.',
-    'Jo format chahiye uska Copy button dabao.',
+    'Choose any color with the color picker, or paste a HEX code (e.g. #D97757).',
+    'HEX, RGB, and HSL — all three codes update instantly.',
+    'Click the Copy button for whichever format you need.',
   ],
   faq: [
-    { q: 'HEX, RGB aur HSL me kya difference hai?', a: 'Teeno same color ko alag tarah likhte hain. HEX (#D97757) web me sabse common hai. RGB (217, 119, 87) red-green-blue values deta hai. HSL (17°, 63%, 60%) hue-saturation-lightness — colors ko adjust karne ke liye sabse intuitive.' },
-    { q: 'HEX code kaise padhte hain?', a: '#RRGGBB — pehle 2 digits red, phir green, phir blue (00 se FF tak hexadecimal me). #FF0000 = pure red, #FFFFFF = white, #000000 = black.' },
-    { q: '3-digit HEX (#F00) kya hota hai?', a: 'Shorthand — har digit double ho jaata hai: #F00 = #FF0000, #ABC = #AABBCC. Tool me full 6-digit format use karo.' },
-    { q: 'Website se color kaise pick karoon?', a: 'Chrome/Edge DevTools ke color picker me eyedropper hota hai, ya browser extensions (ColorZilla) use karo. Phir HEX yahan paste karke RGB/HSL me convert kar lo.' },
+    { q: 'What\'s the difference between HEX, RGB, and HSL?', a: 'All three describe the same color differently. HEX (#D97757) is the most common on the web. RGB (217, 119, 87) gives red-green-blue values. HSL (17°, 63%, 60%) is hue-saturation-lightness — the most intuitive for adjusting colors.' },
+    { q: 'How do I read a HEX code?', a: '#RRGGBB — the first 2 digits are red, then green, then blue (00 to FF in hexadecimal). #FF0000 = pure red, #FFFFFF = white, #000000 = black.' },
+    { q: 'What is a 3-digit HEX (#F00)?', a: 'A shorthand — each digit is doubled: #F00 = #FF0000, #ABC = #AABBCC. Use the full 6-digit format in this tool.' },
+    { q: 'How do I pick a color from a website?', a: 'Chrome/Edge DevTools\' color picker has an eyedropper, or use browser extensions like ColorZilla. Then paste the HEX here to convert to RGB/HSL.' },
   ],
 };

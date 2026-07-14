@@ -4,10 +4,10 @@ module.exports = {
   <div class="panel">
     <div class="panel-label">Names List</div>
     <div class="field">
-      <textarea id="rnp-names" placeholder="Har line pe ek naam…&#10;Amit&#10;Priya&#10;Rahul&#10;Sneha" style="min-height:200px;"></textarea>
+      <textarea id="rnp-names" placeholder="One name per line…&#10;Amit&#10;Priya&#10;Rahul&#10;Sneha" style="min-height:200px;"></textarea>
     </div>
     <div class="field" style="max-width:200px;">
-      <label for="rnp-count">Kitne winners?</label>
+      <label for="rnp-count">How many winners?</label>
       <input type="number" id="rnp-count" value="1" min="1" max="100" step="1">
     </div>
   </div>
@@ -22,14 +22,14 @@ module.exports = {
   <button class="btn btn-secondary" id="rnp-copy">Copy result</button>
 </div>`,
   howto: [
-    'Names ki list paste karo — har line pe ek naam.',
-    'Kitne winners chahiye wo set karo.',
-    '<strong>🎉 Pick winner</strong> dabao — fair random selection ho jayegi.',
+    'Paste the list of names — one name per line.',
+    'Set how many winners you need.',
+    'Click <strong>🎉 Pick winner</strong> — a fair random selection is made.',
   ],
   faq: [
-    { q: 'Kya selection sach me random hai?', a: 'Haan — cryptographically secure random generator (crypto.getRandomValues) use hota hai, wahi jo passwords banane me lagta hai. Kisi ka favouritism nahi! Giveaways ke liye fair hai.' },
-    { q: 'Duplicate names ho to kya hoga?', a: 'Jo naam list me jitni baar hai, uske jeetne ka chance utna zyada — jaise raffle me zyada tickets. Equal chance chahiye to pehle Duplicate Line Remover se list clean kar lo.' },
-    { q: 'Multiple winners me koi repeat to nahi hoga?', a: 'Nahi — ek hi draw me har winner alag line se aata hai (bina replacement ke), jaise parchi nikaalne me.' },
-    { q: 'Giveaway proof ke liye kya karoon?', a: 'Result aane ke baad screen record ya screenshot le lo. Transparency ke liye live session me bhi kar sakte ho.' },
+    { q: 'Is the selection really random?', a: 'Yes — it uses a cryptographically secure random generator (crypto.getRandomValues), the same one used to generate passwords. No favoritism! Fair for giveaways.' },
+    { q: 'What happens with duplicate names?', a: 'A name appearing multiple times in the list has a proportionally higher chance of winning — like more raffle tickets. Clean the list first with the Duplicate Line Remover if you need equal chances.' },
+    { q: 'Will multiple winners ever repeat?', a: 'No — each winner in a single draw comes from a different line (without replacement), like drawing lots.' },
+    { q: 'How do I get proof for a giveaway?', a: 'Take a screen recording or screenshot after the result appears. You can also do it during a live session for transparency.' },
   ],
 };

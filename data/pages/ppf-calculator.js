@@ -31,15 +31,15 @@ module.exports = {
   <button class="btn btn-secondary" id="ppf-copy">Copy result</button>
 </div>`,
   howto: [
-    'Har saal PPF me jitna daaloge wo amount daalo (₹500 se ₹1.5 lakh).',
-    'Current PPF rate daalo — abhi ~7.1% hai (govt har quarter revise karti hai).',
-    'Duration daalo — minimum 15 saal, phir 5-5 saal extend hota hai.',
-    '<strong>Calculate</strong> dabao — tax-free maturity amount dikh jayega.',
+    'Enter how much you\'ll deposit in PPF each year (₹500 to ₹1.5 lakh).',
+    'Enter the current PPF rate — currently ~7.1% (revised by the govt every quarter).',
+    'Enter the duration — minimum 15 years, extendable in 5-year blocks after that.',
+    'Click <strong>Calculate</strong> — see the tax-free maturity amount.',
   ],
   faq: [
-    { q: 'PPF itna popular kyun hai?', a: 'EEE tax status — investment pe 80C deduction, interest tax-free, maturity tax-free. Government guarantee ke saath ~7.1% tax-free return, jo FD ke post-tax return se kaafi better hai.' },
-    { q: 'PPF me interest kaise calculate hota hai?', a: 'Har mahine ki 5 tarikh se month-end tak ke minimum balance pe monthly interest banta hai, jo saal ke end me credit hota hai. Pura fayda lene ke liye saal ki shuruaat me (April 1–5) deposit karo.' },
-    { q: '15 saal se pehle paisa nikal sakte hain?', a: '7th saal se partial withdrawal allowed hai (balance ka 50% tak, conditions ke saath). 5 saal baad specific reasons (illness, education) pe premature closure bhi ho sakta hai penalty ke saath.' },
-    { q: '15 saal baad kya karein?', a: 'Account 5-5 saal ke blocks me extend kar sakte ho — contribution ke saath ya bina. Bina contribution ke bhi balance pe tax-free interest milta rehta hai.' },
+    { q: 'Why is PPF so popular?', a: 'EEE tax status — 80C deduction on investment, tax-free interest, tax-free maturity. A government-guaranteed ~7.1% tax-free return, much better than an FD\'s post-tax return.' },
+    { q: 'How is PPF interest calculated?', a: 'Monthly interest is based on the minimum balance between the 5th of the month and month-end, credited at year-end. Deposit early in the year (April 1–5) to get the full benefit.' },
+    { q: 'Can I withdraw before 15 years?', a: 'Partial withdrawal is allowed from the 7th year (up to 50% of balance, with conditions). After 5 years, premature closure is also possible for specific reasons (illness, education) with a penalty.' },
+    { q: 'What happens after 15 years?', a: 'You can extend the account in 5-year blocks — with or without further contributions. Even without contributions, the balance keeps earning tax-free interest.' },
   ],
 };

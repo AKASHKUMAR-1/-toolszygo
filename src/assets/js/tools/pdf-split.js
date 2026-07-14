@@ -34,7 +34,7 @@
       $('ps-split').disabled = false;
       if (!$('ps-range').value) $('ps-range').value = '1-' + totalPages;
     } catch (e) {
-      $('ps-fileinfo').textContent = 'PDF nahi khul payi (password-protected?)';
+      $('ps-fileinfo').textContent = 'Couldn\'t open the PDF (password-protected?)';
       file = null;
     }
   }
@@ -68,7 +68,7 @@
     var pages = parseRange($('ps-range').value, totalPages);
     if (!pages) {
       err.style.display = '';
-      err.textContent = 'Range sahi nahi hai — 1 se ' + totalPages + ' ke beech likho, jaise "1-3,5"';
+      err.textContent = 'Invalid range — enter values between 1 and ' + totalPages + ', like "1-3,5"';
       return;
     }
     var btn = this;
@@ -89,7 +89,7 @@
       $('ps-download').disabled = false;
     } catch (e) {
       err.style.display = '';
-      err.textContent = 'Split fail ho gaya: ' + (e && e.message ? e.message : e);
+      err.textContent = 'Split failed: ' + (e && e.message ? e.message : e);
     }
     btn.textContent = 'Split PDF';
     btn.disabled = false;

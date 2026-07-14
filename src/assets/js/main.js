@@ -87,10 +87,10 @@
         return t.name.toLowerCase().indexOf(q) !== -1 || t.category.toLowerCase().indexOf(q) !== -1;
       });
       if (popularHead) {
-        popularHead.innerHTML = '<h2>Search results</h2><span class="sub">' + matches.length + ' tool' + (matches.length === 1 ? '' : 's') + ' mile</span>';
+        popularHead.innerHTML = '<h2>Search results</h2><span class="sub">' + matches.length + ' tool' + (matches.length === 1 ? '' : 's') + ' found</span>';
       }
       if (!matches.length) {
-        popularGrid.innerHTML = '<div class="no-results" style="grid-column:1/-1;">Koi tool nahi mila &ldquo;' + heroInput.value.replace(/[<>&"]/g, '') + '&rdquo; ke liye</div>';
+        popularGrid.innerHTML = '<div class="no-results" style="grid-column:1/-1;">No tools found for &ldquo;' + heroInput.value.replace(/[<>&"]/g, '') + '&rdquo;</div>';
         return;
       }
       popularGrid.innerHTML = matches.map(function (t) {
@@ -144,7 +144,7 @@
     var el = document.getElementById(elementId);
     if (!el) return;
     var w = window.open('', '_blank');
-    if (!w) { alert('Popup block ho gaya — is site ke liye popups allow karo.'); return; }
+    if (!w) { alert('The popup was blocked — please allow popups for this site.'); return; }
     w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + (title || 'Document') + '</title>' +
       '<style>body{font-family:Arial,Helvetica,sans-serif;color:#222;margin:0;padding:24px;} table{border-collapse:collapse;} @media print{body{padding:0;}} @page{margin:14mm;}</style>' +
       '</head><body>' + el.innerHTML + '</body></html>');

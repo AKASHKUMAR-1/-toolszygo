@@ -51,14 +51,14 @@
     $('tax-new').textContent = fmt(nt);
     $('tax-old').textContent = fmt(ot);
     if (Math.round(nt) === Math.round(ot)) {
-      $('tax-verdict').textContent = 'Dono regimes me tax same hai';
+      $('tax-verdict').textContent = 'Tax is the same under both regimes';
       $('tax-diff').textContent = '—';
     } else if (nt < ot) {
-      $('tax-verdict').textContent = '✓ New regime better hai';
-      $('tax-diff').textContent = fmt(ot - nt) + ' bachega (new me)';
+      $('tax-verdict').textContent = '✓ New regime is better';
+      $('tax-diff').textContent = fmt(ot - nt) + ' saved (with new)';
     } else {
-      $('tax-verdict').textContent = '✓ Old regime better hai';
-      $('tax-diff').textContent = fmt(nt - ot) + ' bachega (old me)';
+      $('tax-verdict').textContent = '✓ Old regime is better';
+      $('tax-diff').textContent = fmt(nt - ot) + ' saved (with old)';
     }
     lastSummary = 'Income ' + fmt(income) + (salaried ? ' (salaried)' : '') + ' | New regime: ' + fmt(nt) +
       ' | Old regime (ded ' + fmt(ded) + '): ' + fmt(ot) + ' | Best: ' + (nt <= ot ? 'New' : 'Old');

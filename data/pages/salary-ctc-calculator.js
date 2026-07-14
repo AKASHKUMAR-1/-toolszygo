@@ -12,8 +12,8 @@ module.exports = {
       <input type="number" id="ctc-basic" value="40" min="20" max="70" step="5">
     </div>
     <div class="checks">
-      <label><input type="checkbox" id="ctc-pf" checked> PF included hai (employer + employee 12% of basic)</label>
-      <label><input type="checkbox" id="ctc-tax" checked> Income tax bhi kaato (new regime estimate)</label>
+      <label><input type="checkbox" id="ctc-pf" checked> PF is included (employer + employee 12% of basic)</label>
+      <label><input type="checkbox" id="ctc-tax" checked> Deduct income tax too (new regime estimate)</label>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
@@ -21,7 +21,7 @@ module.exports = {
     <div class="result-big" id="ctc-inhand">—</div>
     <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Estimated monthly in-hand</div>
     <div class="result-rows" style="margin-top:8px;">
-      <div class="result-row"><span class="k">Employer PF (CTC me se)</span><span class="v" id="ctc-epf">—</span></div>
+      <div class="result-row"><span class="k">Employer PF (from CTC)</span><span class="v" id="ctc-epf">—</span></div>
       <div class="result-row"><span class="k">Employee PF deduction</span><span class="v" id="ctc-pf-ded">—</span></div>
       <div class="result-row"><span class="k">Professional tax</span><span class="v" id="ctc-pt">—</span></div>
       <div class="result-row"><span class="k">Income tax (monthly avg)</span><span class="v" id="ctc-tax-amt">—</span></div>
@@ -33,17 +33,17 @@ module.exports = {
   <button class="btn btn-primary" id="ctc-calc">Calculate in-hand salary</button>
   <button class="btn btn-secondary" id="ctc-copy">Copy result</button>
 </div>
-<div style="font-size:12px;color:#A39C8B;margin-top:12px;">Note: Ye standard assumptions pe estimate hai — asli in-hand company ke salary structure (HRA, allowances, gratuity, variable pay) pe depend karta hai.</div>`,
+<div style="font-size:12px;color:#A39C8B;margin-top:12px;">Note: This is an estimate based on standard assumptions — actual in-hand depends on the company's salary structure (HRA, allowances, gratuity, variable pay).</div>`,
   howto: [
-    'Apna annual CTC daalo (offer letter wala).',
-    'Basic salary ka % set karo — zyada tar companies 40–50% rakhti hain.',
-    'PF aur tax ke checkboxes apne hisaab se set karo.',
-    '<strong>Calculate</strong> dabao — estimated monthly in-hand aur poora breakdown dikh jayega.',
+    'Enter your annual CTC (from the offer letter).',
+    'Set the basic salary % — most companies keep it at 40–50%.',
+    'Set the PF and tax checkboxes to match your case.',
+    'Click <strong>Calculate</strong> — see the estimated monthly in-hand and full breakdown.',
   ],
   faq: [
-    { q: 'CTC aur in-hand me itna difference kyun hota hai?', a: 'CTC me employer PF, gratuity, insurance, variable pay sab included hota hai jo haath me nahi aata. Uske baad employee PF, professional tax aur income tax bhi katta hai. ₹12L CTC ka in-hand aam taur pe ₹80–90k/month hota hai.' },
-    { q: 'PF kitna katta hai?', a: 'Employee PF = basic ka 12% (salary se katta hai). Employer bhi 12% daalta hai lekin wo CTC me already counted hota hai. Dono milakar retirement corpus banta hai.' },
-    { q: 'Professional tax kya hai?', a: 'State government ka tax — zyada tar states me ₹200/month (₹2,400–2,500/saal). Kuch states (Delhi, UP, Haryana) me nahi lagta. Ye calculator ₹2,400/saal assume karta hai.' },
-    { q: 'Variable pay/bonus ka kya?', a: 'Variable pay CTC me hota hai lekin performance pe milta hai aur aam taur pe quarterly/annually. Fixed in-hand ke liye CTC me se variable hata kar calculate karo.' },
+    { q: 'Why is there such a big difference between CTC and in-hand?', a: 'CTC includes employer PF, gratuity, insurance, and variable pay, which don\'t reach your hand. On top of that, employee PF, professional tax, and income tax are deducted. A ₹12L CTC typically gives ₹80–90k/month in-hand.' },
+    { q: 'How much PF is deducted?', a: 'Employee PF = 12% of basic (deducted from salary). The employer also contributes 12%, but that\'s already counted in CTC. Together they build your retirement corpus.' },
+    { q: 'What is professional tax?', a: 'A state government tax — ₹200/month (₹2,400–2,500/year) in most states. Some states (Delhi, UP, Haryana) don\'t levy it. This calculator assumes ₹2,400/year.' },
+    { q: 'What about variable pay/bonus?', a: 'Variable pay is part of CTC but is paid based on performance, usually quarterly/annually. For fixed in-hand, remove the variable component from CTC before calculating.' },
   ],
 };

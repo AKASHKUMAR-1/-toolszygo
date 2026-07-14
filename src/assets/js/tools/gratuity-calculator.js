@@ -10,9 +10,9 @@
     var note = $('gr-note');
     if (years < 5) {
       $('gr-amount').textContent = '₹0';
-      $('gr-counted').textContent = years + ' saal (5 se kam)';
+      $('gr-counted').textContent = years + ' years (less than 5)';
       note.style.display = '';
-      note.textContent = 'Gratuity 5 saal continuous service ke baad hi milti hai (death/disability chhod kar).';
+      note.textContent = 'Gratuity is only paid after 5 years of continuous service (except for death/disability).';
       lastSummary = '';
       return;
     }
@@ -23,7 +23,7 @@
     var gratuity = (15 / 26) * salary * counted;
     var capped = Math.min(gratuity, 2000000);
     $('gr-amount').textContent = toolsdoINR(Math.round(capped));
-    $('gr-counted').textContent = counted + ' saal';
+    $('gr-counted').textContent = counted + ' years';
     if (gratuity > 2000000) {
       note.style.display = '';
       note.textContent = 'Formula ke hisaab se ' + toolsdoINR(Math.round(gratuity)) + ' banti hai, lekin Act ke under max ₹20 lakh tax-free/payable hai.';

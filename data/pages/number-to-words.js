@@ -12,7 +12,7 @@ module.exports = {
       <select id="nw-style">
         <option value="indian" selected>Indian system (lakh, crore)</option>
         <option value="intl">International (million, billion)</option>
-        <option value="rupees">Rupees words (cheque ke liye)</option>
+        <option value="rupees">Rupees words (for cheques)</option>
       </select>
     </div>
   </div>
@@ -26,14 +26,14 @@ module.exports = {
   <button class="btn btn-secondary" id="nw-copy">Copy words</button>
 </div>`,
   howto: [
-    'Koi bhi number daalo (99 crore tak).',
-    'Format choose karo — Indian (lakh/crore), International (million/billion) ya cheque wala "Rupees … Only".',
-    'Words turant mil jayenge — copy karke use karo.',
+    'Enter any number (up to 99 crore).',
+    'Choose a format — Indian (lakh/crore), International (million/billion), or the cheque-style "Rupees … Only".',
+    'The words appear instantly — copy and use them.',
   ],
   faq: [
-    { q: 'Indian aur international system me kya difference hai?', a: 'Indian: hazaar → lakh (10^5) → crore (10^7). International: thousand → million (10^6) → billion (10^9). 12,34,567 Indian me "twelve lakh…" hai, international me "1.23 million".' },
-    { q: 'Cheque pe amount words me kaise likhe?', a: '"Rupees" format choose karo — "Rupees Twelve Lakh Thirty Four Thousand Five Hundred Sixty Seven Only" jaisa output milega. "Only" lagana zaroori hai taaki koi aage kuch jod na sake.' },
-    { q: 'Decimal (paise) support hai?', a: 'Rupees format me decimal ke 2 digits paise ban jaate hain — 1500.50 = "Rupees One Thousand Five Hundred and Fifty Paise Only".' },
-    { q: 'Kitna bada number convert ho sakta hai?', a: '99,99,99,99,999 (99 arab / ~1 trillion) tak — cheques aur documents ke liye kaafi hai.' },
+    { q: 'What\'s the difference between Indian and international systems?', a: 'Indian: thousand → lakh (10^5) → crore (10^7). International: thousand → million (10^6) → billion (10^9). 12,34,567 is "twelve lakh…" in Indian, "1.23 million" internationally.' },
+    { q: 'How do I write an amount in words on a cheque?', a: 'Choose the "Rupees" format — you\'ll get output like "Rupees Twelve Lakh Thirty Four Thousand Five Hundred Sixty Seven Only". Adding "Only" is important so nothing can be added afterward.' },
+    { q: 'Is decimal (paise) supported?', a: 'In the Rupees format, the 2 decimal digits become paise — 1500.50 = "Rupees One Thousand Five Hundred and Fifty Paise Only".' },
+    { q: 'How large a number can this convert?', a: 'Up to 99,99,99,99,999 (~1 trillion) — plenty for cheques and documents.' },
   ],
 };

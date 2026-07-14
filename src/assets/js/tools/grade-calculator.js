@@ -33,9 +33,9 @@
       var neededTotalPoints = target; // target is % of full 100 weight
       var neededInRemaining = (neededTotalPoints - earnedPoints) / (remWeight / 100);
       $('gr2-needed').textContent = neededInRemaining > 100
-        ? (Math.round(neededInRemaining * 100) / 100) + '% (possible nahi lag raha)'
+        ? (Math.round(neededInRemaining * 100) / 100) + '% (looks impossible)'
         : neededInRemaining < 0
-          ? '0% (already target se aage ho!)'
+          ? '0% (you\'re already past the target!)'
           : (Math.round(neededInRemaining * 100) / 100) + '%';
     } else {
       $('gr2-needed').textContent = '—';

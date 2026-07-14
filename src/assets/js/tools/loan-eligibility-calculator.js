@@ -12,8 +12,8 @@
     if (!income || !rate || !years || income <= 0 || rate <= 0 || years <= 0) return;
     var maxEmi = income * foir - existing;
     if (maxEmi <= 0) {
-      $('le-amount').textContent = 'Eligibility nahi banti';
-      $('le-emi').textContent = 'Existing EMIs bahut zyada hain';
+      $('le-amount').textContent = 'Not eligible';
+      $('le-emi').textContent = 'Existing EMIs are too high';
       $('le-total').textContent = '—';
       lastSummary = '';
       return;

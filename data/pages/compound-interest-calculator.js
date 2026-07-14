@@ -40,15 +40,15 @@ module.exports = {
   <button class="btn btn-secondary" id="ci-copy">Copy result</button>
 </div>`,
   howto: [
-    'Principal amount daalo — jitne paise pe interest lagna hai.',
-    'Annual interest rate aur time (years) daalo.',
-    'Compounding frequency choose karo — banks aam taur pe quarterly compound karte hain.',
-    '<strong>Calculate</strong> dabao — total amount aur compound interest dikh jayega.',
+    'Enter the principal amount — the money on which interest applies.',
+    'Enter the annual interest rate and time (years).',
+    'Choose the compounding frequency — banks usually compound quarterly.',
+    'Click <strong>Calculate</strong> — see the total amount and compound interest.',
   ],
   faq: [
-    { q: 'Compound interest ka formula kya hai?', a: 'A = P × (1 + r/n)^(n×t), jahan P = principal, r = annual rate (decimal), n = compounding frequency per year, t = years. Compound interest = A − P.' },
-    { q: 'Simple aur compound interest me kya difference hai?', a: 'Simple interest sirf principal pe lagta hai. Compound interest me har period ka interest principal me judta hai aur agle period me us par bhi interest milta hai — isliye long-term me compound interest bahut zyada hota hai.' },
-    { q: 'Compounding frequency se kitna difference padta hai?', a: 'Jitni zyada frequency, utna zyada return. ₹1 lakh @ 8% × 10 saal: yearly = ₹2.16L, quarterly = ₹2.21L, monthly = ₹2.22L. Difference chhota lagta hai lekin bade amounts pe significant hai.' },
-    { q: 'Rule of 72 kya hai?', a: 'Paisa double hone ka approximate time = 72 ÷ interest rate. E.g. 8% pe paisa ~9 saal me double hota hai.' },
+    { q: 'What is the compound interest formula?', a: 'A = P × (1 + r/n)^(n×t), where P = principal, r = annual rate (decimal), n = compounding frequency per year, t = years. Compound interest = A − P.' },
+    { q: 'What\'s the difference between simple and compound interest?', a: 'Simple interest applies only to the principal. With compound interest, each period\'s interest gets added to the principal, and earns interest itself in the next period — so compound interest is much larger over the long term.' },
+    { q: 'How much does compounding frequency matter?', a: 'The higher the frequency, the higher the return. ₹1 lakh @ 8% × 10 years: yearly = ₹2.16L, quarterly = ₹2.21L, monthly = ₹2.22L. The difference looks small but is significant on large amounts.' },
+    { q: 'What is the Rule of 72?', a: 'The approximate time for money to double = 72 ÷ interest rate. E.g. at 8%, money doubles in ~9 years.' },
   ],
 };

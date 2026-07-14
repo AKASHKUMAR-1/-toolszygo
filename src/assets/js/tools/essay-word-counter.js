@@ -22,13 +22,13 @@
     if (words === 0) {
       status.textContent = '';
     } else if (remaining > 0) {
-      status.textContent = pct + '% ho gaya — ' + remaining + ' words aur chahiye';
+      status.textContent = pct + '% done — ' + remaining + ' more words needed';
       status.style.color = '#A98423';
     } else if (remaining >= -Math.ceil(target * 0.1)) {
-      status.textContent = '✓ Target ke andar/paas ho — perfect!';
+      status.textContent = '✓ Within/near target — perfect!';
       status.style.color = '#5D8A4E';
     } else {
-      status.textContent = '⚠ Limit se ' + Math.abs(remaining) + ' words zyada — kaat-chhaant karo';
+      status.textContent = '⚠ ' + Math.abs(remaining) + ' words over the limit — trim it down';
       status.style.color = '#B84F4F';
     }
   }

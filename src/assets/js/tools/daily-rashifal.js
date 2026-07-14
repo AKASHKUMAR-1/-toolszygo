@@ -2,36 +2,36 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var SIGNS = [
-    ['Mesh (Aries)', '♈'], ['Vrishabh (Taurus)', '♉'], ['Mithun (Gemini)', '♊'],
-    ['Kark (Cancer)', '♋'], ['Simha (Leo)', '♌'], ['Kanya (Virgo)', '♍'],
-    ['Tula (Libra)', '♎'], ['Vrishchik (Scorpio)', '♏'], ['Dhanu (Sagittarius)', '♐'],
-    ['Makar (Capricorn)', '♑'], ['Kumbh (Aquarius)', '♒'], ['Meen (Pisces)', '♓'],
+    ['Aries', '♈'], ['Taurus', '♉'], ['Gemini', '♊'],
+    ['Cancer', '♋'], ['Leo', '♌'], ['Virgo', '♍'],
+    ['Libra', '♎'], ['Scorpio', '♏'], ['Sagittarius', '♐'],
+    ['Capricorn', '♑'], ['Aquarius', '♒'], ['Pisces', '♓'],
   ];
   var LOVE = [
-    'Aaj rishton me mithaas rahegi — partner ke saath achha waqt bitao.',
-    'Kisi purane dost se mulaqat dil khush kar degi.',
-    'Pyar me thoda dhairya rakho — jaldi ka kaam shaitan ka.',
-    'Family ke saath waqt bitane ka din hai — sabka mood achha rahega.',
-    'Aaj kisi ki taareef aapka din bana degi.',
-    'Partner ki baat dhyan se suno — galatfehmi door hogi.',
+    'Sweetness fills your relationships today — spend quality time with your partner.',
+    'Meeting an old friend will bring a smile to your heart.',
+    'Be a little patient in love — haste makes waste.',
+    'A day to spend with family — everyone will be in a good mood.',
+    'A compliment from someone will make your day.',
+    'Listen to your partner carefully — a misunderstanding will clear up.',
   ];
   var CAREER = [
-    'Kaam me nayi zimmedari mil sakti hai — mauka haath se mat jaane do.',
-    'Aaj ka din mehnat ka fal dene wala hai — focus banaye rakho.',
-    'Paison ke maamle me aaj soch-samajh kar faisla lo.',
-    'Koi ruka hua kaam aaj poora ho sakta hai.',
-    'Naye ideas ko aaj aazmao — seniors impress honge.',
-    'Business me chhota sa fayda hone ke aasaar hain.',
+    'You may get a new responsibility at work — don\'t let the chance slip.',
+    'Today rewards your hard work — stay focused.',
+    'Think carefully before making money decisions today.',
+    'A stalled task may finally get completed today.',
+    'Try out new ideas today — seniors will be impressed.',
+    'There are signs of a small gain in business.',
   ];
   var HEALTH = [
-    'Sehat aaj achhi rahegi — bas paani zyada piyo.',
-    'Thodi walk ya exercise aaj bahut faydemand rahegi.',
-    'Khaane-peene me savdhani rakho — bahar ka khana avoid karo.',
-    'Neend poori karo — thakaan door ho jayegi.',
-    'Aaj stress kam lo — gehri saans aur meditation try karo.',
-    'Energy high rahegi — iska sahi istemaal karo.',
+    'Your health will be good today — just drink more water.',
+    'A short walk or workout will be very beneficial today.',
+    'Be careful with what you eat — avoid outside food.',
+    'Get enough sleep — your fatigue will fade away.',
+    'Take less stress today — try deep breathing and meditation.',
+    'Your energy will be high — put it to good use.',
   ];
-  var COLORS = ['Laal', 'Peela', 'Hara', 'Neela', 'Safed', 'Kesariya', 'Gulabi', 'Aasmani'];
+  var COLORS = ['Red', 'Yellow', 'Green', 'Blue', 'White', 'Saffron', 'Pink', 'Sky Blue'];
 
   function seededPick(arr, seed) {
     return arr[seed % arr.length];
@@ -51,8 +51,8 @@
     $('rf-date').textContent = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
     $('rf-text').innerHTML =
       '<p><strong>💕 Love/Family:</strong> ' + seededPick(LOVE, seed) + '</p>' +
-      '<p><strong>💼 Career/Paisa:</strong> ' + seededPick(CAREER, seed >> 3) + '</p>' +
-      '<p><strong>🍀 Sehat:</strong> ' + seededPick(HEALTH, seed >> 6) + '</p>';
+      '<p><strong>💼 Career/Money:</strong> ' + seededPick(CAREER, seed >> 3) + '</p>' +
+      '<p><strong>🍀 Health:</strong> ' + seededPick(HEALTH, seed >> 6) + '</p>';
     $('rf-lucky-num').textContent = (seed % 9) + 1;
     $('rf-lucky-color').textContent = seededPick(COLORS, seed >> 2);
     $('rf-rating').textContent = '★'.repeat(3 + (seed % 3));

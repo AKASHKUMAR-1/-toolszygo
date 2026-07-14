@@ -11,7 +11,7 @@
     var highlight = $('rx-highlight');
     var matchesEl = $('rx-matches');
     if (!pattern || !text) {
-      status.textContent = pattern ? 'Test text daalo' : 'Pattern daalo';
+      status.textContent = pattern ? 'Enter test text' : 'Enter a pattern';
       status.style.color = '#A39C8B';
       highlight.innerHTML = '';
       matchesEl.innerHTML = '';
@@ -52,13 +52,13 @@
       }
     }
     if (!matches.length) {
-      status.textContent = 'Koi match nahi mila';
+      status.textContent = 'No matches found';
       status.style.color = '#B84F4F';
       highlight.innerHTML = esc(text);
       matchesEl.innerHTML = '';
       return;
     }
-    status.textContent = '✓ ' + matches.length + ' match' + (matches.length > 1 ? 'es' : '') + ' mila';
+    status.textContent = '✓ ' + matches.length + ' match' + (matches.length > 1 ? 'es' : '') + ' found';
     status.style.color = '#5D8A4E';
     highlight.innerHTML = out;
     matchesEl.innerHTML = matches.slice(0, 50).map(function (mm, idx) {
@@ -69,7 +69,7 @@
         }).join(', ');
       }
       return '<div>' + (idx + 1) + '. "' + esc(mm[0]) + '" @ ' + mm.index + groups + '</div>';
-    }).join('') + (matches.length > 50 ? '<div>… aur ' + (matches.length - 50) + ' matches</div>' : '');
+    }).join('') + (matches.length > 50 ? '<div>… and ' + (matches.length - 50) + ' more matches</div>' : '');
   }
 
   ['rx-pattern', 'rx-text'].forEach(function (id) {

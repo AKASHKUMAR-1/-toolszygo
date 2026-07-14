@@ -10,7 +10,7 @@ module.exports = {
       </div>
     </div>
     <div class="field">
-      <textarea id="ew-text" placeholder="Apna essay yahan likho ya paste karo…" style="min-height:220px;"></textarea>
+      <textarea id="ew-text" placeholder="Write or paste your essay here…" style="min-height:220px;"></textarea>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
@@ -20,7 +20,7 @@ module.exports = {
     </div>
     <div class="stat-grid" style="margin-top:6px;">
       <div class="stat"><div class="num" id="ew-words">0</div><div class="lbl">Words</div></div>
-      <div class="stat"><div class="num" id="ew-remaining">500</div><div class="lbl">Bache hue</div></div>
+      <div class="stat"><div class="num" id="ew-remaining">500</div><div class="lbl">Remaining</div></div>
       <div class="stat"><div class="num" id="ew-chars">0</div><div class="lbl">Characters</div></div>
       <div class="stat"><div class="num" id="ew-paras">0</div><div class="lbl">Paragraphs</div></div>
     </div>
@@ -28,14 +28,14 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Apna word limit set karo (e.g. 500 words ka essay).',
-    'Essay likho ya paste karo — progress bar aur counts live update honge.',
-    'Limit cross hone pe warning dikh jayegi.',
+    'Set your word limit (e.g. a 500-word essay).',
+    'Write or paste your essay — the progress bar and counts update live.',
+    'A warning appears if you go over the limit.',
   ],
   faq: [
-    { q: 'Word limit ke kitna paas jaana chahiye?', a: 'Target ka 90–100% ideal hai — 500-word essay me 450–500 words. Bahut kam likhna incomplete lagta hai; exams me limit cross karne pe marks kat sakte hain (UPSC jaise exams me strict hai).' },
-    { q: 'Kya headings/references bhi count hote hain?', a: 'Ye tool sab visible text count karta hai. Aapke exam/assignment ke rules check karo — kuch me references/bibliography excluded hoti hai.' },
-    { q: 'UPSC essay ke liye kitne words?', a: 'UPSC mains essay 1000–1200 words (roughly), Section me 2 essays. Word limit ka strict paalan karo — examiner ko lambe essays pasand nahi aate.' },
-    { q: 'Mera essay save rahega kya?', a: 'Nahi — page refresh pe text chala jayega. Apna essay likhne ke liye Word/Docs use karo aur count check karne yahan paste karo.' },
+    { q: 'How close to the word limit should I get?', a: '90–100% of the target is ideal — 450–500 words for a 500-word essay. Writing too little looks incomplete; exceeding the limit in exams can cost marks (strict in exams like UPSC).' },
+    { q: 'Are headings/references counted too?', a: 'This tool counts all visible text. Check your exam/assignment rules — some exclude references/bibliography.' },
+    { q: 'How many words for a UPSC essay?', a: 'UPSC mains essays are roughly 1000–1200 words, 2 essays in the section. Stick strictly to the word limit — examiners don\'t like overly long essays.' },
+    { q: 'Will my essay be saved?', a: 'No — the text is lost on page refresh. Write your essay in Word/Docs and paste it here just to check the count.' },
   ],
 };

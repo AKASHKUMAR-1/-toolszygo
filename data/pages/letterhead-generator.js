@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Letterhead Details</div>
     <div class="field-row">
-      <div class="field"><label for="lh-company">Company / Business Naam</label><input type="text" id="lh-company" placeholder="e.g. Sharma & Associates"></div>
+      <div class="field"><label for="lh-company">Company / Business Name</label><input type="text" id="lh-company" placeholder="e.g. Sharma & Associates"></div>
       <div class="field"><label for="lh-tagline">Tagline (optional)</label><input type="text" id="lh-tagline" placeholder="e.g. Chartered Accountants"></div>
     </div>
     <div class="field">
@@ -30,13 +30,13 @@ module.exports = {
   <button class="btn btn-primary" id="lh-print">🖨 Print / Save as PDF</button>
 </div>`,
   howto: [
-    'Company naam, tagline, address aur contact details bharo.',
-    'Apna brand color choose karo — header/footer usi color me banega.',
-    '<strong>Print/Save as PDF</strong> karo — blank letterhead ready, jispe letters print kar sakte ho.',
+    'Fill in the company name, tagline, address, and contact details.',
+    'Choose your brand color — the header/footer will use that color.',
+    'Click <strong>Print/Save as PDF</strong> — a blank letterhead is ready, on which you can print letters.',
   ],
   faq: [
-    { q: 'Letterhead kaise use karoon?', a: 'PDF save karke Word me background ki tarah use karo, ya print karke uspe letters type/print karo. Professional communication, quotations aur official letters ke liye.' },
-    { q: 'Logo add kar sakta hoon?', a: 'Abhi text-based design hai — company naam bold styled hota hai. Logo support jald aayega.' },
-    { q: 'Kaunsa color professional lagta hai?', a: 'Navy blue, dark green ya maroon classic professional colors hain. Apne brand/industry se match karo — CA/legal me dark blue common hai.' },
+    { q: 'How do I use the letterhead?', a: 'Save the PDF and use it as a background in Word, or print it and type/print letters on it. Good for professional communication, quotations, and official letters.' },
+    { q: 'Can I add a logo?', a: 'It\'s currently a text-based design — the company name is styled in bold. Logo support is coming soon.' },
+    { q: 'Which color looks professional?', a: 'Navy blue, dark green, or maroon are classic professional colors. Match your brand/industry — dark blue is common for CA/legal firms.' },
   ],
 };

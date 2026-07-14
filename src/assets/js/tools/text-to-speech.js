@@ -23,7 +23,7 @@
   }
 
   if (!synth) {
-    $('tts-status').textContent = '⚠ Browser TTS support nahi karta';
+    $('tts-status').textContent = '⚠ Browser doesn\'t support TTS';
   } else {
     loadVoices();
     if (speechSynthesis.onvoiceschanged !== undefined) {
@@ -42,7 +42,7 @@
     if (!synth) return;
     var text = $('tts-text').value.trim();
     if (!text) {
-      $('tts-status').textContent = 'Pehle kuch likho!';
+      $('tts-status').textContent = 'Type something first!';
       return;
     }
     synth.cancel();
@@ -51,9 +51,9 @@
     if (voices[vi]) u.voice = voices[vi];
     u.rate = parseFloat($('tts-rate').value);
     u.pitch = parseFloat($('tts-pitch').value);
-    u.onstart = function () { $('tts-status').textContent = 'Bol raha hoon… 🗣'; };
-    u.onend = function () { $('tts-status').textContent = 'Ho gaya ✓'; };
-    u.onerror = function () { $('tts-status').textContent = 'Error aa gaya — dobara try karo'; };
+    u.onstart = function () { $('tts-status').textContent = 'Speaking… 🗣'; };
+    u.onend = function () { $('tts-status').textContent = 'Done ✓'; };
+    u.onerror = function () { $('tts-status').textContent = 'An error occurred — try again'; };
     synth.speak(u);
   });
 
@@ -61,7 +61,7 @@
     if (!synth) return;
     if (synth.paused) {
       synth.resume();
-      $('tts-status').textContent = 'Bol raha hoon… 🗣';
+      $('tts-status').textContent = 'Speaking… 🗣';
       this.textContent = '⏸ Pause';
     } else if (synth.speaking) {
       synth.pause();

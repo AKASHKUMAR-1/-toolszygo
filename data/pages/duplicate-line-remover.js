@@ -4,19 +4,19 @@ module.exports = {
   <div class="panel">
     <div class="panel-label">Input</div>
     <div class="field">
-      <textarea id="dl-input" placeholder="Apni list yahan paste karo — har line ek item…" style="min-height:200px;"></textarea>
+      <textarea id="dl-input" placeholder="Paste your list here — one item per line…" style="min-height:200px;"></textarea>
     </div>
     <div class="checks">
       <label><input type="checkbox" id="dl-case"> Case-insensitive matching (Apple = apple)</label>
-      <label><input type="checkbox" id="dl-trim" checked> Aage-peeche ke spaces ignore karo</label>
-      <label><input type="checkbox" id="dl-empty" checked> Khaali lines bhi hatao</label>
-      <label><input type="checkbox" id="dl-sort"> Result ko A–Z sort karo</label>
+      <label><input type="checkbox" id="dl-trim" checked> Ignore leading/trailing spaces</label>
+      <label><input type="checkbox" id="dl-empty" checked> Remove empty lines too</label>
+      <label><input type="checkbox" id="dl-sort"> Sort result A–Z</label>
     </div>
   </div>
   <div class="panel panel-result">
     <div class="panel-label">Result</div>
     <div id="dl-summary" style="font-size:13px;font-weight:600;color:#8A4B2A;"></div>
-    <textarea id="dl-output" readonly placeholder="unique lines yahan aayengi…" style="flex:1;min-height:200px;border:1px solid #F0E0CC;border-radius:10px;background:rgba(255,255,255,0.65);font-size:13.5px;line-height:1.5;color:#3D3929;padding:12px;resize:vertical;"></textarea>
+    <textarea id="dl-output" readonly placeholder="unique lines will appear here…" style="flex:1;min-height:200px;border:1px solid #F0E0CC;border-radius:10px;background:rgba(255,255,255,0.65);font-size:13.5px;line-height:1.5;color:#3D3929;padding:12px;resize:vertical;"></textarea>
   </div>
 </div>
 <div class="btn-row">
@@ -24,14 +24,14 @@ module.exports = {
   <button class="btn btn-secondary" id="dl-copy">Copy result</button>
 </div>`,
   howto: [
-    'Apni list paste karo — har line ek item (names, emails, URLs, kuch bhi).',
-    'Options choose karo — case-insensitive matching, space trimming, sorting.',
-    '<strong>Remove duplicates</strong> dabao — sirf unique lines bachegi, kitni duplicates hati ye bhi dikhega.',
+    'Paste your list — one item per line (names, emails, URLs, anything).',
+    'Choose options — case-insensitive matching, space trimming, sorting.',
+    'Click <strong>Remove duplicates</strong> — only unique lines remain, and it shows how many duplicates were removed.',
   ],
   faq: [
-    { q: 'Lines ka original order preserve hota hai?', a: 'Haan — har line ki pehli occurrence apni jagah rehti hai, sirf baad wali copies hatati hain. Agar A–Z order chahiye to "sort karo" option on kar lo.' },
-    { q: 'Case-insensitive matching kab use karein?', a: 'Jab "Apple", "apple" aur "APPLE" ko same maanna ho — jaise email lists me. Result me pehli occurrence ka original case rehta hai.' },
-    { q: 'Kitni badi list handle ho sakti hai?', a: 'Lakhs of lines aaram se — processing browser me instant hoti hai.' },
-    { q: 'Kya ye emails/URLs ki list ke liye kaam karega?', a: 'Haan — ye har line ko as-is compare karta hai. Email lists ke liye case-insensitive + trim dono on rakho, best results milenge.' },
+    { q: 'Is the original order of lines preserved?', a: 'Yes — the first occurrence of each line stays in place, only later copies are removed. Turn on "sort" if you want A–Z order.' },
+    { q: 'When should I use case-insensitive matching?', a: 'When "Apple", "apple", and "APPLE" should be treated as the same — like in email lists. The result keeps the original case of the first occurrence.' },
+    { q: 'How large a list can this handle?', a: 'Hundreds of thousands of lines with ease — processing is instant in the browser.' },
+    { q: 'Does this work for lists of emails/URLs?', a: 'Yes — it compares each line as-is. For email lists, keep both case-insensitive and trim on for the best results.' },
   ],
 };

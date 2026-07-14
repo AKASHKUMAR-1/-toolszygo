@@ -21,14 +21,14 @@ module.exports = {
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
-    <div class="panel-label">Result (EMI same rakh kar)</div>
+    <div class="panel-label">Result (keeping EMI the same)</div>
     <div class="result-big" id="lp-saved">—</div>
-    <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Interest bachega</div>
+    <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Interest saved</div>
     <div class="result-rows" style="margin-top:8px;">
       <div class="result-row"><span class="k">Current EMI</span><span class="v" id="lp-emi">—</span></div>
-      <div class="result-row"><span class="k">Purani remaining tenure</span><span class="v" id="lp-old-tenure">—</span></div>
-      <div class="result-row"><span class="k">Nayi tenure (prepay ke baad)</span><span class="v" id="lp-new-tenure">—</span></div>
-      <div class="result-row"><span class="k">EMIs kam hui</span><span class="v" id="lp-emis-cut">—</span></div>
+      <div class="result-row"><span class="k">Old remaining tenure</span><span class="v" id="lp-old-tenure">—</span></div>
+      <div class="result-row"><span class="k">New tenure (after prepayment)</span><span class="v" id="lp-new-tenure">—</span></div>
+      <div class="result-row"><span class="k">EMIs reduced by</span><span class="v" id="lp-emis-cut">—</span></div>
     </div>
   </div>
 </div>
@@ -37,15 +37,15 @@ module.exports = {
   <button class="btn btn-secondary" id="lp-copy">Copy result</button>
 </div>`,
   howto: [
-    'Loan ka abhi ka outstanding amount daalo (bank app me dikh jaata hai).',
-    'Interest rate aur remaining tenure daalo.',
-    'Jitna lump sum prepay karna chahte ho wo daalo.',
-    '<strong>Calculate</strong> dabao — kitna interest bachega aur kitni EMIs kam hongi dikh jayega.',
+    'Enter the loan\'s current outstanding amount (visible in your bank app).',
+    'Enter the interest rate and remaining tenure.',
+    'Enter the lump sum you want to prepay.',
+    'Click <strong>Calculate</strong> — see how much interest you\'ll save and how many EMIs are cut.',
   ],
   faq: [
-    { q: 'Prepayment se tenure kam hota hai ya EMI?', a: 'Aap choose kar sakte ho. Ye calculator tenure-reduction dikhata hai (EMI same) — isme interest ki bachat sabse zyada hoti hai. EMI kam karwana cash flow ke liye theek hai lekin bachat kam hoti hai.' },
-    { q: 'Kya home loan prepayment pe penalty lagti hai?', a: 'Floating rate home loans pe RBI ke rules ke hisaab se koi prepayment penalty nahi lagti. Fixed rate loans pe 2–4% penalty ho sakti hai — apne bank se confirm karo.' },
-    { q: 'Prepay karna better hai ya invest karna?', a: 'Thumb rule: agar expected investment return (post-tax) loan rate se zyada hai to invest karo, warna prepay. 8.5% ka loan prepay karna = guaranteed 8.5% tax-free return.' },
-    { q: 'Prepayment kab karna sabse faydemand hai?', a: 'Loan ke shuruaati saalon me — tab EMI ka bada hissa interest hota hai, isliye principal ghatane ka asar sabse zyada hota hai.' },
+    { q: 'Does prepayment reduce tenure or EMI?', a: 'You can choose either. This calculator shows tenure-reduction (EMI stays the same) — this gives the biggest interest savings. Reducing the EMI helps cash flow but saves less.' },
+    { q: 'Is there a penalty for home loan prepayment?', a: 'Per RBI rules, floating-rate home loans have no prepayment penalty. Fixed-rate loans may have a 2–4% penalty — confirm with your bank.' },
+    { q: 'Is it better to prepay or invest?', a: 'Rule of thumb: if the expected investment return (post-tax) exceeds the loan rate, invest; otherwise prepay. Prepaying an 8.5% loan = a guaranteed 8.5% tax-free return.' },
+    { q: 'When is prepayment most beneficial?', a: 'In the early years of the loan — that\'s when a bigger part of the EMI is interest, so reducing the principal has the biggest impact.' },
   ],
 };

@@ -21,21 +21,21 @@ module.exports = {
     </div>
   </div>
   <div class="panel panel-result">
-    <div class="panel-label">Schedule (pehle 12 months)</div>
+    <div class="panel-label">Schedule (first 12 months)</div>
     <div id="am-table" style="overflow:auto;max-height:340px;font-size:12px;"></div>
   </div>
 </div>
 <div class="btn-row">
-  <button class="btn btn-secondary" id="am-download">Poora schedule CSV me download karo</button>
+  <button class="btn btn-secondary" id="am-download">Download full schedule as CSV</button>
 </div>`,
   howto: [
-    'Loan amount, rate aur tenure daalo.',
-    'Pehle 12 months ka schedule (principal/interest/balance) dikh jayega.',
-    'Poora schedule (saare months) CSV me download kar sakte ho Excel me kholne ke liye.',
+    'Enter the loan amount, rate, and tenure.',
+    'The first 12 months\' schedule (principal/interest/balance) appears instantly.',
+    'Download the full schedule (all months) as CSV to open in Excel.',
   ],
   faq: [
-    { q: 'Amortization schedule kya hai?', a: 'Loan ki har EMI ka breakdown — kitna principal aur kitna interest gaya, aur balance kitna bacha — month by month.' },
-    { q: 'Shuru me interest zyada kyun katta hai?', a: 'Interest outstanding balance pe calculate hota hai — shuru me balance zyada hota hai isliye interest ka hissa zyada hota hai. Jaise-jaise balance ghatta hai, principal ka hissa badhta jaata hai.' },
-    { q: 'Prepayment se schedule kaise badalta hai?', a: 'Prepayment se principal seedha kam ho jaata hai, isliye baaki schedule me interest kam lagta hai aur loan jaldi khatam ho jaata hai. Iske liye humara Loan Prepayment Calculator use karo.' },
+    { q: 'What is an amortization schedule?', a: 'A breakdown of every EMI of the loan — how much went to principal and how much to interest, and how much balance remains — month by month.' },
+    { q: 'Why is more interest deducted at the start?', a: 'Interest is calculated on the outstanding balance — early on, the balance is higher so the interest portion is bigger. As the balance shrinks, the principal portion grows.' },
+    { q: 'How does prepayment change the schedule?', a: 'Prepayment directly reduces the principal, so less interest accrues over the rest of the schedule and the loan finishes sooner. Use our Loan Prepayment Calculator for this.' },
   ],
 };

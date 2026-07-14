@@ -2,12 +2,12 @@ module.exports = {
   workspace: `
 <div class="workspace">
   <div class="panel" style="min-height:0;">
-    <div class="panel-label">Signature Banao</div>
+    <div class="panel-label">Make a Signature</div>
     <div class="field">
       <label for="sig-mode">Mode</label>
       <select id="sig-mode">
-        <option value="draw" selected>✍ Draw karo (mouse/finger se)</option>
-        <option value="type">⌨ Type karo (stylish font me)</option>
+        <option value="draw" selected>✍ Draw (with mouse/finger)</option>
+        <option value="type">⌨ Type (in a stylish font)</option>
       </select>
     </div>
     <div id="sig-draw-area">
@@ -16,7 +16,7 @@ module.exports = {
         <div class="field">
           <label for="sig-color">Pen color</label>
           <select id="sig-color">
-            <option value="#1a1a2e" selected>Blue-black (pen jaisa)</option>
+            <option value="#1a1a2e" selected>Blue-black (pen-like)</option>
             <option value="#000000">Black</option>
             <option value="#1B4F72">Blue</option>
           </select>
@@ -29,7 +29,7 @@ module.exports = {
     </div>
     <div id="sig-type-area" style="display:none;">
       <div class="field">
-        <label for="sig-text">Apna naam</label>
+        <label for="sig-text">Your name</label>
         <input type="text" id="sig-text" placeholder="Akash Kumar">
       </div>
       <div class="field">
@@ -55,13 +55,13 @@ module.exports = {
   <button class="btn btn-primary" id="sig-download">Download PNG (transparent)</button>
 </div>`,
   howto: [
-    'Draw mode me box ke andar mouse/finger se signature banao, ya Type mode me naam likhkar stylish font choose karo.',
-    'Pen color aur width apne hisaab se set karo.',
-    '<strong>Download PNG</strong> dabao — transparent background wali signature milegi jo documents me paste ho sakti hai.',
+    'In Draw mode, sign inside the box with your mouse/finger; or in Type mode, enter your name and choose a stylish font.',
+    'Set the pen color and width to your preference.',
+    'Click <strong>Download PNG</strong> — get a transparent-background signature you can paste into documents.',
   ],
   faq: [
-    { q: 'Transparent PNG ka kya fayda hai?', a: 'Background transparent hone se signature kisi bhi document (Word, PDF, image) pe naturally baithti hai — white box nahi dikhta.' },
-    { q: 'Kya ye digitally valid signature hai?', a: 'Ye scanned signature jaisa image hai — normal documents, forms me chalta hai. Legal digital signature (DSC) alag cheez hai jo certificate authority se milti hai.' },
-    { q: 'PDF me signature kaise lagayein?', a: 'PNG download karke PDF editors (Adobe, ya online) me image insert karo. Word me Insert > Picture se laga kar PDF save karo.' },
+    { q: 'What\'s the benefit of a transparent PNG?', a: 'With a transparent background, the signature sits naturally on any document (Word, PDF, image) — no white box shows.' },
+    { q: 'Is this a legally valid digital signature?', a: 'This is an image like a scanned signature — fine for normal documents and forms. A legal digital signature (DSC) is different and comes from a certificate authority.' },
+    { q: 'How do I add the signature to a PDF?', a: 'Download the PNG and insert the image in a PDF editor (Adobe, or online). In Word, use Insert > Picture and save as PDF.' },
   ],
 };

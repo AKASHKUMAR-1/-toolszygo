@@ -10,7 +10,7 @@
     var ext = $('dom-ext').value;
     var box = $('dom-results');
     if (!kw) {
-      box.innerHTML = '<div style="color:#A39C8B;font-family:var(--sans);">Pehle keyword daalo</div>';
+      box.innerHTML = '<div style="color:#A39C8B;font-family:var(--sans);">Enter a keyword first</div>';
       return;
     }
     var ideas = [];

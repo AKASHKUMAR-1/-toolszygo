@@ -58,7 +58,7 @@ ${items}
     </div>
   </div>
   <div class="tool-list" id="tool-list">
-    <div class="no-results" id="no-results" style="display:none;">Koi tool nahi mila<br>&ldquo;<span class="q"></span>&rdquo; ke liye</div>
+    <div class="no-results" id="no-results" style="display:none;">No tools found for<br>&ldquo;<span class="q"></span>&rdquo;</div>
 ${groups}
   </div>
   <div class="theme-picker" id="theme-picker">
@@ -74,7 +74,7 @@ ${groups}
 function footer() {
   const year = new Date().getFullYear();
   return `<footer class="site-footer">
-  <div>© ${year} ${SITE_NAME} — sab tools free, browser me hi chalte hain.</div>
+  <div>© ${year} ${SITE_NAME} — all tools free, run entirely in your browser.</div>
   <div><a href="/">Home</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="/contact.html">Contact</a></div>
 </footer>`;
 }
@@ -149,19 +149,19 @@ function homePage() {
   const bodyMain = `
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-pill"><span class="dot"></span> Sab kuch free, sab kuch ek jagah</div>
-    <h1>Har kaam ka tool,<br>ek hi jagah.</h1>
-    <p>Text, image, developer, calculator — ${allTools.length} simple tools jo browser me hi chalte hain. No signup, no clutter.</p>
+    <div class="hero-pill"><span class="dot"></span> 100% free, all in one place</div>
+    <h1>Every tool you need,<br>in one place.</h1>
+    <p>Text, image, developer, calculator — ${allTools.length} simple tools that run entirely in your browser. No signup, no clutter.</p>
     <div class="hero-search">
       ${svgSearch(17, '#B8AD97')}
-      <input id="hero-search" type="text" placeholder="Kya karna hai aaj? e.g. &ldquo;image compress&rdquo;" autocomplete="off">
+      <input id="hero-search" type="text" placeholder="What do you want to do today? e.g. &ldquo;image compress&rdquo;" autocomplete="off">
     </div>
   </div>
 </div>
 <div class="home-content">
   <div class="section-head" id="popular-head">
     <h2>Popular tools</h2>
-    <span class="sub">sabse zyada use hone wale</span>
+    <span class="sub">most used tools</span>
   </div>
   <div class="tool-grid" id="popular-grid">
 ${popularCards}
@@ -237,7 +237,7 @@ function toolPage(tool, def) {
     <div class="tool-header-chip" style="background:${tool.chipBg};color:${tool.chipFg};">${tool.initials}</div>
     <div>
       <h1>${esc(tool.name)}</h1>
-      <div class="meta">${esc(tool.category)} · Free · Browser me hi chalta hai</div>
+      <div class="meta">${esc(tool.category)} · Free · Runs entirely in your browser</div>
     </div>
   </div>
   <p class="tool-desc">${esc(tool.desc)}</p>
@@ -339,17 +339,17 @@ function build() {
   fs.writeFileSync(path.join(dist, 'about.html'), simplePage('About', '/about.html', `
 <div class="seo-content" style="margin-top:0;">
 <h2>About ${SITE_NAME}</h2>
-<p style="font-size:14.5px;color:#6E6552;line-height:1.7;">${SITE_NAME} ek free online tools website hai jahan aapko rozmarra ke kaam ke ${allTools.length} tools milte hain — finance calculators, PDF tools, image tools, text tools aur developer utilities. Koi signup nahi, koi charge nahi. Zyada tar tools aapke browser me hi chalte hain, matlab aapka data aapke device se bahar nahi jaata.</p>
+<p style="font-size:14.5px;color:#6E6552;line-height:1.7;">${SITE_NAME} is a free online tools website with ${allTools.length} tools for everyday tasks — finance calculators, PDF tools, image tools, text tools and developer utilities. No signup, no charges. Most tools run entirely in your browser, which means your data never leaves your device.</p>
 </div>`));
   fs.writeFileSync(path.join(dist, 'privacy.html'), simplePage('Privacy Policy', '/privacy.html', `
 <div class="seo-content" style="margin-top:0;">
 <h2>Privacy Policy</h2>
-<p style="font-size:14.5px;color:#6E6552;line-height:1.7;">${SITE_NAME} ke zyada tar tools aapke browser me hi process hote hain — aapki files ya data hamare server pe upload nahi hota. Hum Google AdSense ads dikhate hain; Google apni ad personalization ke liye cookies use kar sakta hai. Details ke liye Google ki privacy policy dekhein. Hum khud koi personal data collect ya store nahi karte.</p>
+<p style="font-size:14.5px;color:#6E6552;line-height:1.7;">Most ${SITE_NAME} tools are processed entirely in your browser — your files and data are never uploaded to our server. We show Google AdSense ads; Google may use cookies for ad personalization. See Google's privacy policy for details. We do not collect or store any personal data ourselves.</p>
 </div>`));
   fs.writeFileSync(path.join(dist, 'contact.html'), simplePage('Contact', '/contact.html', `
 <div class="seo-content" style="margin-top:0;">
 <h2>Contact</h2>
-<p style="font-size:14.5px;color:#6E6552;line-height:1.7;">Koi suggestion, bug ya business query? Email karein: <a href="mailto:akash906kr@gmail.com" style="color:#D97757;">akash906kr@gmail.com</a></p>
+<p style="font-size:14.5px;color:#6E6552;line-height:1.7;">Have a suggestion, bug report or business query? Email us: <a href="mailto:akash906kr@gmail.com" style="color:#D97757;">akash906kr@gmail.com</a></p>
 </div>`));
 
   // robots + sitemap

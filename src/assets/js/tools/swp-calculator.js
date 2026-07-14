@@ -13,9 +13,9 @@
     $('swp-vs').textContent = toolsdoINR(Math.round(monthlyReturn)) + ' return vs ' + toolsdoINR(w) + ' withdrawal';
 
     if (w <= monthlyReturn) {
-      $('swp-duration').textContent = 'Kabhi khatam nahi hoga! 🎉';
-      $('swp-duration-label').textContent = 'Withdrawal returns se kam hai — corpus badhta rahega';
-      $('swp-total').textContent = toolsdoINR(w * 12) + '/saal, hamesha';
+      $('swp-duration').textContent = 'Never runs out! 🎉';
+      $('swp-duration-label').textContent = 'Withdrawal is below returns — the corpus keeps growing';
+      $('swp-total').textContent = toolsdoINR(w * 12) + '/year, forever';
       lastSummary = 'SWP: ' + toolsdoINR(corpus) + ' corpus @ ' + rate + '%, withdrawing ' + toolsdoINR(w) +
         '/month — corpus never depletes (monthly return ' + toolsdoINR(Math.round(monthlyReturn)) + ')';
       return;
@@ -29,9 +29,9 @@
       months++;
     }
     var y = Math.floor(months / 12), mo = months % 12;
-    var dur = (y ? y + ' saal ' : '') + (mo ? mo + ' mahine' : '');
-    $('swp-duration').textContent = months >= 1200 ? '100+ saal' : dur.trim();
-    $('swp-duration-label').textContent = 'Corpus kitna chalega';
+    var dur = (y ? y + ' years ' : '') + (mo ? mo + ' months' : '');
+    $('swp-duration').textContent = months >= 1200 ? '100+ years' : dur.trim();
+    $('swp-duration-label').textContent = 'How long the corpus lasts';
     $('swp-total').textContent = toolsdoINR(Math.round(total));
     lastSummary = 'SWP: ' + toolsdoINR(corpus) + ' @ ' + rate + '%, ' + toolsdoINR(w) + '/month | Lasts: ' +
       dur.trim() + ' | Total withdrawn: ' + toolsdoINR(Math.round(total));

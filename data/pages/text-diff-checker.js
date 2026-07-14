@@ -4,13 +4,13 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Original Text</div>
     <div class="field">
-      <textarea id="diff-a" placeholder="Pehla (original) text…" spellcheck="false" style="min-height:170px;font-family:monospace;font-size:13px;"></textarea>
+      <textarea id="diff-a" placeholder="First (original) text…" spellcheck="false" style="min-height:170px;font-family:monospace;font-size:13px;"></textarea>
     </div>
   </div>
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Changed Text</div>
     <div class="field">
-      <textarea id="diff-b" placeholder="Doosra (changed) text…" spellcheck="false" style="min-height:170px;font-family:monospace;font-size:13px;"></textarea>
+      <textarea id="diff-b" placeholder="Second (changed) text…" spellcheck="false" style="min-height:170px;font-family:monospace;font-size:13px;"></textarea>
     </div>
   </div>
 </div>
@@ -23,14 +23,14 @@ module.exports = {
   <div id="diff-output" style="font-family:monospace;font-size:12.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;"></div>
 </div>`,
   howto: [
-    'Pehle box me original text paste karo.',
-    'Doosre box me changed/naya text paste karo.',
-    '<strong>Compare texts</strong> dabao — hati hui lines laal me, nayi lines hari me dikh jayengi.',
+    'Paste the original text in the first box.',
+    'Paste the changed/new text in the second box.',
+    'Click <strong>Compare texts</strong> — removed lines show in red, new lines in green.',
   ],
   faq: [
-    { q: 'Diff kaise calculate hota hai?', a: 'Line-by-line comparison hota hai LCS (Longest Common Subsequence) algorithm se — wahi approach jo Git jaise version control tools use karte hain.' },
-    { q: 'Kya mera text kahin upload hota hai?', a: 'Nahi — comparison poori tarah browser me hota hai. Contracts, code ya confidential documents compare karna bhi safe hai.' },
-    { q: 'Colors ka kya matlab hai?', a: 'Laal background wali lines original me thi lekin nayi version me nahi (removed). Hari lines nayi version me add hui hain. Bina color wali lines dono me same hain.' },
-    { q: 'Word-level diff milega kya?', a: 'Abhi line-level diff hai jo zyada tar cases me kaafi hai. Kisi line me chhota sa change hai to wo line removed+added dono me dikhegi.' },
+    { q: 'How is the diff calculated?', a: 'A line-by-line comparison using the LCS (Longest Common Subsequence) algorithm — the same approach version control tools like Git use.' },
+    { q: 'Is my text uploaded anywhere?', a: 'No — the comparison happens entirely in the browser. It\'s safe to compare contracts, code, or confidential documents.' },
+    { q: 'What do the colors mean?', a: 'Red-background lines were in the original but not the new version (removed). Green lines were added in the new version. Uncolored lines are the same in both.' },
+    { q: 'Is there a word-level diff?', a: 'Currently it\'s a line-level diff, which is enough for most cases. If a line has a small change, that line appears in both removed and added.' },
   ],
 };

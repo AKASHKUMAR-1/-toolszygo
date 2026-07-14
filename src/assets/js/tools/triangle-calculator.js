@@ -20,7 +20,7 @@
     try {
       // SSS
       if (a && b && c) {
-        if (a + b <= c || a + c <= b || b + c <= a) throw new Error('Invalid triangle — sides ka sum theek nahi hai');
+        if (a + b <= c || a + c <= b || b + c <= a) throw new Error('Invalid triangle — the sum of two sides must exceed the third');
         A = toDeg(Math.acos((b * b + c * c - a * a) / (2 * b * c)));
         B = toDeg(Math.acos((a * a + c * c - b * b) / (2 * a * c)));
         C = 180 - A - B;
@@ -45,24 +45,24 @@
         if (a) { var k = a / Math.sin(toRad(A)); b = k * Math.sin(toRad(B)); c = k * Math.sin(toRad(C)); }
         else if (b) { var k2 = b / Math.sin(toRad(B)); a = k2 * Math.sin(toRad(A)); c = k2 * Math.sin(toRad(C)); }
         else if (c) { var k3 = c / Math.sin(toRad(C)); a = k3 * Math.sin(toRad(A)); b = k3 * Math.sin(toRad(B)); }
-        else throw new Error('Kam se kam ek side chahiye');
+        else throw new Error('At least one side is required');
       } else if (A && C && !B) {
         B = 180 - A - C;
         if (a) { var m = a / Math.sin(toRad(A)); b = m * Math.sin(toRad(B)); c = m * Math.sin(toRad(C)); }
         else if (b) { var m2 = b / Math.sin(toRad(B)); a = m2 * Math.sin(toRad(A)); c = m2 * Math.sin(toRad(C)); }
         else if (c) { var m3 = c / Math.sin(toRad(C)); a = m3 * Math.sin(toRad(A)); b = m3 * Math.sin(toRad(B)); }
-        else throw new Error('Kam se kam ek side chahiye');
+        else throw new Error('At least one side is required');
       } else if (B && C && !A) {
         A = 180 - B - C;
         if (a) { var n = a / Math.sin(toRad(A)); b = n * Math.sin(toRad(B)); c = n * Math.sin(toRad(C)); }
         else if (b) { var n2 = b / Math.sin(toRad(B)); a = n2 * Math.sin(toRad(A)); c = n2 * Math.sin(toRad(C)); }
         else if (c) { var n3 = c / Math.sin(toRad(C)); a = n3 * Math.sin(toRad(A)); b = n3 * Math.sin(toRad(B)); }
-        else throw new Error('Kam se kam ek side chahiye');
+        else throw new Error('At least one side is required');
       } else {
-        throw new Error('Ye combination supported nahi hai — 3 sides, 2 sides+angle, ya 2 angles+side try karo');
+        throw new Error('This combination isn\'t supported — try 3 sides, 2 sides+angle, or 2 angles+side');
       }
 
-      if (Math.abs(A + B + C - 180) > 0.5) throw new Error('Angles ka sum 180° nahi hai — invalid input');
+      if (Math.abs(A + B + C - 180) > 0.5) throw new Error('Angles don\'t sum to 180° — invalid input');
 
       var area = 0.5 * a * b * Math.sin(toRad(C));
       var perimeter = a + b + c;

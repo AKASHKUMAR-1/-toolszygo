@@ -25,7 +25,7 @@
 
   async function extract(file) {
     fname = file.name.replace(/\.pdf$/i, '');
-    $('pe-status').textContent = 'Table data nikal rahe hain…';
+    $('pe-status').textContent = 'Extracting table data…';
     try {
       var pdf = await pdfjsLib.getDocument({ data: await file.arrayBuffer() }).promise;
       var allRows = [];
@@ -57,7 +57,7 @@
         if (p < pdf.numPages) allRows.push('');
       }
       $('pe-output').value = allRows.join('\n');
-      $('pe-status').textContent = '✓ ' + allRows.filter(Boolean).length + ' rows extract hui — check karke download karo';
+      $('pe-status').textContent = '✓ ' + allRows.filter(Boolean).length + ' rows extracted — review and download';
       $('pe-download').disabled = false;
     } catch (e) {
       $('pe-status').textContent = 'Fail: ' + (e.message || 'password-protected ya scanned PDF?');

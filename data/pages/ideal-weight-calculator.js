@@ -13,7 +13,7 @@ module.exports = {
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
-    <div class="panel-label">Ideal Weight (formula ke hisaab se)</div>
+    <div class="panel-label">Ideal Weight (by formula)</div>
     <div class="result-rows">
       <div class="result-row"><span class="k">Devine Formula</span><span class="v" id="iw-devine">—</span></div>
       <div class="result-row"><span class="k">Robinson Formula</span><span class="v" id="iw-robinson">—</span></div>
@@ -25,12 +25,12 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Gender aur height daalo.',
-    '4 standard medical formulas se ideal weight turant calculate ho jayegi — sabka average bhi dikhega.',
+    'Enter gender and height.',
+    'Ideal weight is calculated instantly using 4 standard medical formulas — with an average shown too.',
   ],
   faq: [
-    { q: 'Ye 4 formulas alag result kyun dete hain?', a: 'Har formula alag dashak me alag population data se banaya gaya tha — thoda variation normal hai. Isliye average lena sabse balanced approach hai.' },
-    { q: 'Kya body frame (patla/moti haddi) ka effect hota hai?', a: 'Haan — ye formulas sirf height pe based hain, body frame/muscle mass consider nahi karte. Athletic build wale logo ka "ideal" weight formula se zyada ho sakta hai aur ye bilkul normal hai.' },
-    { q: 'BMI aur ideal weight me kya farak hai?', a: 'BMI ek range deta hai (healthy 18.5-24.9), ideal weight calculators ek specific number dete hain. Dono ko saath me dekhna better hota hai.' },
+    { q: 'Why do these 4 formulas give different results?', a: 'Each formula was built in a different decade using different population data — some variation is normal. Taking the average is the most balanced approach.' },
+    { q: 'Does body frame (small/large) matter?', a: 'Yes — these formulas are based only on height and don\'t account for body frame/muscle mass. An athletic build person\'s "ideal" weight can exceed the formula\'s number, and that\'s completely normal.' },
+    { q: 'What\'s the difference between BMI and ideal weight?', a: 'BMI gives a range (healthy 18.5-24.9), ideal weight calculators give a specific number. It\'s better to look at both together.' },
   ],
 };

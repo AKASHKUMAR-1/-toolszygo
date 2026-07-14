@@ -5,7 +5,7 @@
   function parse() {
     var raw = $('json-input').value.trim();
     if (!raw) {
-      setStatus('Pehle JSON paste karo', false);
+      setStatus('Paste JSON first', false);
       return null;
     }
     try {

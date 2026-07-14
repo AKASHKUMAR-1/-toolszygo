@@ -32,14 +32,14 @@ module.exports = {
   <button class="btn btn-secondary" id="tz-swap">⇄ Swap zones</button>
 </div>`,
   howto: [
-    'Date aur time daalo (default abhi ka time hai).',
-    'From/To timezones choose karo — IST, EST, GMT, Dubai, Singapore, 25+ zones.',
-    '<strong>Convert</strong> dabao — doosre zone ka exact time aur difference dikh jayega.',
+    'Enter the date and time (defaults to the current time).',
+    'Choose the From/To timezones — IST, EST, GMT, Dubai, Singapore, 25+ zones.',
+    'Click <strong>Convert</strong> — see the exact time in the other zone and the difference.',
   ],
   faq: [
-    { q: 'IST aur EST me kitna difference hai?', a: 'IST, EST (New York winter) se 10.5 ghante aage hai; daylight saving (EDT, summer) me 9.5 ghante. Ye tool DST automatically handle karta hai — isliye manual +/- karne se zyada accurate hai.' },
-    { q: 'Daylight saving time (DST) handle hota hai?', a: 'Haan — browser ka timezone database use hota hai jo DST rules janta hai. US/Europe ke zones me summer-winter ka difference khud adjust ho jaata hai.' },
-    { q: 'Meeting time plan karne ke liye kaise use karein?', a: 'Apna proposed time IST me daalo, To me client ka zone choose karo — unka local time dikh jayega. 9 AM–6 PM me aata hai to meeting set karo.' },
-    { q: 'India me DST kyun nahi hota?', a: 'India equator ke paas hai isliye seasons me daylight ka difference kam hota hai — DST ka fayda nahi. IST saal bhar UTC+5:30 rehta hai.' },
+    { q: 'What\'s the difference between IST and EST?', a: 'IST is 10.5 hours ahead of EST (New York winter); 9.5 hours ahead during daylight saving (EDT, summer). This tool handles DST automatically — so it\'s more accurate than manually adding/subtracting.' },
+    { q: 'Is daylight saving time (DST) handled?', a: 'Yes — the browser\'s timezone database is used, which knows DST rules. The summer-winter difference in US/Europe zones adjusts automatically.' },
+    { q: 'How do I use this to plan a meeting time?', a: 'Enter your proposed time in IST, choose the client\'s zone in To — their local time appears. If it falls within 9 AM–6 PM, set the meeting.' },
+    { q: 'Why doesn\'t India observe DST?', a: 'India is close to the equator, so the seasonal difference in daylight is small — DST offers no benefit. IST stays UTC+5:30 all year.' },
   ],
 };

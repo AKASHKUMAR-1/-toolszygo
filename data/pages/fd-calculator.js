@@ -40,15 +40,15 @@ module.exports = {
   <button class="btn btn-secondary" id="fd-copy">Copy result</button>
 </div>`,
   howto: [
-    'FD me jitna paisa daalna hai wo amount daalo.',
-    'Bank ka annual interest rate daalo (e.g. 7%).',
-    'Tenure years ya months me choose karo.',
-    '<strong>Calculate</strong> dabao — maturity amount aur total interest dikh jayega.',
+    'Enter the amount you want to deposit in the FD.',
+    'Enter the bank\'s annual interest rate (e.g. 7%).',
+    'Choose the tenure in years or months.',
+    'Click <strong>Calculate</strong> — see the maturity amount and total interest.',
   ],
   faq: [
-    { q: 'FD interest kaise compound hota hai?', a: 'Indian banks me FD interest quarterly compound hota hai: Maturity = P × (1 + r/4)^(4×t). Ye calculator yehi standard method use karta hai.' },
-    { q: 'FD interest pe tax lagta hai?', a: 'Haan — FD interest aapki income me add hokar slab rate se taxable hai. Saal me ₹40,000 (senior citizens ₹50,000) se zyada interest pe bank TDS bhi kaatta hai.' },
-    { q: 'Premature withdrawal pe kya hota hai?', a: 'FD tudwane pe banks 0.5–1% penalty lagate hain aur jitna time FD chali usi ke applicable rate se interest milta hai. Exact rules bank pe depend karte hain.' },
-    { q: 'FD vs SIP — kya choose karein?', a: 'FD guaranteed return deta hai, capital safe rehta hai — short-term goals ke liye best. SIP/mutual funds long-term (5+ saal) me zyada return de sakte hain lekin market risk ke saath.' },
+    { q: 'How does FD interest compound?', a: 'Indian banks compound FD interest quarterly: Maturity = P × (1 + r/4)^(4×t). This calculator uses that same standard method.' },
+    { q: 'Is FD interest taxed?', a: 'Yes — FD interest is added to your income and taxed at your slab rate. Banks also deduct TDS if interest exceeds ₹40,000/year (₹50,000 for senior citizens).' },
+    { q: 'What happens on premature withdrawal?', a: 'Banks charge a 0.5–1% penalty for breaking an FD, and interest is paid at the rate applicable for the actual duration held. Exact rules depend on the bank.' },
+    { q: 'FD vs SIP — which should I choose?', a: 'FDs give a guaranteed return with safe capital — best for short-term goals. SIPs/mutual funds can give higher returns long-term (5+ years) but carry market risk.' },
   ],
 };

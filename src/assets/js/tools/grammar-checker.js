@@ -14,7 +14,7 @@
     var text = $('gc-input').value;
     var issues = [];
     if (!text.trim()) {
-      $('gc-summary').textContent = 'Pehle text paste karo';
+      $('gc-summary').textContent = 'Paste text first';
       $('gc-issues').innerHTML = '';
       return;
     }
@@ -35,26 +35,26 @@
     sentences.forEach(function (s) {
       var first = s.trim().charAt(0);
       if (first && /[a-z]/.test(first)) {
-        issues.push({ type: 'Capital missing', found: s.trim().slice(0, 30) + '…', fix: 'Sentence capital letter se shuru karo' });
+        issues.push({ type: 'Capital missing', found: s.trim().slice(0, 30) + '…', fix: 'Start the sentence with a capital letter' });
       }
     });
     // double spaces
-    if (/  +/.test(text)) issues.push({ type: 'Double space', found: 'text me multiple spaces hain', fix: 'Single space use karo' });
+    if (/  +/.test(text)) issues.push({ type: 'Double space', found: 'multiple spaces in the text', fix: 'Use a single space' });
     // space before punctuation
-    if (/\s+[,.!?;:]/.test(text)) issues.push({ type: 'Space before punctuation', found: 'e.g. "word ,"', fix: 'Punctuation se pehle space hatao' });
+    if (/\s+[,.!?;:]/.test(text)) issues.push({ type: 'Space before punctuation', found: 'e.g. "word ,"', fix: 'Remove the space before punctuation' });
     // missing space after comma
     var reC = /,(?=[A-Za-z])/g;
-    if (reC.test(text)) issues.push({ type: 'No space after comma', found: 'e.g. "word,next"', fix: 'Comma ke baad space do' });
+    if (reC.test(text)) issues.push({ type: 'No space after comma', found: 'e.g. "word,next"', fix: 'Add a space after the comma' });
     // misspellings
     Object.keys(MISSPELL).forEach(function (bad) {
       var rx = new RegExp('\\b' + bad + '\\b', 'gi');
       if (rx.test(text)) issues.push({ type: 'Spelling', found: bad, fix: MISSPELL[bad] });
     });
     // multiple punctuation
-    if (/[!?]{2,}/.test(text)) issues.push({ type: 'Multiple punctuation', found: '!! ya ??', fix: 'Ek hi kaafi hai formal writing me' });
+    if (/[!?]{2,}/.test(text)) issues.push({ type: 'Multiple punctuation', found: '!! or ??', fix: 'One is enough in formal writing' });
 
     if (!issues.length) {
-      $('gc-summary').textContent = '✓ Koi common mistake nahi mili — badhiya!';
+      $('gc-summary').textContent = '✓ No common mistakes found — great!';
       $('gc-summary').style.color = '#5D8A4E';
       $('gc-issues').innerHTML = '';
       return;

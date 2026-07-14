@@ -14,7 +14,7 @@
     var raw = $('jc-input').value.trim();
     var status = $('jc-status');
     if (!raw) {
-      status.textContent = 'Pehle JSON paste karo';
+      status.textContent = 'Paste JSON first';
       status.style.color = '#B84F4F';
       return;
     }

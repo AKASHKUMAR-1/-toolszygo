@@ -14,12 +14,12 @@
 
     var firstInterest = bal * r;
     if (pay <= firstInterest) {
-      $('cci-months').textContent = 'Kabhi nahi!';
+      $('cci-months').textContent = 'Never!';
       $('cci-total').textContent = '∞';
       $('cci-interest').textContent = '∞';
       warning.style.display = '';
-      warning.textContent = '⚠ Aapki payment (' + toolsdoINR(pay) + ') sirf interest (' + toolsdoINR(Math.round(firstInterest)) +
-        '/month) se bhi kam/barabar hai — balance kabhi khatam nahi hoga. Payment badhao!';
+      warning.textContent = '⚠ Your payment (' + toolsdoINR(pay) + ') is less than or equal to just the interest (' + toolsdoINR(Math.round(firstInterest)) +
+        '/month) — the balance will never clear. Increase your payment!';
       lastSummary = '';
       return;
     }
@@ -34,7 +34,7 @@
     }
     var totalPaid = bal + totalInterest;
     var y = Math.floor(months / 12), mo = months % 12;
-    var dur = (y ? y + ' saal ' : '') + (mo ? mo + ' mahine' : '');
+    var dur = (y ? y + ' years ' : '') + (mo ? mo + ' months' : '');
     $('cci-months').textContent = dur.trim();
     $('cci-total').textContent = toolsdoINR(Math.round(totalPaid));
     $('cci-interest').textContent = toolsdoINR(Math.round(totalInterest)) + ' (' + Math.round(totalInterest / bal * 100) + '% of balance)';

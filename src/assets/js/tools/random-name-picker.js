@@ -16,7 +16,7 @@
       .filter(function (n) { return n; });
     var count = Math.max(1, parseInt($('rnp-count').value, 10) || 1);
     if (!names.length) {
-      $('rnp-result').textContent = 'Pehle names daalo!';
+      $('rnp-result').textContent = 'Enter names first!';
       $('rnp-result').style.fontSize = '18px';
       return;
     }

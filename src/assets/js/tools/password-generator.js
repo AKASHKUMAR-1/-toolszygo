@@ -24,7 +24,7 @@
     if ($('pw-nums').checked) pools.push(SETS.nums);
     if ($('pw-syms').checked) pools.push(SETS.syms);
     if (!pools.length) {
-      $('pw-result').textContent = 'Kam se kam ek character type choose karo';
+      $('pw-result').textContent = 'Choose at least one character type';
       $('pw-strength').textContent = '—';
       current = '';
       return;

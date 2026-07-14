@@ -19,7 +19,7 @@ module.exports = {
       <label for="hra-city">City</label>
       <select id="hra-city">
         <option value="metro" selected>Metro (Delhi, Mumbai, Kolkata, Chennai)</option>
-        <option value="nonmetro">Non-metro (baaki sab cities)</option>
+        <option value="nonmetro">Non-metro (all other cities)</option>
       </select>
     </div>
   </div>
@@ -30,7 +30,7 @@ module.exports = {
     <div class="result-rows" style="margin-top:8px;">
       <div class="result-row"><span class="k">HRA received (annual)</span><span class="v" id="hra-total">—</span></div>
       <div class="result-row"><span class="k">Taxable HRA</span><span class="v" id="hra-taxable">—</span></div>
-      <div class="result-row"><span class="k">Exemption ka basis</span><span class="v" id="hra-basis" style="font-weight:400;font-size:12px;max-width:55%;">—</span></div>
+      <div class="result-row"><span class="k">Exemption basis</span><span class="v" id="hra-basis" style="font-weight:400;font-size:12px;max-width:55%;">—</span></div>
     </div>
   </div>
 </div>
@@ -39,15 +39,15 @@ module.exports = {
   <button class="btn btn-secondary" id="hra-copy">Copy result</button>
 </div>`,
   howto: [
-    'Apni monthly basic salary (+DA agar hai) daalo.',
-    'Salary slip me jo HRA milta hai wo daalo.',
-    'Jitna rent dete ho wo daalo aur city type choose karo.',
-    '<strong>Calculate</strong> dabao — kitna HRA tax-free hai dikh jayega.',
+    'Enter your monthly basic salary (+DA if any).',
+    'Enter the HRA you receive on your salary slip.',
+    'Enter the rent you pay and choose the city type.',
+    'Click <strong>Calculate</strong> — see how much HRA is tax-free.',
   ],
   faq: [
-    { q: 'HRA exemption kaise calculate hoti hai?', a: 'Teeno me se SABSE KAM: (1) actual HRA received, (2) rent paid − basic ka 10%, (3) metro me basic ka 50% / non-metro me 40%. Ye calculator teeno compare karke exemption batata hai.' },
-    { q: 'HRA exemption kis regime me milti hai?', a: 'Sirf OLD regime me. New regime me HRA exemption nahi hai — isliye zyada rent dene walo ke liye old regime aksar better hota hai. Income Tax Calculator se dono compare karo.' },
-    { q: 'Rent parents ko de sakte hain?', a: 'Haan — agar ghar parents ke naam pe hai to unhe rent dekar HRA claim kar sakte ho. Rent agreement + bank transfer rakho, aur parents ko wo rent apni ITR me dikhana hoga.' },
-    { q: 'Landlord ka PAN kab chahiye?', a: 'Annual rent ₹1 lakh (matlab ~₹8,333/month) se zyada hone pe employer ko landlord ka PAN dena zaroori hai.' },
+    { q: 'How is HRA exemption calculated?', a: 'The LOWEST of three: (1) actual HRA received, (2) rent paid − 10% of basic, (3) 50% of basic in metros / 40% in non-metros. This calculator compares all three to find the exemption.' },
+    { q: 'Which tax regime allows HRA exemption?', a: 'Only the OLD regime. The new regime has no HRA exemption — so the old regime is often better for those paying high rent. Compare both with our Income Tax Calculator.' },
+    { q: 'Can I pay rent to my parents?', a: 'Yes — if the house is in your parents\' name, you can pay them rent and claim HRA. Keep a rent agreement + bank transfer, and your parents must show that rent in their ITR.' },
+    { q: 'When is the landlord\'s PAN required?', a: 'If annual rent exceeds ₹1 lakh (~₹8,333/month), you must provide the landlord\'s PAN to your employer.' },
   ],
 };

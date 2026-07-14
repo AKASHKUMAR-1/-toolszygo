@@ -35,12 +35,12 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Pehli fraction ka numerator/denominator daalo, operation choose karo, doosri fraction daalo.',
-    'Result automatically simplify hokar (lowest terms me) milega, decimal value ke saath.',
+    'Enter the first fraction\'s numerator/denominator, choose an operation, enter the second fraction.',
+    'The result is automatically simplified (lowest terms), along with the decimal value.',
   ],
   faq: [
-    { q: 'Simplify kaise hota hai?', a: 'GCD (Greatest Common Divisor) nikal kar numerator aur denominator dono ko usse divide kar diya jaata hai — jaise 4/8 simplify hokar 1/2 ban jaata hai.' },
-    { q: 'Mixed numbers (jaise 2½) chalenge?', a: 'Abhi sirf simple fractions (numerator/denominator) support hain. Mixed number ko improper fraction me convert karke daalo (2½ = 5/2).' },
-    { q: 'Negative fractions kaam karengi?', a: 'Haan — numerator ya denominator me negative number daal sakte ho.' },
+    { q: 'How is it simplified?', a: 'The GCD (Greatest Common Divisor) is found and both numerator and denominator are divided by it — e.g. 4/8 simplifies to 1/2.' },
+    { q: 'Do mixed numbers (like 2½) work?', a: 'Currently only simple fractions (numerator/denominator) are supported. Convert a mixed number to an improper fraction first (2½ = 5/2).' },
+    { q: 'Do negative fractions work?', a: 'Yes — you can enter a negative number in either the numerator or denominator.' },
   ],
 };

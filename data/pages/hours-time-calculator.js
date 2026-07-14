@@ -18,7 +18,7 @@ module.exports = {
     <div class="result-big" id="ht-result1" style="margin-top:8px;">—</div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
-    <div class="panel-label">Time Duration (clock times ke beech)</div>
+    <div class="panel-label">Time Duration (between clock times)</div>
     <div class="field-row">
       <div class="field"><label for="ht-start">Start Time</label><input type="time" id="ht-start" value="09:00"></div>
       <div class="field"><label for="ht-end">End Time</label><input type="time" id="ht-end" value="17:30"></div>
@@ -31,12 +31,12 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Upar Hours+Minutes ko add/subtract karo — result turant milega.',
-    'Neeche start/end clock time daalo — duration aur decimal hours (payroll ke liye) mil jayega.',
+    'Add/subtract hours+minutes above — get the result instantly.',
+    'Enter start/end clock times below — get duration and decimal hours (for payroll).',
   ],
   faq: [
-    { q: 'Decimal hours kya hote hain?', a: 'Payroll me time aksar decimal me chahiye hota hai — jaise "8 ghante 30 minute" = 8.5 hours. Ye tool automatically convert kar deta hai.' },
-    { q: 'Agar end time start time se pehle ho (night shift)?', a: 'Tool automatically agle din maan kar calculate kar leta hai — jaise 22:00 se 06:00 = 8 hours (raat paar karke).' },
-    { q: 'Timesheet banane ke liye use kar sakte hain?', a: 'Bilkul — daily clock-in/clock-out times daal kar total worked hours nikalo, phir payroll ke liye decimal format use karo.' },
+    { q: 'What are decimal hours?', a: 'Payroll often needs time in decimal form — e.g. "8 hours 30 minutes" = 8.5 hours. This tool converts automatically.' },
+    { q: 'What if the end time is before the start time (night shift)?', a: 'The tool automatically assumes the next day — e.g. 22:00 to 06:00 = 8 hours (crossing midnight).' },
+    { q: 'Can I use this to build a timesheet?', a: 'Absolutely — enter daily clock-in/clock-out times to get total worked hours, then use the decimal format for payroll.' },
   ],
 };

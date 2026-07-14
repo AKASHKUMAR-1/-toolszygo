@@ -33,15 +33,15 @@ module.exports = {
   <button class="btn btn-secondary" id="cci-copy">Copy result</button>
 </div>`,
   howto: [
-    'Credit card ka total outstanding balance daalo.',
-    'Card ka monthly interest rate daalo — statement me hota hai, aam taur pe 3–3.75% per month.',
-    'Har mahine jitna pay kar sakte ho wo daalo.',
-    '<strong>Calculate</strong> dabao — kitne mahine lagenge aur total kitna interest jayega, sach dikh jayega.',
+    'Enter the credit card\'s total outstanding balance.',
+    'Enter the card\'s monthly interest rate — found on the statement, usually 3–3.75% per month.',
+    'Enter how much you can pay each month.',
+    'Click <strong>Calculate</strong> — see how many months it\'ll take and the real total interest.',
   ],
   faq: [
-    { q: 'Credit card ka interest itna zyada kyun hai?', a: 'Cards ka rate 3–3.75% PER MONTH hota hai = 36–45% per year! Ye personal loan (11–16%) se 3x zyada hai. Isliye card ka balance carry karna sabse mehenga udhaar hai.' },
-    { q: 'Minimum due bharne se kya hota hai?', a: 'Minimum due (~5%) bharne pe late fee nahi lagti, lekin baaki balance pe pura interest chalta rehta hai — aur naye purchases pe bhi grace period nahi milta. ₹50,000 ka balance minimum due pe chukane me saalon lag sakte hain.' },
-    { q: 'Interest se bachne ka sahi tarika kya hai?', a: 'Due date tak PURA bill bharo — tab interest zero hai. Agar balance bada hai to personal loan me convert karna (11–16%) ya balance transfer card lena sasta padta hai.' },
-    { q: 'Ye calculation kaise hoti hai?', a: 'Har mahine: balance × monthly rate ka interest judta hai, phir aapki payment ghatati hai. Jab tak balance zero ho, mahine count hote hain. Agar payment interest se kam hai to balance kabhi khatam nahi hoga — calculator warn karega.' },
+    { q: 'Why is credit card interest so high?', a: 'Card rates are 3–3.75% PER MONTH = 36–45% per year! That\'s 3x higher than a personal loan (11–16%). This is why carrying a card balance is the most expensive kind of debt.' },
+    { q: 'What happens if I only pay the minimum due?', a: 'Paying the minimum due (~5%) avoids the late fee, but interest keeps accruing on the rest of the balance — and new purchases lose their grace period too. A ₹50,000 balance can take years to clear at minimum due.' },
+    { q: 'What\'s the right way to avoid interest?', a: 'Pay the FULL bill by the due date — that\'s zero interest. If the balance is large, converting to a personal loan (11–16%) or a balance transfer card works out cheaper.' },
+    { q: 'How is this calculated?', a: 'Each month: interest at balance × monthly rate is added, then your payment is subtracted. Months are counted until the balance reaches zero. If the payment is less than the interest, the balance will never clear — the calculator will warn you.' },
   ],
 };

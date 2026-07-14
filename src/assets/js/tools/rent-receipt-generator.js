@@ -24,7 +24,7 @@
     var rent = parseFloat($('rr-rent').value) || 0;
     var list = months($('rr-from').value, $('rr-to').value);
     if (!list.length) {
-      $('rr-preview').innerHTML = '<em style="color:#999;">From month choose karo</em>';
+      $('rr-preview').innerHTML = '<em style="color:#999;">Choose a From month</em>';
       return;
     }
     var receipts = list.map(function (m, i) {

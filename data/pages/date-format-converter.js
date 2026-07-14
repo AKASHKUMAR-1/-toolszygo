@@ -27,18 +27,18 @@ module.exports = {
   </div>
 </div>
 <div class="btn-row">
-  <button class="btn btn-secondary" id="df-today">Aaj ki date</button>
+  <button class="btn btn-secondary" id="df-today">Today's date</button>
   <button class="btn btn-secondary" id="df-copy">Copy all</button>
 </div>`,
   howto: [
-    'Date select karo (time optional hai).',
-    'Saare common formats ek saath dikh jayenge — DD/MM/YYYY, US format, ISO, long format, Unix timestamp.',
-    'Jo format chahiye copy kar lo.',
+    'Select a date (time is optional).',
+    'All common formats appear at once — DD/MM/YYYY, US format, ISO, long format, Unix timestamp.',
+    'Copy whichever format you need.',
   ],
   faq: [
-    { q: 'DD/MM/YYYY aur MM/DD/YYYY me confusion kaise bache?', a: 'India/UK me DD/MM/YYYY chalta hai, US me MM/DD/YYYY. 04/07/2026 India me 4 July hai, US me April 7! International documents me confusion se bachne ke liye ISO format (2026-07-04) ya "4 Jul 2026" likho.' },
-    { q: 'ISO 8601 format kya hai?', a: 'International standard: YYYY-MM-DD (e.g. 2026-07-04). Sorting me sahi order me aata hai aur duniya me kahin bhi ambiguous nahi hai. Databases aur APIs isi format ko use karte hain.' },
-    { q: 'Unix timestamp kya hota hai?', a: '1 January 1970 UTC se ab tak ke seconds. Programming me time store karne ka standard tarika. E.g. 1782172800 = 23 June 2026.' },
-    { q: 'Time optional kyun hai?', a: 'Sirf date chahiye to time chhod do — timestamp midnight (00:00) ka banega. Exact moment ka timestamp chahiye to time bhi daalo.' },
+    { q: 'How do I avoid confusion between DD/MM/YYYY and MM/DD/YYYY?', a: 'India/UK use DD/MM/YYYY, the US uses MM/DD/YYYY. 04/07/2026 is July 4 in India, but April 7 in the US! To avoid confusion in international documents, write the ISO format (2026-07-04) or "4 Jul 2026".' },
+    { q: 'What is ISO 8601 format?', a: 'The international standard: YYYY-MM-DD (e.g. 2026-07-04). It sorts correctly and is unambiguous anywhere in the world. Databases and APIs use this format.' },
+    { q: 'What is a Unix timestamp?', a: 'Seconds elapsed since January 1, 1970 UTC. The standard way programming stores time. E.g. 1782172800 = June 23, 2026.' },
+    { q: 'Why is time optional?', a: 'If you only need the date, leave time blank — the timestamp will be for midnight (00:00). Add the time if you need the timestamp for an exact moment.' },
   ],
 };

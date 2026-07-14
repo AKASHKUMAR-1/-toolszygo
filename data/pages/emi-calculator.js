@@ -41,15 +41,15 @@ module.exports = {
   <button class="btn btn-secondary" id="emi-copy">Copy result</button>
 </div>`,
   howto: [
-    'Loan amount daalo — jitna loan lena hai (e.g. ₹10,00,000).',
-    'Bank ka annual interest rate daalo (e.g. 8.5%).',
-    'Tenure choose karo — years ya months me.',
-    '<strong>Calculate EMI</strong> pe click karo — monthly EMI, total interest aur total payment turant dikh jayega.',
+    'Enter the loan amount you want to borrow (e.g. ₹10,00,000).',
+    "Enter the bank's annual interest rate (e.g. 8.5%).",
+    'Choose the tenure — in years or months.',
+    'Click <strong>Calculate EMI</strong> — the monthly EMI, total interest, and total payment appear instantly.',
   ],
   faq: [
-    { q: 'EMI kaise calculate hota hai?', a: 'EMI formula: P × r × (1+r)^n / ((1+r)^n − 1), jahan P = loan amount, r = monthly interest rate (annual rate ÷ 12 ÷ 100) aur n = total months. Ye tool yehi standard formula use karta hai jo sab banks use karte hain.' },
-    { q: 'Kya ye home loan, car loan aur personal loan sabke liye kaam karta hai?', a: 'Haan. EMI ka formula sab fixed-rate loans ke liye same hota hai — bas amount, rate aur tenure sahi daalo.' },
-    { q: 'Kya mera data kahin save hota hai?', a: 'Nahi. Saara calculation aapke browser me hi hota hai — koi data server pe nahi jaata.' },
-    { q: 'Floating rate loan ka EMI isse alag hoga?', a: 'Floating rate me interest rate time ke saath badalta hai, isliye actual EMI future me change ho sakti hai. Ye calculator current rate pe EMI batata hai.' },
+    { q: 'How is EMI calculated?', a: 'EMI formula: P × r × (1+r)^n / ((1+r)^n − 1), where P = loan amount, r = monthly interest rate (annual rate ÷ 12 ÷ 100), and n = total months. This tool uses the same standard formula banks use.' },
+    { q: 'Does this work for home loans, car loans, and personal loans?', a: 'Yes. The EMI formula is the same for all fixed-rate loans — just enter the correct amount, rate, and tenure.' },
+    { q: 'Is my data saved anywhere?', a: 'No. All calculations happen entirely in your browser — no data is sent to any server.' },
+    { q: "Will a floating-rate loan's EMI differ from this?", a: 'With floating rates, the interest rate changes over time, so the actual EMI may change in the future. This calculator shows the EMI at the current rate.' },
   ],
 };

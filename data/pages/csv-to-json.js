@@ -7,8 +7,8 @@ module.exports = {
       <textarea id="cj-input" placeholder="name,age,city&#10;Amit,25,Delhi&#10;Priya,30,Mumbai" spellcheck="false" style="min-height:200px;font-family:monospace;font-size:13px;"></textarea>
     </div>
     <div class="checks">
-      <label><input type="checkbox" id="cj-headers" checked> Pehli row headers hai</label>
-      <label><input type="checkbox" id="cj-numbers" checked> Numbers ko number banao (string nahi)</label>
+      <label><input type="checkbox" id="cj-headers" checked> First row is headers</label>
+      <label><input type="checkbox" id="cj-numbers" checked> Convert numbers to numbers (not strings)</label>
     </div>
   </div>
   <div class="panel panel-result">
@@ -23,14 +23,14 @@ module.exports = {
   <button class="btn btn-secondary" id="cj-download">Download .json</button>
 </div>`,
   howto: [
-    'CSV data paste karo — Excel/Google Sheets se copy karke bhi chalega (tabs auto-detect hote hain).',
-    'Pehli row headers hai ya nahi, checkbox se batao.',
-    '<strong>Convert</strong> dabao — JSON array ready, copy ya download karo.',
+    'Paste CSV data — copying directly from Excel/Google Sheets also works (tabs are auto-detected).',
+    'Tell it whether the first row is headers using the checkbox.',
+    'Click <strong>Convert</strong> — JSON array is ready, copy or download it.',
   ],
   faq: [
-    { q: 'Excel se data kaise laayein?', a: 'Excel/Google Sheets me cells select karke copy karo aur yahan paste kar do — tab-separated data automatically detect ho jaata hai. Ya file ko CSV me save karke uska content paste karo.' },
-    { q: 'Values me comma ho to kya hoga?', a: 'CSV standard ke hisaab se aisi values double quotes me hoti hain ("Delhi, India") — parser ise sahi handle karta hai, quotes ke andar wala comma split nahi hota.' },
-    { q: 'Kya mera data upload hota hai?', a: 'Nahi — conversion browser me hota hai. Customer lists, financial data sab safe hai.' },
-    { q: 'Headers nahi hain to kya output milega?', a: 'Checkbox off karo — har row ek array banegi (objects ki jagah): [["Amit",25],["Priya",30]].' },
+    { q: 'How do I bring data from Excel?', a: 'Select cells in Excel/Google Sheets, copy, and paste here — tab-separated data is detected automatically. Or save the file as CSV and paste its contents.' },
+    { q: 'What if values contain a comma?', a: 'Per the CSV standard, such values are wrapped in double quotes ("Delhi, India") — the parser handles this correctly, without splitting on commas inside quotes.' },
+    { q: 'Is my data uploaded anywhere?', a: 'No — conversion happens in the browser. Customer lists, financial data — all safe.' },
+    { q: 'What if there are no headers?', a: 'Turn off the checkbox — each row becomes an array instead of an object: [["Amit",25],["Priya",30]].' },
   ],
 };

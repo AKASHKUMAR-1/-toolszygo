@@ -6,7 +6,7 @@
     var html = $('hp-input').value;
     // strip script tags for safety
     html = html.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/\son\w+="[^"]*"/gi, '').replace(/\son\w+='[^']*'/gi, '');
-    $('hp-preview').innerHTML = html || '<span style="color:#B98E63;font-family:monospace;font-size:12px;">rendered preview yahan dikhega</span>';
+    $('hp-preview').innerHTML = html || '<span style="color:#B98E63;font-family:monospace;font-size:12px;">rendered preview will appear here</span>';
   }
 
   $('hp-input').addEventListener('input', render);

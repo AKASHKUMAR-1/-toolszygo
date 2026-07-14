@@ -5,7 +5,7 @@ module.exports = {
     <div class="panel-label">Input</div>
     <div class="dropzone" id="ic-drop">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0l-4 4m4-4l4 4" stroke="#A39C8B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3" stroke="#A39C8B" stroke-width="1.6" stroke-linecap="round"/></svg>
-      <div><strong>Image choose karo</strong> ya yahan drop karo</div>
+      <div><strong>Choose an image</strong> or drop it here</div>
       <div style="font-size:11.5px;">JPG, PNG, WEBP — max 25 MB</div>
     </div>
     <input type="file" id="ic-file" accept="image/jpeg,image/png,image/webp" style="display:none;">
@@ -16,16 +16,16 @@ module.exports = {
     <div class="field">
       <label for="ic-format">Output format</label>
       <select id="ic-format">
-        <option value="image/jpeg" selected>JPG (photos ke liye best)</option>
-        <option value="image/webp">WEBP (sabse chhota size)</option>
-        <option value="image/png">PNG (lossless — size kam nahi hoga)</option>
+        <option value="image/jpeg" selected>JPG (best for photos)</option>
+        <option value="image/webp">WEBP (smallest size)</option>
+        <option value="image/png">PNG (lossless — size won't reduce)</option>
       </select>
     </div>
-    <div id="ic-png-note" style="display:none;font-size:12px;color:#A98423;background:#FDF3D8;border-radius:8px;padding:8px 10px;">⚠ PNG lossless format hai — quality slider kaam nahi karta aur size kam nahi hoga (kabhi thoda badh bhi sakta hai). Real compression ke liye JPG ya WEBP choose karo.</div>
+    <div id="ic-png-note" style="display:none;font-size:12px;color:#A98423;background:#FDF3D8;border-radius:8px;padding:8px 10px;">⚠ PNG is a lossless format — the quality slider has no effect and size won't reduce (it can even grow slightly). Choose JPG or WEBP for real compression.</div>
   </div>
   <div class="panel panel-result">
     <div class="panel-label">Result</div>
-    <div class="panel-placeholder" id="ic-placeholder">compressed image yahan dikhegi</div>
+    <div class="panel-placeholder" id="ic-placeholder">compressed image will appear here</div>
     <img id="ic-preview" alt="Compressed preview" style="display:none;max-width:100%;border-radius:10px;border:1px solid #F0E0CC;">
     <div class="result-rows" id="ic-stats" style="display:none;">
       <div class="result-row"><span class="k">Original size</span><span class="v" id="ic-orig">—</span></div>
@@ -39,15 +39,15 @@ module.exports = {
   <button class="btn btn-secondary" id="ic-download" disabled>Download</button>
 </div>`,
   howto: [
-    'Apni JPG, PNG ya WEBP image select karo ya drag-drop karo.',
-    'Quality slider set karo — 70–80% me quality bhi achhi rehti hai aur size bhi kaafi kam ho jaata hai.',
-    'Output format choose karo — WEBP sabse chhota size deta hai.',
-    '<strong>Compress image</strong> dabao, phir "Download" se save karo.',
+    'Select or drag-drop your JPG, PNG, or WEBP image.',
+    'Set the quality slider — 70–80% keeps good quality while reducing size significantly.',
+    'Choose the output format — WEBP gives the smallest size.',
+    'Click <strong>Compress image</strong>, then save it with "Download".',
   ],
   faq: [
-    { q: 'Kya meri photo kahin upload hoti hai?', a: 'Nahi — compression poori tarah aapke browser me hoti hai (HTML5 canvas se). Photo aapke device se bahar kabhi nahi jaati, isliye private documents/photos ke liye bhi 100% safe hai.' },
-    { q: 'Kitna size kam ho sakta hai?', a: 'Photos me aam taur pe 60–90% size reduction milta hai quality slider ke hisaab se. Screenshots aur graphics me PNG→WEBP conversion se bhi bada difference aata hai.' },
-    { q: 'Best quality setting kya hai?', a: 'WhatsApp/web ke liye 70–80% sweet spot hai. Printing ke liye 85–95% rakho. 50% se neeche visible quality loss ho sakta hai.' },
-    { q: 'PNG compress karne pe transparent background ka kya hoga?', a: 'PNG output me transparency preserve hoti hai. JPG me transparent area white ho jaata hai kyunki JPG transparency support nahi karta.' },
+    { q: 'Is my photo uploaded anywhere?', a: 'No — compression happens entirely in your browser (via HTML5 canvas). Your photo never leaves your device, so it\'s 100% safe even for private documents/photos.' },
+    { q: 'How much can the size be reduced?', a: 'Photos typically see a 60–90% size reduction depending on the quality slider. Screenshots and graphics see an even bigger difference with PNG→WEBP conversion.' },
+    { q: 'What\'s the best quality setting?', a: '70–80% is the sweet spot for WhatsApp/web. Keep 85–95% for printing. Below 50% may cause visible quality loss.' },
+    { q: 'What happens to transparent backgrounds when compressing PNG?', a: 'Transparency is preserved in PNG output. In JPG, transparent areas turn white since JPG doesn\'t support transparency.' },
   ],
 };

@@ -20,14 +20,14 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Number daalo (1 se 3999) — Roman numeral turant mil jayega.',
-    'Ya Roman numeral daalo (jaise XIV) — uska number mil jayega.',
-    'Dono directions live update hoti hain.',
+    'Enter a number (1 to 3999) — the Roman numeral appears instantly.',
+    'Or enter a Roman numeral (like XIV) — get its number.',
+    'Both directions update live.',
   ],
   faq: [
-    { q: 'Roman numerals kaise kaam karte hain?', a: 'I=1, V=5, X=10, L=50, C=100, D=500, M=1000. Chhota symbol bade ke pehle aaye to minus hota hai: IV=4, IX=9, XL=40, CM=900. Isi se sab numbers bante hain.' },
-    { q: '3999 tak hi kyun?', a: 'Standard Roman system me ek symbol max 3 baar repeat hota hai, isliye MMMCMXCIX (3999) sabse bada standard number hai. Bade numbers ke liye Romans vinculum (line) use karte the jo typing me nahi hota.' },
-    { q: 'Zero ka Roman numeral kya hai?', a: 'Hai hi nahi! Roman system me zero ka concept nahi tha — ye India ki den hai (Aryabhata/Brahmagupta). Isliye converter 1 se shuru hota hai.' },
-    { q: 'IIII galat hai ya IV?', a: 'Standard rule IV hai (5−1). Lekin ghadiyon (clock faces) pe traditionally IIII likha jaata hai — dono historically use hue hain, aaj IV standard hai.' },
+    { q: 'How do Roman numerals work?', a: 'I=1, V=5, X=10, L=50, C=100, D=500, M=1000. When a smaller symbol comes before a larger one, it subtracts: IV=4, IX=9, XL=40, CM=900. All numbers are built this way.' },
+    { q: 'Why only up to 3999?', a: 'In the standard Roman system, a symbol repeats at most 3 times, so MMMCMXCIX (3999) is the largest standard number. For larger numbers, Romans used a vinculum (a line), which isn\'t typable.' },
+    { q: 'What is the Roman numeral for zero?', a: 'There isn\'t one! The Roman system had no concept of zero — that came from India (Aryabhata/Brahmagupta). That\'s why the converter starts at 1.' },
+    { q: 'Is IIII wrong, or IV?', a: 'The standard rule is IV (5−1). But clock faces traditionally use IIII — both have been used historically; today IV is standard.' },
   ],
 };

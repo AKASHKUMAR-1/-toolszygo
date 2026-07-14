@@ -8,7 +8,7 @@ module.exports = {
       <input type="number" id="fc-distance" value="100" min="1" step="5">
     </div>
     <div class="field">
-      <label for="fc-mileage">Gaadi ka Mileage (km/l)</label>
+      <label for="fc-mileage">Vehicle Mileage (km/l)</label>
       <input type="number" id="fc-mileage" value="18" min="1" max="150" step="0.5">
     </div>
     <div class="field">
@@ -16,7 +16,7 @@ module.exports = {
       <input type="number" id="fc-price" value="105" min="1" step="0.5">
     </div>
     <div class="checks">
-      <label><input type="checkbox" id="fc-round"> Round trip (aana-jaana dono)</label>
+      <label><input type="checkbox" id="fc-round"> Round trip (both ways)</label>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
@@ -34,15 +34,15 @@ module.exports = {
   <button class="btn btn-secondary" id="fc-copy">Copy result</button>
 </div>`,
   howto: [
-    'Trip ki distance km me daalo (one-way).',
-    'Apni gaadi ka mileage daalo — bikes 40–60, hatchbacks 18–22, SUVs 12–16 km/l.',
-    'Aaj ka petrol/diesel rate daalo.',
-    'Aana-jaana dono count karna ho to "Round trip" tick karo — total fuel aur kharcha dikh jayega.',
+    'Enter the trip distance in km (one-way).',
+    'Enter your vehicle\'s mileage — bikes 40–60, hatchbacks 18–22, SUVs 12–16 km/l.',
+    'Enter today\'s petrol/diesel rate.',
+    'Tick "Round trip" to count both ways — total fuel and cost will be shown.',
   ],
   faq: [
-    { q: 'Fuel cost kaise calculate hota hai?', a: 'Fuel needed = distance ÷ mileage. Cost = fuel × price per litre. E.g. 100 km ÷ 18 km/l = 5.56 litre × ₹105 = ₹583.' },
-    { q: 'Apni gaadi ka real mileage kaise pata karein?', a: 'Tank full karao, trip meter zero karo. Agli baar full karane pe: chale hue km ÷ dale gaye litre = real mileage. Ye company ke claimed mileage se 10–20% kam hota hai.' },
-    { q: 'Highway aur city mileage me kitna difference hota hai?', a: 'Highway pe 20–30% better mileage milta hai — steady speed, kam braking. City me traffic/AC se mileage girta hai. Trip ke hisaab se realistic value daalo.' },
-    { q: 'Kya ye EV ke liye kaam karega?', a: 'Concept same hai — mileage ki jagah km/kWh aur price me ₹/kWh (per unit) daalo. E.g. 6 km/kWh aur ₹8/unit.' },
+    { q: 'How is fuel cost calculated?', a: 'Fuel needed = distance ÷ mileage. Cost = fuel × price per litre. E.g. 100 km ÷ 18 km/l = 5.56 litres × ₹105 = ₹583.' },
+    { q: 'How do I find my vehicle\'s real mileage?', a: 'Fill the tank, reset the trip meter to zero. Next time you fill up: km driven ÷ litres filled = real mileage. This is usually 10–20% lower than the manufacturer\'s claimed mileage.' },
+    { q: 'How much difference is there between highway and city mileage?', a: 'Highway driving gives 20–30% better mileage — steady speed, less braking. City traffic/AC use lowers mileage. Enter a realistic value based on your trip.' },
+    { q: 'Will this work for an EV?', a: 'Same concept — enter km/kWh instead of mileage, and ₹/kWh (per unit) for price. E.g. 6 km/kWh and ₹8/unit.' },
   ],
 };

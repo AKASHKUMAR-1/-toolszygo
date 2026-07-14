@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel">
     <div class="panel-label">Input</div>
     <div class="field">
-      <textarea id="tts-text" placeholder="Jo sunna hai wo yahan likho… Hindi ya English dono chalega." style="min-height:160px;"></textarea>
+      <textarea id="tts-text" placeholder="Type what you want to hear here… Hindi or English both work." style="min-height:160px;"></textarea>
     </div>
     <div class="field">
       <label for="tts-voice">Voice</label>
@@ -32,14 +32,14 @@ module.exports = {
   <button class="btn btn-secondary" id="tts-stop">⏹ Stop</button>
 </div>`,
   howto: [
-    'Apna text box me likho ya paste karo — Hindi ya English.',
-    'Voice choose karo (Hindi text ke liye hi-IN voice best hai) aur speed/pitch set karo.',
-    '<strong>▶ Speak</strong> dabao — browser bol kar sunayega.',
+    'Type or paste your text in the box — Hindi or English.',
+    'Choose a voice (an hi-IN voice is best for Hindi text) and set the speed/pitch.',
+    'Click <strong>▶ Speak</strong> — the browser reads it aloud.',
   ],
   faq: [
-    { q: 'Awaazein kahan se aati hain?', a: 'Aapke browser/device ki built-in voices (Web Speech API) use hoti hain — koi server nahi. Isliye available voices device pe depend karti hain: Chrome me Google voices, Windows me Microsoft voices.' },
-    { q: 'Hindi voice nahi dikh rahi?', a: 'Device pe Hindi voice installed honi chahiye. Chrome desktop me "Google हिन्दी" aam taur pe hoti hai. Windows Settings > Speech me voices add kar sakte ho.' },
-    { q: 'Audio download (MP3) kar sakte hain?', a: 'Browser ki TTS API direct download nahi deti. Recording ke liye screen/audio recorder use karna hoga. MP3 export wala TTS chahiye to batao, future me API-based tool consider karenge.' },
-    { q: 'Kitna lamba text bol sakta hai?', a: 'Koi hard limit nahi, lekin bahut lambe text (essay+) me kuch browsers beech me ruk jaate hain. Paragraphs me tod kar sunna best hai.' },
+    { q: 'Where do the voices come from?', a: 'Your browser/device\'s built-in voices (Web Speech API) are used — no server. So available voices depend on your device: Google voices in Chrome, Microsoft voices on Windows.' },
+    { q: 'I don\'t see a Hindi voice?', a: 'A Hindi voice must be installed on your device. Chrome desktop usually has "Google हिन्दी". You can add voices in Windows Settings > Speech.' },
+    { q: 'Can I download the audio (MP3)?', a: 'The browser\'s TTS API doesn\'t allow direct download. You\'d need a screen/audio recorder to capture it. Let us know if you need TTS with MP3 export and we\'ll consider an API-based tool in the future.' },
+    { q: 'How long a text can it read?', a: 'No hard limit, but with very long text (essay+) some browsers stop midway. It\'s best to break it into paragraphs.' },
   ],
 };

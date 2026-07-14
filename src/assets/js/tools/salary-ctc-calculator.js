@@ -34,10 +34,10 @@
     var annualInhand = grossSalary - employeePf - pt - tax;
     var monthly = annualInhand / 12;
     $('ctc-inhand').textContent = toolsdoINR(Math.round(monthly));
-    $('ctc-epf').textContent = toolsdoINR(Math.round(employerPf)) + '/saal';
-    $('ctc-pf-ded').textContent = toolsdoINR(Math.round(employeePf)) + '/saal';
-    $('ctc-pt').textContent = toolsdoINR(pt) + '/saal';
-    $('ctc-tax-amt').textContent = withTax ? toolsdoINR(Math.round(tax / 12)) + '/month' : 'Nahi kata';
+    $('ctc-epf').textContent = toolsdoINR(Math.round(employerPf)) + '/year';
+    $('ctc-pf-ded').textContent = toolsdoINR(Math.round(employeePf)) + '/year';
+    $('ctc-pt').textContent = toolsdoINR(pt) + '/year';
+    $('ctc-tax-amt').textContent = withTax ? toolsdoINR(Math.round(tax / 12)) + '/month' : 'Not deducted';
     $('ctc-annual').textContent = toolsdoINR(Math.round(annualInhand));
     lastSummary = 'CTC ' + toolsdoINR(ctc) + ' (basic ' + Math.round(basicPct * 100) + '%) | In-hand: ~' +
       toolsdoINR(Math.round(monthly)) + '/month | PF: ' + toolsdoINR(Math.round(employeePf)) +

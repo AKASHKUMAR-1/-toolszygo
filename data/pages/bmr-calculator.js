@@ -24,13 +24,13 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Age, gender, height aur weight daalo.',
-    'BMR turant calculate ho jayega — ye wo calories hain jo aapka body bina kuch kiye, sirf zinda rehne ke liye kharch karta hai.',
-    'Alag-alag activity levels ke liye estimated daily needs bhi neeche dikh jayenge.',
+    'Enter age, gender, height, and weight.',
+    'BMR is calculated instantly — this is the calories your body burns just to stay alive, without doing anything.',
+    'Estimated daily needs for different activity levels appear below too.',
   ],
   faq: [
-    { q: 'BMR kya hota hai?', a: 'Basal Metabolic Rate — agar aap poora din bistar pe lete rahein, tab bhi breathing, digestion, blood circulation ke liye jitni calories chahiye, wahi BMR hai.' },
-    { q: 'BMR aur TDEE me kya farak hai?', a: 'BMR sirf resting calories hai. TDEE (Total Daily Energy Expenditure) me daily activities/exercise ki calories bhi jud jaati hain — TDEE hamesha BMR se zyada hoga.' },
-    { q: 'Kaunsa formula use hota hai?', a: 'Mifflin-St Jeor formula — ye Harris-Benedict se zyada accurate maana jaata hai aur aajkal dietitians isi ko recommend karte hain.' },
+    { q: 'What is BMR?', a: 'Basal Metabolic Rate — the calories your body needs for breathing, digestion, and blood circulation even if you stayed in bed all day.' },
+    { q: 'What\'s the difference between BMR and TDEE?', a: 'BMR is just resting calories. TDEE (Total Daily Energy Expenditure) adds calories from daily activities/exercise on top — TDEE is always higher than BMR.' },
+    { q: 'Which formula is used?', a: 'The Mifflin-St Jeor formula — considered more accurate than Harris-Benedict, and the one dietitians recommend today.' },
   ],
 };

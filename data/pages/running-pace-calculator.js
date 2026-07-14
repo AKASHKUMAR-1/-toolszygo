@@ -2,7 +2,7 @@ module.exports = {
   workspace: `
 <div class="workspace">
   <div class="panel" style="min-height:0;">
-    <div class="panel-label">Koi bhi 2 daalo, teesra mil jayega</div>
+    <div class="panel-label">Enter any 2, get the third</div>
     <div class="field">
       <label for="rp-distance">Distance (km)</label>
       <input type="number" id="rp-distance" placeholder="e.g. 5" step="0.01">
@@ -33,13 +33,13 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Distance aur Time daalo — pace khud calculate ho jayega (ya koi bhi 2 fields bharo).',
-    'Aapke current pace se 5K, 10K, Half aur Full marathon ka predicted time bhi dikh jayega.',
-    'Race planning ke liye perfect — pata chalega kis speed pe daudna hai target time ke liye.',
+    'Enter Distance and Time — pace is calculated automatically (or fill any 2 fields).',
+    'Your current pace also gives predicted times for 5K, 10K, Half, and Full marathon.',
+    'Perfect for race planning — find out what speed to run for your target time.',
   ],
   faq: [
-    { q: 'Pace kya hota hai?', a: 'Pace matlab 1 km (ya 1 mile) daudne me kitna time lagta hai — jaise "5:30 min/km". Speed (km/h) ka ulta concept hai.' },
-    { q: 'Predicted times kitne accurate hain?', a: 'Ye Riegel formula pe based estimate hai — assume karta hai ki aap consistent effort maintain kar sakte ho. Lambi races me endurance/fueling ka bhi role hota hai, isliye actual time thoda alag ho sakta hai.' },
-    { q: 'Beginners ke liye achha pace kya hai?', a: 'Koi "sahi" pace nahi hota — apni conversation pace (jaha baat kar sako) se shuru karo, dheere-dheere speed badhao. Consistency speed se zyada important hai shuru me.' },
+    { q: 'What is pace?', a: 'Pace is how long it takes to run 1 km (or 1 mile) — like "5:30 min/km". It\'s the inverse of speed (km/h).' },
+    { q: 'How accurate are the predicted times?', a: 'This is an estimate based on the Riegel formula — it assumes you can maintain consistent effort. In longer races, endurance/fueling also play a role, so the actual time may differ slightly.' },
+    { q: 'What\'s a good pace for beginners?', a: 'There\'s no "right" pace — start at your conversational pace (where you can still talk) and gradually increase speed. Consistency matters more than speed at the start.' },
   ],
 };

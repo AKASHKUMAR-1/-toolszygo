@@ -11,15 +11,15 @@ module.exports = {
       </select>
     </div>
     <div class="field">
-      <label for="bn2-letter">Shuruaati letter (optional)</label>
+      <label for="bn2-letter">Starting letter (optional)</label>
       <select id="bn2-letter">
-        <option value="">Koi bhi</option>
+        <option value="">Any</option>
       </select>
     </div>
     <div class="field">
       <label for="bn2-religion">Origin</label>
       <select id="bn2-religion">
-        <option value="all" selected>Sab</option>
+        <option value="all" selected>All</option>
         <option value="hindu">Hindu / Sanskrit</option>
         <option value="muslim">Muslim / Arabic</option>
         <option value="sikh">Sikh / Punjabi</option>
@@ -33,16 +33,16 @@ module.exports = {
   </div>
 </div>
 <div class="btn-row">
-  <button class="btn btn-primary" id="bn2-generate">🔄 Naye naam dikhao</button>
+  <button class="btn btn-primary" id="bn2-generate">🔄 Show new names</button>
 </div>`,
   howto: [
-    'Gender, shuruaati letter aur origin (Hindu/Muslim/Sikh/Modern) choose karo.',
-    'Names apne matlab (meaning) ke saath dikh jayenge.',
-    '"Naye naam dikhao" se aur options dekho.',
+    'Choose gender, starting letter, and origin (Hindu/Muslim/Sikh/Modern).',
+    'Names appear along with their meanings.',
+    'Click "Show new names" to see more options.',
   ],
   faq: [
-    { q: 'Kitne names hain database me?', a: 'Sab categories milakar 200+ curated names hain, meaning ke saath. Regular naye names add hote rahenge.' },
-    { q: 'Naam ka matlab kitna accurate hai?', a: 'Traditional/commonly-accepted meanings diye gaye hain. Kisi bhi naam ka final decision lene se pehle apne family/pandit/religious guide se bhi confirm kar lo, khaas kar numerology/astrology angle ke liye.' },
-    { q: 'Kya rashi ke hisaab se naam filter kar sakte hain?', a: 'Abhi gender/letter/origin filter available hain. Rashi-based naming aana chahiye future me — filhaal letter filter se kaafi had tak kaam chal jaata hai.' },
+    { q: 'How many names are in the database?', a: 'Across all categories, there are 200+ curated names with meanings. New names are added regularly.' },
+    { q: 'How accurate are the name meanings?', a: 'Traditional/commonly-accepted meanings are provided. Before making a final decision on any name, confirm with your family/priest/religious guide too, especially for the numerology/astrology angle.' },
+    { q: 'Can I filter names by zodiac sign?', a: 'Currently gender/letter/origin filters are available. Zodiac-based naming may come in the future — for now, the letter filter covers most needs.' },
   ],
 };

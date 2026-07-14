@@ -51,7 +51,7 @@
       $('pn-pages').textContent = total;
       $('pn-download').disabled = false;
     } catch (e) {
-      alert('Fail ho gaya: ' + (e.message || 'password-protected PDF?'));
+      alert('Failed: ' + (e.message || 'password-protected PDF?'));
     }
     btn.textContent = 'Add page numbers';
     btn.disabled = false;

@@ -4,14 +4,14 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Input</div>
     <div class="field">
-      <label for="sd-numbers">Numbers (comma ya space se alag)</label>
+      <label for="sd-numbers">Numbers (separated by comma or space)</label>
       <textarea id="sd-numbers" placeholder="e.g. 10, 12, 23, 23, 16, 23, 21, 16" style="min-height:120px;"></textarea>
     </div>
     <div class="field">
       <label for="sd-type">Type</label>
       <select id="sd-type">
-        <option value="sample" selected>Sample (data ka ek hissa)</option>
-        <option value="population">Population (poora data)</option>
+        <option value="sample" selected>Sample (a subset of data)</option>
+        <option value="population">Population (all the data)</option>
       </select>
     </div>
   </div>
@@ -28,13 +28,13 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Numbers paste karo — comma, space ya nayi line se alag kar sakte ho.',
-    'Sample ya Population type choose karo (agar pata na ho to Sample default rakho).',
-    'Mean, variance aur standard deviation turant mil jayenge.',
+    'Paste your numbers — separated by comma, space, or new line.',
+    'Choose Sample or Population type (keep Sample as default if unsure).',
+    'Get the mean, variance, and standard deviation instantly.',
   ],
   faq: [
-    { q: 'Standard deviation kya batata hai?', a: 'Data mean (average) ke aas-paas kitna phaila hua hai. Kam SD matlab values mean ke paas hain, zyada SD matlab widely spread hain.' },
-    { q: 'Sample aur Population me kya farak hai?', a: 'Population = poora dataset (jaise pure class ke marks). Sample = usme se ek chhota hissa (jaise class ke 10 students). Sample formula me (n-1) use hota hai jo thoda bada estimate deta hai (Bessel\'s correction).' },
-    { q: 'Variance aur SD me kya farak hai?', a: 'Variance = SD ka square. SD zyada useful hai kyunki iski unit original data jaisi hoti hai (variance ki unit squared hoti hai).' },
+    { q: 'What does standard deviation tell you?', a: 'How spread out the data is around the mean (average). A low SD means values are close to the mean, a high SD means they\'re widely spread.' },
+    { q: 'What\'s the difference between Sample and Population?', a: 'Population = the entire dataset (like the whole class\'s marks). Sample = a small part of it (like 10 students from the class). The sample formula uses (n-1), which gives a slightly larger estimate (Bessel\'s correction).' },
+    { q: 'What\'s the difference between variance and SD?', a: 'Variance = the square of SD. SD is more useful because its unit matches the original data (variance\'s unit is squared).' },
   ],
 };

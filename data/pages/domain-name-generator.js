@@ -27,16 +27,16 @@ module.exports = {
   <button class="btn btn-primary" id="dom-generate">Generate ideas</button>
   <button class="btn btn-secondary" id="dom-copy">Copy all</button>
 </div>
-<div style="font-size:12px;color:#A39C8B;margin-top:12px;">Note: Ye sirf ideas hain — availability check karne ke liye GoDaddy/Namecheap/Hostinger pe search karo.</div>`,
+<div style="font-size:12px;color:#A39C8B;margin-top:12px;">Note: These are just ideas — search on GoDaddy/Namecheap/Hostinger to check availability.</div>`,
   howto: [
-    'Apne business/idea ka main keyword daalo.',
-    'Preferred extension choose karo (.com, .in…).',
-    '<strong>Generate</strong> dabao — 20 creative domain ideas mil jayenge. Pasand aaye to registrar pe availability check karo.',
+    'Enter the main keyword for your business/idea.',
+    'Choose a preferred extension (.com, .in…).',
+    'Click <strong>Generate</strong> — get 20 creative domain ideas. Check availability with a registrar if you like one.',
   ],
   faq: [
-    { q: 'Achha domain naam kaisa hota hai?', a: 'Chhota (6–14 characters), bolne-likhne me aasan, numbers/hyphens ke bina, aur brand jaisa yaadgar. .com sabse trusted hai; India-focused business ke liye .in bhi achha hai.' },
-    { q: 'Availability kaise check karein?', a: 'Ideas copy karke GoDaddy, Namecheap ya Hostinger pe search karo — wahan available/taken dikh jaata hai aur price bhi. Ye tool sirf ideas generate karta hai.' },
-    { q: '.com nahi mil raha to kya karein?', a: 'Prefix/suffix try karo (get-, -app, -hq), ya .in/.io/.co jaisi extensions dekho. Bas confusingly similar naam kisi established brand se mat lo.' },
-    { q: 'Domain kitne ka aata hai?', a: '.com ~₹800–1,200/saal, .in ~₹500–800/saal. Pehle saal ke discounts aam hain — renewal price zaroor check karo.' },
+    { q: 'What makes a good domain name?', a: 'Short (6–14 characters), easy to say and write, no numbers/hyphens, and memorable like a brand. .com is the most trusted; .in is good for India-focused businesses too.' },
+    { q: 'How do I check availability?', a: 'Copy the ideas and search on GoDaddy, Namecheap, or Hostinger — they show available/taken status and price. This tool only generates ideas.' },
+    { q: 'What if .com isn\'t available?', a: 'Try a prefix/suffix (get-, -app, -hq), or look at extensions like .in/.io/.co. Just avoid anything confusingly similar to an established brand.' },
+    { q: 'How much does a domain cost?', a: '.com ~₹800–1,200/year, .in ~₹500–800/year. First-year discounts are common — check the renewal price too.' },
   ],
 };

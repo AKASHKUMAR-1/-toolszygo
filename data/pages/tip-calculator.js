@@ -14,7 +14,7 @@ module.exports = {
       </div>
     </div>
     <div class="field">
-      <label for="tip-people">Kitne log split kar rahe hain?</label>
+      <label for="tip-people">How many people are splitting?</label>
       <input type="number" id="tip-people" value="1" min="1" max="50" step="1">
     </div>
   </div>
@@ -33,14 +33,14 @@ module.exports = {
   <button class="btn btn-secondary" id="tip-copy">Copy result</button>
 </div>`,
   howto: [
-    'Bill amount daalo.',
-    'Tip % slider se set karo — India me 5–10% common hai.',
-    'Agar dosto me split karna hai to logo ki sankhya daalo — per-person share dikh jayega.',
+    'Enter the bill amount.',
+    'Set the tip % with the slider — 5–10% is common in India (15–20% in the US).',
+    'If splitting among friends, enter the number of people — the per-person share appears.',
   ],
   faq: [
-    { q: 'India me kitna tip dena chahiye?', a: 'Restaurants me 5–10% common hai. Agar bill me "service charge" already laga hai to alag tip dena zaroori nahi. Delivery boys ko ₹20–50 dena aam hai.' },
-    { q: 'Service charge aur tip me kya difference hai?', a: 'Service charge (aam taur pe 5–10%) restaurant khud bill me lagata hai — ye optional hai aur aap hatwa sakte ho. Tip aap apni marzi se dete ho jo staff ko milta hai.' },
-    { q: 'Tip GST ke pehle ke amount pe ya baad ke?', a: 'Etiquette ke hisaab se tip food amount (GST se pehle) pe calculate karna sahi hai, lekin practically log final bill pe hi karte hain — dono chalta hai.' },
-    { q: 'Split karne pe paisa round kaise karein?', a: 'Tool exact per-person amount dikhata hai. Aap upar round kar do — thoda extra tip ban jayega, kisi ka nuksaan nahi.' },
+    { q: 'How much should I tip in India?', a: '5–10% is common at restaurants. If a "service charge" is already on the bill, a separate tip isn\'t necessary. ₹20–50 is common for delivery workers.' },
+    { q: 'What\'s the difference between service charge and tip?', a: 'A service charge (usually 5–10%) is added to the bill by the restaurant — it\'s optional and you can have it removed. A tip is given at your discretion and goes to the staff.' },
+    { q: 'Is the tip on the pre-tax or post-tax amount?', a: 'Etiquette says to calculate the tip on the food amount (pre-tax), but in practice people use the final bill — both are fine.' },
+    { q: 'How do I round the split amount?', a: 'The tool shows the exact per-person amount. You can round up — it just makes a slightly bigger tip, no one loses out.' },
   ],
 };

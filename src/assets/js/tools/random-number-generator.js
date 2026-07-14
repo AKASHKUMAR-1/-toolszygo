@@ -17,13 +17,13 @@
     var unique = $('rn-unique').checked;
     var out = $('rn-result');
     if (isNaN(min) || isNaN(max) || min > max) {
-      out.textContent = 'Min, Max se chhota ya barabar hona chahiye';
+      out.textContent = 'Min must be less than or equal to Max';
       out.style.fontSize = '15px';
       return;
     }
     var range = max - min + 1;
     if (unique && count > range) {
-      out.textContent = 'Is range me sirf ' + range + ' unique numbers hain — count kam karo';
+      out.textContent = 'This range has only ' + range + ' unique numbers — lower the count';
       out.style.fontSize = '15px';
       return;
     }
@@ -55,7 +55,7 @@
   $('rn-generate').addEventListener('click', generate);
   $('rn-copy').addEventListener('click', function () {
     var t = $('rn-result').textContent;
-    if (t && t !== '—' && !/chahiye|karo/.test(t)) toolsdoCopy(t, this);
+    if (t && t !== '—' && !/must be|only|lower/.test(t)) toolsdoCopy(t, this);
   });
   generate();
 })();

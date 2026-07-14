@@ -52,7 +52,7 @@
     var style = $('nw-style').value;
     var num = Math.abs(parseFloat(raw));
     if (isNaN(num) || num > 99999999999) {
-      $('nw-result').textContent = 'Valid number daalo (99 arab tak)';
+      $('nw-result').textContent = 'Enter a valid number (up to ~1 trillion)';
       return;
     }
     var intPart = Math.floor(num);

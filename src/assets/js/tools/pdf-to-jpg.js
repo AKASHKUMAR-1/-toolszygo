@@ -51,11 +51,11 @@
         var thumb = document.createElement('a');
         thumb.href = url;
         thumb.download = base + '-page-' + p + '.jpg';
-        thumb.title = 'Click karke download karo';
+        thumb.title = 'Click to download';
         thumb.innerHTML = '<img src="' + url + '" style="width:100%;border-radius:8px;border:1px solid #F0E0CC;"><div style="font-size:10px;text-align:center;color:#B98E63;">Page ' + p + '</div>';
         box.appendChild(thumb);
       }
-      $('pj-status').textContent = '✓ ' + pdf.numPages + ' pages ready — thumbnail pe click karke download karo';
+      $('pj-status').textContent = '✓ ' + pdf.numPages + ' pages ready — click a thumbnail to download';
       $('pj-download-all').disabled = false;
     } catch (e) {
       $('pj-status').textContent = 'Fail: ' + (e.message || 'password-protected PDF?');

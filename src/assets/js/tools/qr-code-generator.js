@@ -9,7 +9,7 @@
   function generate() {
     var text = $('qr-text').value.trim();
     if (!text) {
-      $('qr-placeholder').textContent = 'Pehle kuch text ya URL daalo';
+      $('qr-placeholder').textContent = 'Enter some text or a URL first';
       return;
     }
     var size = parseInt($('qr-size').value, 10);
@@ -42,7 +42,7 @@
     } catch (err) {
       $('qr-placeholder').style.display = '';
       canvas.style.display = 'none';
-      $('qr-placeholder').textContent = 'QR nahi ban paya — text bahut lamba ho sakta hai';
+      $('qr-placeholder').textContent = 'Couldn\'t generate QR — the text may be too long';
       $('qr-download').disabled = true;
       hasQR = false;
     }

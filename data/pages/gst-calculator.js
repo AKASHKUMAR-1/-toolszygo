@@ -43,15 +43,15 @@ module.exports = {
   <button class="btn btn-secondary" id="gst-copy">Copy result</button>
 </div>`,
   howto: [
-    'Amount daalo — with GST ya without GST, dono chalega.',
-    'GST rate choose karo (0.25%, 3%, 5%, 12%, 18% ya 28%).',
-    '<strong>Add GST</strong> select karo agar amount me GST add karna hai, ya <strong>Remove GST</strong> agar GST-inclusive price se base nikalna hai.',
-    'Calculate pe click karo — GST amount, CGST/SGST breakup aur total dikh jayega.',
+    'Enter the amount — with GST or without GST, either works.',
+    'Choose the GST rate (0.25%, 3%, 5%, 12%, 18%, or 28%).',
+    'Select <strong>Add GST</strong> to add GST to the amount, or <strong>Remove GST</strong> to extract the base price from a GST-inclusive price.',
+    'Click Calculate — the GST amount, CGST/SGST breakup, and total appear instantly.',
   ],
   faq: [
-    { q: 'CGST aur SGST kya hote hain?', a: 'Same state ke andar sale pe GST do hisso me batta hai — CGST (Central GST) aur SGST (State GST), dono GST rate ke aadhe-aadhe. E.g. 18% GST = 9% CGST + 9% SGST.' },
-    { q: 'GST remove (reverse GST) kaise calculate hota hai?', a: 'GST-inclusive amount se base price nikalne ka formula: Base = Total ÷ (1 + rate/100). E.g. ₹1180 me 18% GST included hai to base = 1180 ÷ 1.18 = ₹1000.' },
-    { q: 'India me GST ke kaunse rates hain?', a: 'Common rates: 0.25% (rough diamonds), 3% (gold), 5%, 12%, 18% aur 28%. Zyada tar services pe 18% lagta hai.' },
-    { q: 'Kya ye calculator IGST ke liye bhi kaam karta hai?', a: 'Haan — inter-state sale me poora GST amount hi IGST hota hai. Is tool ka "GST amount" hi aapka IGST hai.' },
+    { q: 'What are CGST and SGST?', a: 'For sales within the same state, GST is split into two parts — CGST (Central GST) and SGST (State GST), each half of the GST rate. E.g. 18% GST = 9% CGST + 9% SGST.' },
+    { q: 'How is GST removed (reverse GST) calculated?', a: 'The formula to extract the base price from a GST-inclusive amount: Base = Total ÷ (1 + rate/100). E.g. if ₹1180 includes 18% GST, base = 1180 ÷ 1.18 = ₹1000.' },
+    { q: 'What are the GST rates in India?', a: 'Common rates: 0.25% (rough diamonds), 3% (gold), 5%, 12%, 18%, and 28%. Most services are taxed at 18%.' },
+    { q: 'Does this calculator work for IGST too?', a: 'Yes — for inter-state sales, the entire GST amount is IGST. This tool\'s "GST amount" is your IGST.' },
   ],
 };

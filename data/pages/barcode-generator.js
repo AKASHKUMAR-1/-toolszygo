@@ -11,7 +11,7 @@ module.exports = {
     <div class="field">
       <label for="bc-format">Barcode Format</label>
       <select id="bc-format">
-        <option value="CODE128" selected>CODE128 (sabke liye — text+numbers)</option>
+        <option value="CODE128" selected>CODE128 (general — text+numbers)</option>
         <option value="EAN13">EAN-13 (products, 12-13 digits)</option>
         <option value="UPC">UPC-A (US products, 11-12 digits)</option>
         <option value="CODE39">CODE39 (industrial)</option>
@@ -29,14 +29,14 @@ module.exports = {
   <button class="btn btn-secondary" id="bc-download" disabled>Download PNG</button>
 </div>`,
   howto: [
-    'Barcode me jo number/text chahiye wo daalo.',
-    'Format choose karo — general use ke liye CODE128, retail products ke liye EAN-13.',
-    '<strong>Generate</strong> dabao aur PNG download karo — print ya label ke liye ready.',
+    'Enter the number/text you want in the barcode.',
+    'Choose a format — CODE128 for general use, EAN-13 for retail products.',
+    'Click <strong>Generate</strong> and download the PNG — ready to print or label.',
   ],
   faq: [
-    { q: 'CODE128 aur EAN-13 me kya difference hai?', a: 'CODE128 kuch bhi encode karta hai (letters, numbers, symbols) — internal use, couriers, inventory ke liye. EAN-13 sirf 13 digits — retail products pe jo standard barcode dikhta hai wahi hai.' },
-    { q: 'EAN-13 pe error kyun aa raha hai?', a: 'EAN-13 ko exactly 12 digits chahiye (13th check digit khud banta hai) ya 13 valid digits. Text ya galat length pe error aayega — CODE128 use karo agar flexible input chahiye.' },
-    { q: 'Kya ye barcode scanner se scan hoga?', a: 'Haan — standard formats hain, koi bhi barcode scanner ya mobile scanning app padh legi. Print karte waqt size kam se kam 3 cm wide rakho.' },
-    { q: 'Apne product ke liye official EAN number kahan se milega?', a: 'GS1 India (gs1india.org) se registered EAN numbers milte hain jo globally unique hote hain. Ye tool kisi bhi number ka barcode bana dega, lekin retail me bechne ke liye GS1 wala number chahiye.' },
+    { q: 'What\'s the difference between CODE128 and EAN-13?', a: 'CODE128 encodes anything (letters, numbers, symbols) — for internal use, couriers, inventory. EAN-13 is exactly 13 digits — the standard barcode you see on retail products.' },
+    { q: 'Why am I getting an error on EAN-13?', a: 'EAN-13 needs exactly 12 digits (the 13th check digit is generated automatically) or 13 valid digits. Text or wrong length will cause an error — use CODE128 if you need flexible input.' },
+    { q: 'Will this barcode scan with a scanner?', a: 'Yes — these are standard formats, readable by any barcode scanner or mobile scanning app. Keep the printed size at least 3 cm wide.' },
+    { q: 'Where do I get an official EAN number for my product?', a: 'Registered EAN numbers that are globally unique come from GS1 India (gs1india.org). This tool generates a barcode for any number, but selling at retail requires a GS1-issued number.' },
   ],
 };

@@ -6,8 +6,8 @@ module.exports = {
     <div class="panel-label">Input</div>
     <div class="dropzone" id="pn-drop">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0l-4 4m4-4l4 4" stroke="#A39C8B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3" stroke="#A39C8B" stroke-width="1.6" stroke-linecap="round"/></svg>
-      <div><strong>PDF choose karo</strong> ya yahan drop karo</div>
-      <div id="pn-info" style="font-size:11.5px;">koi file selected nahi</div>
+      <div><strong>Choose a PDF</strong> or drop it here</div>
+      <div id="pn-info" style="font-size:11.5px;">no file selected</div>
     </div>
     <input type="file" id="pn-file" accept="application/pdf" style="display:none;">
     <div class="field-row">
@@ -35,7 +35,7 @@ module.exports = {
   </div>
   <div class="panel panel-result">
     <div class="panel-label">Result</div>
-    <div class="panel-placeholder" id="pn-placeholder">numbered PDF yahan ready hoga</div>
+    <div class="panel-placeholder" id="pn-placeholder">numbered PDF will be ready here</div>
     <div class="result-rows" id="pn-stats" style="display:none;">
       <div class="result-row"><span class="k">Pages numbered</span><span class="v" id="pn-pages">—</span></div>
     </div>
@@ -46,13 +46,13 @@ module.exports = {
   <button class="btn btn-secondary" id="pn-download" disabled>Download PDF</button>
 </div>`,
   howto: [
-    'PDF select karo.',
-    'Position, starting number aur format choose karo.',
-    '<strong>Add page numbers</strong> dabao aur numbered PDF download karo.',
+    'Select a PDF.',
+    'Choose the position, starting number, and format.',
+    'Click <strong>Add page numbers</strong> and download the numbered PDF.',
   ],
   faq: [
-    { q: 'Number kis style me lagta hai?', a: 'Clean helvetica font me, page ke bottom pe — center, left ya right jahan chaaho. "Page 1" ya "1 of 10" formats bhi available hain.' },
-    { q: 'Kya original content pe number overlap hoga?', a: 'Numbers bottom margin me lagte hain — normal documents me content se takrate nahi. Agar aapki PDF me margin bilkul nahi hai to overlap ho sakta hai.' },
-    { q: 'Assignment/thesis ke liye page numbers chahiye — sahi rahega?', a: 'Bilkul — yehi iska main use hai. Print se pehle numbered PDF check kar lena.' },
+    { q: 'What style are the numbers in?', a: 'Clean Helvetica font, at the bottom of the page — center, left, or right, your choice. "Page 1" or "1 of 10" formats are available too.' },
+    { q: 'Will the numbers overlap with the original content?', a: 'Numbers are placed in the bottom margin — they don\'t clash with content in normal documents. If your PDF has no margin at all, overlap can occur.' },
+    { q: 'I need page numbers for an assignment/thesis — will this work?', a: 'Absolutely — that\'s the main use case. Just check the numbered PDF before printing.' },
   ],
 };

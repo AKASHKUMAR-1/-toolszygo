@@ -17,18 +17,18 @@
 
   async function convert(file) {
     if (!/\.docx$/i.test(file.name)) {
-      $('wp-status').textContent = 'Sirf .docx files supported hain (.doc nahi)';
+      $('wp-status').textContent = 'Only .docx files are supported (not .doc)';
       return;
     }
-    $('wp-status').textContent = 'Document render ho raha hai…';
+    $('wp-status').textContent = 'Rendering document…';
     try {
       var result = await mammoth.convertToHtml({ arrayBuffer: await file.arrayBuffer() });
-      $('wp-preview').innerHTML = result.value || '<em>Document khaali lag raha hai</em>';
-      $('wp-status').textContent = '✓ Ready — ab "Save as PDF" dabao';
+      $('wp-preview').innerHTML = result.value || '<em>The document appears to be empty</em>';
+      $('wp-status').textContent = '✓ Ready — now click "Save as PDF"';
       $('wp-print').disabled = false;
       $('wp-info').textContent = file.name;
     } catch (e) {
-      $('wp-status').textContent = 'File nahi khul payi: ' + (e.message || e);
+      $('wp-status').textContent = 'Couldn\'t open the file: ' + (e.message || e);
     }
   }
 

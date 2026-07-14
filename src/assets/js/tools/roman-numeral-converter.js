@@ -39,7 +39,7 @@
     var v = fromRoman(input);
     if (v === null) {
       $('rn2-value').textContent = '—';
-      err.textContent = 'Valid Roman numeral nahi hai (e.g. XIV, MMXXVI)';
+      err.textContent = 'Not a valid Roman numeral (e.g. XIV, MMXXVI)';
     } else {
       $('rn2-value').textContent = v.toLocaleString('en-IN');
       err.textContent = '';

@@ -14,7 +14,7 @@ module.exports = {
       </div>
     </div>
     <div class="field">
-      <label for="rc-expense">Aaj ke Monthly Expenses (₹)</label>
+      <label for="rc-expense">Today's Monthly Expenses (₹)</label>
       <input type="number" id="rc-expense" value="50000" min="5000" step="5000">
     </div>
     <div class="field-row">
@@ -31,10 +31,10 @@ module.exports = {
   <div class="panel panel-result" style="min-height:0;">
     <div class="panel-label">Result</div>
     <div class="result-big" id="rc-corpus">—</div>
-    <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Retirement corpus chahiye</div>
+    <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Retirement corpus needed</div>
     <div class="result-rows" style="margin-top:8px;">
-      <div class="result-row"><span class="k">Retirement pe monthly kharcha hoga</span><span class="v" id="rc-future-exp">—</span></div>
-      <div class="result-row"><span class="k">Corpus banane ke liye monthly SIP @12%</span><span class="v" id="rc-sip">—</span></div>
+      <div class="result-row"><span class="k">Monthly expense at retirement</span><span class="v" id="rc-future-exp">—</span></div>
+      <div class="result-row"><span class="k">Monthly SIP @12% to build this corpus</span><span class="v" id="rc-sip">—</span></div>
     </div>
   </div>
 </div>
@@ -43,15 +43,15 @@ module.exports = {
   <button class="btn btn-secondary" id="rc-copy">Copy result</button>
 </div>`,
   howto: [
-    'Apni current age aur planned retirement age daalo.',
-    'Aaj ke monthly expenses daalo — retirement me lifestyle same maani jayegi.',
-    'Inflation aur life expectancy adjust karo agar chahiye.',
-    '<strong>Calculate</strong> dabao — kitna corpus chahiye aur usko banane ki monthly SIP dikh jayegi.',
+    'Enter your current age and planned retirement age.',
+    'Enter today\'s monthly expenses — the same lifestyle is assumed at retirement.',
+    'Adjust inflation and life expectancy if needed.',
+    'Click <strong>Calculate</strong> — see the corpus needed and the monthly SIP to build it.',
   ],
   faq: [
-    { q: 'Corpus kaise calculate hota hai?', a: 'Pehle aaj ke expenses ko inflation se retirement tak badhaya jaata hai. Phir retirement ke saalon ke liye corpus nikala jaata hai maankar ki corpus post-retirement ~7% kamayega jabki kharche inflation se badhte rahenge (real return method).' },
-    { q: 'Kitna corpus kaafi hota hai?', a: 'Thumb rule: retirement ke pehle saal ke annual expenses ka 25–30x. E.g. retirement pe ₹3.5L/month kharcha = ₹42L/saal × 30 = ~₹12.6 crore. Ye calculator exact number deta hai aapke inputs pe.' },
-    { q: 'SIP @12% hi kyun?', a: 'Long-term equity ka historical average ~12% hai. Conservative estimate ke liye is number ko kam maan kar zyada SIP karna better hai. Retirement ke paas aate hi equity se debt me shift karte jao.' },
-    { q: 'EPF/NPS already hai to?', a: 'Unka expected retirement value is corpus me se minus kar do — bacha hua gap SIP se cover karo. EPF+NPS aksar corpus ka 30–50% cover kar dete hain.' },
+    { q: 'How is the corpus calculated?', a: 'Today\'s expenses are first grown with inflation until retirement. Then the corpus needed for the retirement years is calculated assuming the corpus earns ~7% post-retirement while expenses keep rising with inflation (real return method).' },
+    { q: 'How large a corpus is enough?', a: 'Rule of thumb: 25–30x the annual expenses in the first year of retirement. E.g. ₹3.5L/month expense at retirement = ₹42L/year × 30 = ~₹12.6 crore. This calculator gives an exact number based on your inputs.' },
+    { q: 'Why SIP @12%?', a: 'Long-term equity has a historical average of ~12%. For a conservative estimate, assume less and invest a slightly higher SIP. Shift from equity to debt as you approach retirement.' },
+    { q: 'What if I already have EPF/NPS?', a: 'Subtract their expected retirement value from this corpus — cover the remaining gap with SIP. EPF+NPS often cover 30–50% of the corpus.' },
   ],
 };

@@ -40,15 +40,15 @@ module.exports = {
   <button class="btn btn-secondary" id="si-copy">Copy result</button>
 </div>`,
   howto: [
-    'Principal amount daalo — jitna paisa udhaar diya/liya hai.',
-    'Annual interest rate daalo (e.g. 10%).',
-    'Time years ya months me daalo.',
-    '<strong>Calculate</strong> dabao — simple interest aur total amount dikh jayega.',
+    'Enter the principal amount — the money lent/borrowed.',
+    'Enter the annual interest rate (e.g. 10%).',
+    'Enter the time in years or months.',
+    'Click <strong>Calculate</strong> — see the simple interest and total amount.',
   ],
   faq: [
-    { q: 'Simple interest ka formula kya hai?', a: 'SI = P × R × T ÷ 100, jahan P = principal, R = annual rate aur T = time in years. Total amount = P + SI.' },
-    { q: 'Simple interest kahan use hota hai?', a: 'Personal udhaar, gold loans, kuch vehicle loans aur short-term lending me. Banks ke deposits me zyada tar compound interest hota hai.' },
-    { q: 'Mahine ke hisaab se interest kaise nikale?', a: 'Time unit "Months" select karo — tool khud months ko years me convert kar leta hai (months ÷ 12). "2 rupaye sekda" matlab 2% per month = 24% per year.' },
-    { q: 'Simple aur compound me kaunsa zyada hota hai?', a: 'Same rate aur time pe compound interest hamesha zyada hota hai (1 period ke baad), kyunki usme interest pe bhi interest lagta hai.' },
+    { q: 'What is the simple interest formula?', a: 'SI = P × R × T ÷ 100, where P = principal, R = annual rate, and T = time in years. Total amount = P + SI.' },
+    { q: 'Where is simple interest used?', a: 'In personal loans, gold loans, some vehicle loans, and short-term lending. Bank deposits mostly use compound interest.' },
+    { q: 'How do I calculate interest on a monthly basis?', a: 'Select the "Months" time unit — the tool converts months to years (months ÷ 12). "2 rupees per hundred" means 2% per month = 24% per year.' },
+    { q: 'Which is more — simple or compound?', a: 'For the same rate and time, compound interest is always more (after 1 period), because it also earns interest on interest.' },
   ],
 };

@@ -61,7 +61,7 @@
     var w = parseInt($('ir-width').value, 10);
     var h = parseInt($('ir-height').value, 10);
     if (!w || !h || w < 1 || h < 1 || w > 10000 || h > 10000) {
-      alert('Valid width/height daalo (1–10000 px).');
+      alert('Enter a valid width/height (1–10000 px).');
       return;
     }
     var btn = this;

@@ -7,10 +7,10 @@
     var left = max - used;
     if (used === 0) { el.textContent = '—'; el.style.color = ''; return; }
     if (left >= 0) {
-      el.textContent = left.toLocaleString('en-IN') + ' bache';
+      el.textContent = left.toLocaleString('en-IN') + ' left';
       el.style.color = '#5D8A4E';
     } else {
-      el.textContent = Math.abs(left).toLocaleString('en-IN') + ' zyada';
+      el.textContent = Math.abs(left).toLocaleString('en-IN') + ' over';
       el.style.color = '#B84F4F';
     }
   }

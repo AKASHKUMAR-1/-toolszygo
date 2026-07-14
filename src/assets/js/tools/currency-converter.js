@@ -23,7 +23,7 @@
       return;
     }
     $('cur-result').textContent = '…';
-    $('cur-rate').textContent = 'Rate fetch ho raha hai…';
+    $('cur-rate').textContent = 'Fetching rate…';
     fetch('https://api.frankfurter.dev/v1/latest?amount=' + amount + '&from=' + from + '&to=' + to)
       .then(function (r) { if (!r.ok) throw new Error('network'); return r.json(); })
       .then(function (d) {
@@ -36,7 +36,7 @@
       })
       .catch(function () {
         $('cur-result').textContent = '—';
-        $('cur-rate').textContent = 'Rate nahi mila — internet check karke dobara try karo';
+        $('cur-rate').textContent = 'Couldn\'t get rate — check your internet and try again';
       });
   }
 

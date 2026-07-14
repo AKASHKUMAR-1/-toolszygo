@@ -22,7 +22,7 @@
 
     recognition.onstart = function () {
       listening = true;
-      $('stt-status').textContent = '🔴 Sun raha hoon… bolo!';
+      $('stt-status').textContent = '🔴 Listening… speak!';
       $('stt-status').style.color = '#B84F4F';
     };
     recognition.onresult = function (e) {
@@ -38,9 +38,9 @@
     };
     recognition.onerror = function (e) {
       if (e.error === 'not-allowed') {
-        $('stt-status').textContent = 'Mic permission chahiye — browser me allow karo';
+        $('stt-status').textContent = 'Mic permission needed — allow it in the browser';
       } else if (e.error === 'no-speech') {
-        $('stt-status').textContent = 'Kuch sunayi nahi diya — dobara bolo';
+        $('stt-status').textContent = 'Didn\'t catch anything — speak again';
       } else {
         $('stt-status').textContent = 'Error: ' + e.error;
       }

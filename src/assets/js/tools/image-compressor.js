@@ -23,11 +23,11 @@
 
   function setFile(f) {
     if (!/^image\/(jpeg|png|webp)$/.test(f.type)) {
-      alert('Sirf JPG, PNG ya WEBP images supported hain.');
+      alert('Only JPG, PNG, or WEBP images are supported.');
       return;
     }
     if (f.size > 25 * 1048576) {
-      alert('File 25 MB se badi hai.');
+      alert('File is larger than 25 MB.');
       return;
     }
     file = f;
@@ -82,7 +82,7 @@
         $('ic-orig').textContent = fmtSize(file.size);
         $('ic-comp').textContent = fmtSize(blob.size);
         var savedPct = Math.round((1 - blob.size / file.size) * 100);
-        $('ic-saved').textContent = savedPct > 0 ? savedPct + '% smaller' : 'Kam nahi hua (' + Math.abs(savedPct) + '% badi ho gayi) — format badalkar dekho';
+        $('ic-saved').textContent = savedPct > 0 ? savedPct + '% smaller' : 'No reduction (' + Math.abs(savedPct) + '% larger) — try a different format';
         $('ic-saved').style.color = savedPct > 0 ? '' : '#B84F4F';
         $('ic-download').disabled = false;
       }, format, quality);
@@ -91,7 +91,7 @@
       URL.revokeObjectURL(url);
       btn.textContent = 'Compress image';
       btn.disabled = false;
-      alert('Image load nahi ho payi.');
+      alert('Image failed to load.');
     };
     img.src = url;
   });

@@ -26,7 +26,7 @@
   function tick() {
     var upcoming = exams.filter(function (ex) { return new Date(ex.date) > new Date(); })[0];
     if (!upcoming) {
-      $('ec-title').textContent = exams.length ? 'Sab exams ho gaye! 🎉' : 'Pehla exam add karo';
+      $('ec-title').textContent = exams.length ? 'All exams done! 🎉' : 'Add your first exam';
       ['ec-days', 'ec-hours', 'ec-mins', 'ec-secs'].forEach(function (id) { $(id).textContent = '—'; });
       return;
     }
@@ -42,7 +42,7 @@
     var name = $('ec-name').value.trim();
     var date = $('ec-date').value;
     if (!name || !date) {
-      $('ec-title').textContent = 'Naam aur date dono daalo';
+      $('ec-title').textContent = 'Enter both name and date';
       return;
     }
     exams.push({ name: name, date: date });

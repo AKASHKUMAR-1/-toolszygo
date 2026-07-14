@@ -39,7 +39,7 @@
       var pdf = await pdfjsLib.getDocument({ data: await file.arrayBuffer() }).promise;
       var out = await PDFLib.PDFDocument.create();
       for (var p = 1; p <= pdf.numPages; p++) {
-        $('pc2-status').textContent = 'Page ' + p + ' / ' + pdf.numPages + ' compress ho raha hai…';
+        $('pc2-status').textContent = 'Compressing page ' + p + ' / ' + pdf.numPages + '…';
         var page = await pdf.getPage(p);
         var viewport = page.getViewport({ scale: 1.5 });
         var canvas = document.createElement('canvas');
@@ -61,11 +61,11 @@
       $('pc2-orig').textContent = fmtSize(file.size);
       $('pc2-new').textContent = fmtSize(resultBlob.size);
       var saved = Math.round((1 - resultBlob.size / file.size) * 100);
-      $('pc2-saved').textContent = saved > 0 ? saved + '% chhoti' : 'Compression nahi hui (PDF pehle se optimized hai)';
-      $('pc2-status').textContent = '✓ Ho gaya';
+      $('pc2-saved').textContent = saved > 0 ? saved + '% smaller' : 'No compression (the PDF is already optimized)';
+      $('pc2-status').textContent = '✓ Done';
       $('pc2-download').disabled = false;
     } catch (e) {
-      $('pc2-status').textContent = 'Fail ho gaya: ' + (e.message || 'password-protected PDF?');
+      $('pc2-status').textContent = 'Failed: ' + (e.message || 'password-protected PDF?');
     }
     btn.disabled = false;
   });

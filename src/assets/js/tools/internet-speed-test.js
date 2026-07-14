@@ -22,7 +22,7 @@
     var bestMbps = 0;
     for (var i = 0; i < sizes.length; i++) {
       var bytes = sizes[i];
-      $('st-status').textContent = 'Download test ' + (i + 1) + '/2 chal raha hai…';
+      $('st-status').textContent = 'Download test ' + (i + 1) + '/2 running…';
       var t0 = performance.now();
       var res = await fetch('https://speed.cloudflare.com/__down?bytes=' + bytes + '&r=' + Math.random(), { cache: 'no-store' });
       var reader = res.body.getReader();
@@ -49,18 +49,18 @@
     $('st-mbs').textContent = '—';
     $('st-verdict').textContent = '—';
     try {
-      $('st-status').textContent = 'Ping check ho raha hai…';
+      $('st-status').textContent = 'Checking ping…';
       var p = await ping();
       if (p !== null) $('st-ping').textContent = p;
       var mbps = await download();
       var rounded = mbps >= 100 ? Math.round(mbps) : Math.round(mbps * 10) / 10;
       $('st-speed').textContent = rounded;
       $('st-mbs').textContent = (Math.round(mbps / 8 * 10) / 10);
-      var verdict = mbps >= 100 ? 'Zabardast 🚀' : mbps >= 40 ? 'Bahut achhi 👍' : mbps >= 15 ? 'Theek-thaak' : mbps >= 5 ? 'Slow 🐢' : 'Bahut slow';
+      var verdict = mbps >= 100 ? 'Excellent 🚀' : mbps >= 40 ? 'Very good 👍' : mbps >= 15 ? 'Decent' : mbps >= 5 ? 'Slow 🐢' : 'Very slow';
       $('st-verdict').textContent = verdict;
-      $('st-status').textContent = '✓ Test complete — dobara chala kar average dekh sakte ho';
+      $('st-status').textContent = '✓ Test complete — run again to see an average';
     } catch (e) {
-      $('st-status').textContent = 'Test fail ho gaya — internet check karke dobara try karo';
+      $('st-status').textContent = 'Test failed — check your internet and try again';
       $('st-speed').textContent = '—';
     }
     btn.disabled = false;

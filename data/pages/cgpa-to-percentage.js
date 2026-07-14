@@ -15,10 +15,10 @@ module.exports = {
       </select>
     </div>
     <div class="field">
-      <label for="cg-multiplier">Multiplier (board/university ka formula)</label>
+      <label for="cg-multiplier">Multiplier (your board/university's formula)</label>
       <select id="cg-multiplier">
         <option value="9.5" selected>× 9.5 (CBSE standard)</option>
-        <option value="10">× 10 (kuch universities)</option>
+        <option value="10">× 10 (some universities)</option>
         <option value="custom">Custom multiplier</option>
       </select>
     </div>
@@ -37,14 +37,14 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'CGPA daalo (ya percentage, agar ulta convert karna hai).',
-    'Apne board/university ka multiplier choose karo — CBSE ke liye 9.5.',
-    'Result live update hota hai formula ke saath.',
+    'Enter your CGPA (or percentage, if converting the other way).',
+    'Choose your board/university\'s multiplier — 9.5 for CBSE.',
+    'The result updates live along with the formula.',
   ],
   faq: [
-    { q: 'CBSE me CGPA se percentage kaise nikalte hain?', a: 'CBSE ka official formula: Percentage = CGPA × 9.5. E.g. 8.2 CGPA = 77.9%. Ye 9.5 isliye hai kyunki CBSE ne top scorers ke average marks se ye ratio nikala tha.' },
-    { q: 'Meri university ka formula alag hai to?', a: 'Har university ka apna conversion formula ho sakta hai — kuch ×10, kuch (CGPA−0.5)×10, kuch ×9.5 use karte hain. "Custom multiplier" choose karke apna formula lagao. Official conversion certificate university se hi milta hai.' },
-    { q: 'Job applications me kaunsa use karein?', a: 'Jo aapki marksheet/transcript pe likha hai wahi official hai. Agar sirf CGPA likha hai to university ke official formula se convert karo aur apply karte waqt formula mention karo.' },
-    { q: '10-point aur 4-point GPA me kya difference hai?', a: 'India me zyada tar 10-point CGPA hai; US me 4-point GPA. US applications ke liye WES jaisi credential evaluation services official conversion karti hain.' },
+    { q: 'How is percentage calculated from CGPA for CBSE?', a: 'CBSE\'s official formula: Percentage = CGPA × 9.5. E.g. 8.2 CGPA = 77.9%. This 9.5 factor comes from CBSE\'s own analysis of top scorers\' average marks.' },
+    { q: 'What if my university uses a different formula?', a: 'Every university may have its own conversion formula — some use ×10, some (CGPA−0.5)×10, some ×9.5. Choose "Custom multiplier" to apply your own formula. An official conversion certificate comes from the university.' },
+    { q: 'Which one should I use for job applications?', a: 'Whatever is printed on your marksheet/transcript is official. If only CGPA is listed, convert using your university\'s official formula and mention the formula when applying.' },
+    { q: 'What\'s the difference between 10-point and 4-point GPA?', a: 'India mostly uses 10-point CGPA; the US uses 4-point GPA. For US applications, credential evaluation services like WES do the official conversion.' },
   ],
 };

@@ -27,12 +27,12 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'IP address daalo (e.g. 192.168.1.0) aur CIDR/subnet mask choose karo.',
-    'Network address, broadcast address, usable host range aur total hosts turant mil jayenge.',
+    'Enter an IP address (e.g. 192.168.1.0) and choose the CIDR/subnet mask.',
+    'Get the network address, broadcast address, usable host range, and total hosts instantly.',
   ],
   faq: [
-    { q: 'CIDR notation kya hai?', a: '/24 jaisa notation batata hai ki kitne bits network ke liye reserve hain. /24 = 255.255.255.0 subnet mask ke barabar hai, jisme 256 addresses hoti hain (254 usable).' },
-    { q: 'Network aur broadcast address alag kyun hote hain usable range se?', a: 'Har subnet ka pehla address (network address) subnet ko identify karta hai, aakhri (broadcast) sabko message bhejne ke liye reserved hai — dono devices ko assign nahi kiye ja sakte.' },
-    { q: 'Ye networking students/sysadmins ke liye kyun useful hai?', a: 'Subnetting manual calculation error-prone hai — ye tool turant sahi values deta hai IP planning, VLAN setup ya exam preparation (CCNA jaisi certifications) ke liye.' },
+    { q: 'What is CIDR notation?', a: 'Notation like /24 indicates how many bits are reserved for the network. /24 equals a 255.255.255.0 subnet mask, which has 256 addresses (254 usable).' },
+    { q: 'Why are the network and broadcast addresses separate from the usable range?', a: 'Each subnet\'s first address (network address) identifies the subnet, and the last (broadcast) is reserved for sending messages to everyone — neither can be assigned to devices.' },
+    { q: 'Why is this useful for networking students/sysadmins?', a: 'Manual subnetting is error-prone — this tool gives correct values instantly for IP planning, VLAN setup, or exam prep (certifications like CCNA).' },
   ],
 };

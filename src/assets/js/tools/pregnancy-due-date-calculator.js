@@ -46,7 +46,7 @@
       $('pdd-trimester').textContent = '—';
     }
     $('pdd-conception').textContent = fmtDate(conception);
-    $('pdd-remaining').textContent = remaining > 0 ? remaining + ' din' : 'Due date nikal gayi';
+    $('pdd-remaining').textContent = remaining > 0 ? remaining + ' days' : 'Due date has passed';
   }
 
   $('pdd-date').addEventListener('change', calc);

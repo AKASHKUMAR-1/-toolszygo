@@ -7,11 +7,11 @@ module.exports = {
       <label for="ifsc-code">IFSC Code</label>
       <input type="text" id="ifsc-code" placeholder="e.g. SBIN0000300" maxlength="11" style="font-family:monospace;text-transform:uppercase;">
     </div>
-    <div style="font-size:12px;color:#A39C8B;">IFSC code cheque book, passbook ya bank app me milta hai — 11 characters ka hota hai.</div>
+    <div style="font-size:12px;color:#A39C8B;">The IFSC code is found on your chequebook, passbook, or bank app — it's 11 characters long.</div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
     <div class="panel-label">Result</div>
-    <div class="panel-placeholder" id="ifsc-placeholder">bank branch details yahan aayengi</div>
+    <div class="panel-placeholder" id="ifsc-placeholder">bank branch details will appear here</div>
     <div class="result-rows" id="ifsc-result" style="display:none;">
       <div class="result-row"><span class="k">Bank</span><span class="v" id="ifsc-bank">—</span></div>
       <div class="result-row"><span class="k">Branch</span><span class="v" id="ifsc-branch">—</span></div>
@@ -28,14 +28,14 @@ module.exports = {
   <button class="btn btn-secondary" id="ifsc-copy">Copy details</button>
 </div>`,
   howto: [
-    'Apna 11-character IFSC code daalo (e.g. SBIN0000300).',
-    '<strong>Search IFSC</strong> dabao — bank, branch, address aur services ki details aa jayengi.',
-    'Details copy karke NEFT/RTGS form me use karo.',
+    'Enter your 11-character IFSC code (e.g. SBIN0000300).',
+    'Click <strong>Search IFSC</strong> — bank, branch, address, and service details appear.',
+    'Copy the details for use in an NEFT/RTGS form.',
   ],
   faq: [
-    { q: 'IFSC code kya hota hai?', a: 'IFSC (Indian Financial System Code) har bank branch ka unique 11-character code hai — pehle 4 letters bank ka naam, 5th character 0, aakhri 6 branch code. NEFT, RTGS aur IMPS transfers me zaroori hota hai.' },
-    { q: 'Ye data kahan se aata hai?', a: 'Razorpay ki free IFSC directory API se, jo RBI ki official list pe based hai aur regularly update hoti hai.' },
-    { q: 'IFSC code kahan milta hai?', a: 'Cheque book ke har page pe, bank passbook pe, bank ki app/net-banking me, ya bank ki website pe. Account number ke saath hamesha IFSC bhi verify karo.' },
-    { q: 'Galat IFSC daalne pe paisa kahan jaata hai?', a: 'Agar IFSC+account combination invalid hai to transfer fail hokar paisa wapas aa jaata hai. Lekin galat-but-valid details pe paisa galat account me jaa sakta hai — isliye hamesha double-check karo.' },
+    { q: 'What is an IFSC code?', a: 'IFSC (Indian Financial System Code) is a unique 11-character code for every bank branch — the first 4 letters are the bank name, the 5th character is 0, and the last 6 are the branch code. It\'s required for NEFT, RTGS, and IMPS transfers.' },
+    { q: 'Where does this data come from?', a: 'From Razorpay\'s free IFSC directory API, which is based on the RBI\'s official list and updated regularly.' },
+    { q: 'Where do I find the IFSC code?', a: 'On every chequebook page, the bank passbook, the bank\'s app/net-banking, or the bank\'s website. Always verify the IFSC along with the account number.' },
+    { q: 'What happens to money sent with a wrong IFSC?', a: 'If the IFSC+account combination is invalid, the transfer fails and the money is returned. But with a valid-but-wrong combination, money can go to the wrong account — always double-check.' },
   ],
 };

@@ -10,7 +10,7 @@ module.exports = {
   <div class="panel panel-result">
     <div class="panel-label">Result</div>
     <div id="json-status" style="font-size:13px;font-weight:600;"></div>
-    <textarea id="json-output" readonly spellcheck="false" placeholder="formatted JSON yahan aayega…" style="flex:1;min-height:220px;border:1px solid #F0E0CC;border-radius:10px;background:rgba(255,255,255,0.65);font-family:monospace;font-size:13px;color:#3D3929;padding:12px;resize:vertical;"></textarea>
+    <textarea id="json-output" readonly spellcheck="false" placeholder="formatted JSON will appear here…" style="flex:1;min-height:220px;border:1px solid #F0E0CC;border-radius:10px;background:rgba(255,255,255,0.65);font-family:monospace;font-size:13px;color:#3D3929;padding:12px;resize:vertical;"></textarea>
   </div>
 </div>
 <div class="btn-row">
@@ -20,15 +20,15 @@ module.exports = {
   <button class="btn btn-secondary" id="json-copy">Copy result</button>
 </div>`,
   howto: [
-    'Apna JSON input box me paste karo.',
-    '<strong>Format</strong> dabao — 2-space indentation ke saath beautify hoga.',
-    '<strong>Minify</strong> se saare spaces hat kar compact JSON milega.',
-    'Agar JSON invalid hai to exact error position ke saath message dikhega.',
+    'Paste your JSON in the input box.',
+    'Click <strong>Format</strong> — it beautifies with 2-space indentation.',
+    'Use <strong>Minify</strong> to strip all spaces for compact JSON.',
+    'If the JSON is invalid, a message with the exact error position appears.',
   ],
   faq: [
-    { q: 'JSON invalid kyun bata raha hai?', a: 'Common galtiyan: keys double quotes me nahi hain, aakhri item ke baad extra comma (trailing comma), single quotes ka use, ya comments — JSON me ye sab allowed nahi hai. Error message me exact position dikhta hai.' },
-    { q: 'Kya mera JSON data kahin upload hota hai?', a: 'Nahi — parsing aur formatting browser me JSON.parse/JSON.stringify se hoti hai. API keys ya sensitive data wala JSON bhi safe hai.' },
-    { q: 'Kitna bada JSON handle ho sakta hai?', a: 'Kai MB tak aaram se — browser me hi process hota hai. Bahut bade files (50MB+) pe tab slow ho sakta hai.' },
-    { q: 'JSON5 ya JSONC (comments wala) support hai?', a: 'Nahi — ye strict JSON validator hai (RFC 8259). Comments aur trailing commas standard JSON me invalid hain, isliye error milega.' },
+    { q: 'Why does it say my JSON is invalid?', a: 'Common mistakes: keys not in double quotes, a trailing comma after the last item, single quotes, or comments — none of these are allowed in JSON. The error message shows the exact position.' },
+    { q: 'Is my JSON data uploaded anywhere?', a: 'No — parsing and formatting happen in the browser via JSON.parse/JSON.stringify. JSON containing API keys or sensitive data is safe too.' },
+    { q: 'How large a JSON can this handle?', a: 'Several MB with ease — it\'s processed entirely in the browser. Very large files (50MB+) may be slow.' },
+    { q: 'Is JSON5 or JSONC (with comments) supported?', a: 'No — this is a strict JSON validator (RFC 8259). Comments and trailing commas are invalid in standard JSON, so you\'ll get an error.' },
   ],
 };

@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel">
     <div class="panel-label">Markdown Input</div>
     <div class="field">
-      <textarea id="md-input" placeholder="# Heading&#10;&#10;Ye **bold** hai aur ye *italic*.&#10;&#10;- List item&#10;- [Link](https://example.com)" spellcheck="false" style="min-height:220px;font-family:monospace;font-size:13px;"></textarea>
+      <textarea id="md-input" placeholder="# Heading&#10;&#10;This is **bold** and this is *italic*.&#10;&#10;- List item&#10;- [Link](https://example.com)" spellcheck="false" style="min-height:220px;font-family:monospace;font-size:13px;"></textarea>
     </div>
   </div>
   <div class="panel panel-result">
@@ -15,18 +15,18 @@ module.exports = {
 </div>
 <div class="btn-row">
   <button class="btn btn-primary" id="md-convert">Convert</button>
-  <button class="btn btn-secondary" id="md-toggle">👁 Preview dekho</button>
+  <button class="btn btn-secondary" id="md-toggle">👁 View preview</button>
   <button class="btn btn-secondary" id="md-copy">Copy HTML</button>
 </div>`,
   howto: [
-    'Markdown text paste karo ya likho.',
-    '<strong>Convert</strong> dabao — HTML code mil jayega.',
-    '"Preview dekho" se rendered output check karo, phir HTML copy karo.',
+    'Paste or write Markdown text.',
+    'Click <strong>Convert</strong> — get the HTML code.',
+    'Use "View preview" to check the rendered output, then copy the HTML.',
   ],
   faq: [
-    { q: 'Kaunse Markdown features supported hain?', a: 'Headings (#), bold (**), italic (*), inline code (\`), code blocks (\`\`\`), links, images, bullet/numbered lists, blockquotes (>), horizontal rules (---) aur paragraphs. Tables abhi supported nahi hain.' },
-    { q: 'Markdown kya hota hai?', a: 'Plain text me formatting likhne ka simple tarika — # heading ke liye, ** bold ke liye. GitHub, Reddit, Discord, documentation sab me use hota hai.' },
-    { q: 'Ye HTML WordPress me use kar sakta hoon?', a: 'Haan — WordPress editor ke "Custom HTML" block me paste kar do. Blogger, email templates me bhi chalega.' },
-    { q: 'Kya HTML wapas Markdown me convert hota hai?', a: 'Ye tool sirf MD→HTML karta hai. Ulta karne ke liye alag tool chahiye hoga — zaroorat ho to batao, add kar denge.' },
+    { q: 'Which Markdown features are supported?', a: 'Headings (#), bold (**), italic (*), inline code (\`), code blocks (\`\`\`), links, images, bullet/numbered lists, blockquotes (>), horizontal rules (---), and paragraphs. Tables aren\'t supported yet.' },
+    { q: 'What is Markdown?', a: 'A simple way to write formatting in plain text — # for a heading, ** for bold. Used across GitHub, Reddit, Discord, and documentation.' },
+    { q: 'Can I use this HTML in WordPress?', a: 'Yes — paste it into the WordPress editor\'s "Custom HTML" block. Works in Blogger and email templates too.' },
+    { q: 'Can HTML be converted back to Markdown?', a: 'This tool only does MD→HTML. The reverse would need a separate tool — let us know if you need it, we\'ll add it.' },
   ],
 };

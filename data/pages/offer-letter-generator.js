@@ -4,11 +4,11 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Offer Letter Details</div>
     <div class="field-row">
-      <div class="field"><label for="ol-company">Company Naam</label><input type="text" id="ol-company" placeholder="e.g. ABC Technologies"></div>
+      <div class="field"><label for="ol-company">Company Name</label><input type="text" id="ol-company" placeholder="e.g. ABC Technologies"></div>
       <div class="field"><label for="ol-date">Date</label><input type="date" id="ol-date"></div>
     </div>
     <div class="field-row">
-      <div class="field"><label for="ol-candidate">Candidate Naam</label><input type="text" id="ol-candidate" placeholder="Candidate"></div>
+      <div class="field"><label for="ol-candidate">Candidate Name</label><input type="text" id="ol-candidate" placeholder="Candidate"></div>
       <div class="field"><label for="ol-role">Designation / Role</label><input type="text" id="ol-role" placeholder="e.g. Sales Executive"></div>
     </div>
     <div class="field-row">
@@ -18,7 +18,7 @@ module.exports = {
     </div>
     <div class="field-row">
       <div class="field"><label for="ol-probation">Probation (months)</label><input type="number" id="ol-probation" value="3" min="0" max="12"></div>
-      <div class="field"><label for="ol-hr">HR / Signatory Naam</label><input type="text" id="ol-hr" placeholder="e.g. Priya Sharma, HR Manager"></div>
+      <div class="field"><label for="ol-hr">HR / Signatory Name</label><input type="text" id="ol-hr" placeholder="e.g. Priya Sharma, HR Manager"></div>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
@@ -31,13 +31,13 @@ module.exports = {
   <button class="btn btn-secondary" id="ol-copy">Copy letter text</button>
 </div>`,
   howto: [
-    'Company, candidate, role, CTC aur joining date bharo.',
-    'Professional offer letter template me sab details apni jagah aa jaati hain.',
-    '<strong>Print/Save as PDF</strong> karo ya text copy karke email me bhejo.',
+    'Fill in the company, candidate, role, CTC, and joining date.',
+    'All details are placed into a professional offer letter template.',
+    'Click <strong>Print/Save as PDF</strong> or copy the text to send by email.',
   ],
   faq: [
-    { q: 'Offer letter me kya hona chahiye?', a: 'Role, CTC, joining date, location, probation period aur acceptance ki last date. Detailed terms (leave policy, notice period) appointment letter me aate hain jo joining pe milta hai.' },
-    { q: 'Offer letter legally binding hai?', a: 'Candidate ke sign karne pe ek contract ban jaata hai, lekin employment at-will clauses pe depend karta hai. Serious cases me lawyer se draft review karwao.' },
-    { q: 'CTC breakdown dena zaroori hai?', a: 'Offer letter me total CTC kaafi hai. Detailed breakup (basic, HRA, PF) annexure ya appointment letter me diya jaata hai.' },
+    { q: 'What should an offer letter include?', a: 'Role, CTC, joining date, location, probation period, and the acceptance deadline. Detailed terms (leave policy, notice period) go in the appointment letter given at joining.' },
+    { q: 'Is an offer letter legally binding?', a: 'It becomes a contract once the candidate signs, but it depends on employment at-will clauses. Have a lawyer review the draft for serious cases.' },
+    { q: 'Is a CTC breakdown necessary?', a: 'Total CTC is enough in the offer letter. A detailed breakup (basic, HRA, PF) is given in an annexure or the appointment letter.' },
   ],
 };

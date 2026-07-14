@@ -11,7 +11,7 @@
     var months = Math.ceil(years * 12);
     var y = Math.floor(months / 12), mo = months % 12;
     $('kvp-maturity').textContent = toolsdoINR(P * 2);
-    $('kvp-time').textContent = y + ' saal ' + (mo ? mo + ' mahine' : '') + ' me (' + months + ' months)';
+    $('kvp-time').textContent = y + ' years ' + (mo ? mo + ' months' : '') + ' (' + months + ' months)';
     $('kvp-interest').textContent = toolsdoINR(P);
     lastSummary = 'KVP ' + toolsdoINR(P) + ' @ ' + rate + '% | Double: ' + toolsdoINR(P * 2) +
       ' in ' + y + 'y ' + mo + 'm (' + months + ' months)';

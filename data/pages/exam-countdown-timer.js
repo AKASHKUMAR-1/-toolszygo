@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Exam Details</div>
     <div class="field">
-      <label for="ec-name">Exam ka naam</label>
+      <label for="ec-name">Exam name</label>
       <input type="text" id="ec-name" placeholder="e.g. JEE Mains, Board Exam, UPSC Prelims">
     </div>
     <div class="field">
@@ -28,14 +28,14 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Exam ka naam aur date-time daalo, <strong>+ Add exam</strong> dabao.',
-    'Live countdown chalne lagega — days, hours, minutes, seconds.',
-    'Kai exams add kar sakte ho — sab browser me saved rehte hain, sabse pehla wala countdown me dikhta hai.',
+    'Enter the exam name and date-time, click <strong>+ Add exam</strong>.',
+    'A live countdown starts — days, hours, minutes, seconds.',
+    'Add multiple exams — they\'re all saved in the browser, and the nearest one shows in the countdown.',
   ],
   faq: [
-    { q: 'Mere exams kahan save hote hain?', a: 'Aapke browser ke localStorage me — sirf aapke device pe. Page dobara kholne pe exams wahi milenge. Browser data clear karne pe hat jayenge.' },
-    { q: 'Kitne exams add kar sakte hain?', a: 'Jitne chaaho — list me sab dikhte hain apne countdown ke saath. Sabse nazdeeki exam bada countdown dikhata hai.' },
-    { q: 'Countdown ke hisaab se preparation kaise plan karein?', a: 'Bache hue din ÷ syllabus chapters = per chapter days. Last 15–20% din revision aur mock tests ke liye rakho. Roz countdown dekhna motivation bhi deta hai!' },
-    { q: 'Exam nikal jaane pe kya hota hai?', a: 'Us exam pe "ho gaya" dikh jaata hai — ✕ se remove kar do.' },
+    { q: 'Where are my exams saved?', a: 'In your browser\'s localStorage — only on your device. Reopening the page will show the same exams. Clearing browser data removes them.' },
+    { q: 'How many exams can I add?', a: 'As many as you want — they all show in the list with their countdown. The nearest exam shows the large countdown.' },
+    { q: 'How do I plan preparation around the countdown?', a: 'Days remaining ÷ syllabus chapters = days per chapter. Keep the last 15–20% of days for revision and mock tests. Checking the countdown daily is motivating too!' },
+    { q: 'What happens after the exam passes?', a: 'It shows as "done" — remove it with ✕.' },
   ],
 };

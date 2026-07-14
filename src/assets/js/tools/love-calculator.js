@@ -13,11 +13,11 @@
   }
 
   function message(pct) {
-    if (pct >= 90) return 'Made for each other! Rab ne bana di jodi 💍';
-    if (pct >= 75) return 'Bahut strong connection hai — lucky ho dono! 💖';
-    if (pct >= 60) return 'Achhi jodi hai — thodi mehnat aur masti chahiye 😊';
-    if (pct >= 45) return 'Kuch to hai… dosti se shuruaat karo 😉';
-    return 'Opposites attract bhi hota hai — himmat rakho! 😄';
+    if (pct >= 90) return 'Made for each other! A match made in heaven 💍';
+    if (pct >= 75) return 'A very strong connection — you\'re both lucky! 💖';
+    if (pct >= 60) return 'A good match — a little effort and fun needed 😊';
+    if (pct >= 45) return 'There\'s something there… start with friendship 😉';
+    return 'Opposites attract too — keep your chin up! 😄';
   }
 
   function calc() {
@@ -25,7 +25,7 @@
     var n2 = $('love-name2').value.trim();
     if (!n1 || !n2) {
       $('love-percent').textContent = '💘';
-      $('love-message').textContent = 'Dono naam daalo!';
+      $('love-message').textContent = 'Enter both names!';
       return;
     }
     var pct = score(n1, n2);

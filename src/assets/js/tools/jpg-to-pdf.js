@@ -87,7 +87,7 @@
       $('jp-pdfsize').textContent = fmtSize(resultBlob.size);
       $('jp-download').disabled = false;
     } catch (err) {
-      alert('Convert fail ho gaya: ' + (err && err.message ? err.message : err));
+      alert('Conversion failed: ' + (err && err.message ? err.message : err));
     }
     btn.textContent = 'Convert to PDF';
     btn.disabled = files.length < 1;

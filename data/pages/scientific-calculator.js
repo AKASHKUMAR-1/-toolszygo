@@ -7,13 +7,13 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Normal calculator ki tarah numbers aur operations use karo.',
-    'sin, cos, tan, log, ln, √, x², xʸ jaise scientific functions bhi available hain.',
-    'DEG/RAD mode switch kar sakte ho trig functions ke liye.',
+    'Use numbers and operations like a normal calculator.',
+    'Scientific functions like sin, cos, tan, log, ln, √, x², xʸ are available too.',
+    'Switch between DEG/RAD mode for trig functions.',
   ],
   faq: [
-    { q: 'DEG aur RAD me kya farak hai?', a: 'DEG (degrees) me ek circle 360° ka hota hai — school math me common hai. RAD (radians) me ek circle 2π ka hota hai — higher math/physics me use hota hai. Default DEG rakha hai.' },
-    { q: 'Memory (M+, MR, MC) kaise use karein?', a: 'M+ current result memory me add karta hai, MR memory se value wapas laata hai, MC memory clear karta hai — lambi calculations me intermediate results save karne ke liye.' },
-    { q: 'Kya ye scientific notation handle karta hai?', a: 'Haan — bahut bade ya chhote numbers automatically scientific notation (e.g. 1.5e+10) me dikh jaate hain.' },
+    { q: 'What\'s the difference between DEG and RAD?', a: 'In DEG (degrees), a full circle is 360° — common in school math. In RAD (radians), a full circle is 2π — used in higher math/physics. The default is DEG.' },
+    { q: 'How do I use memory (M+, MR, MC)?', a: 'M+ adds the current result to memory, MR recalls the value from memory, MC clears memory — for saving intermediate results in long calculations.' },
+    { q: 'Does it handle scientific notation?', a: 'Yes — very large or small numbers automatically display in scientific notation (e.g. 1.5e+10).' },
   ],
 };

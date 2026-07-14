@@ -19,7 +19,7 @@
 
   async function extract(file) {
     fname = file.name.replace(/\.pdf$/i, '');
-    $('pw2-status').textContent = 'Text nikal rahe hain…';
+    $('pw2-status').textContent = 'Extracting text…';
     try {
       var pdf = await pdfjsLib.getDocument({ data: await file.arrayBuffer() }).promise;
       var out = [];
@@ -42,10 +42,10 @@
         out.push(pageText);
       }
       $('pw2-output').value = out.join('\n\n');
-      $('pw2-status').textContent = '✓ ' + pdf.numPages + ' pages ka text nikal gaya';
+      $('pw2-status').textContent = '✓ Extracted text from ' + pdf.numPages + ' pages';
       $('pw2-download').disabled = false;
     } catch (e) {
-      $('pw2-status').textContent = 'PDF nahi padh paye — ' + (e.message || 'password-protected ho sakti hai');
+      $('pw2-status').textContent = 'Couldn\'t read the PDF — ' + (e.message || 'it may be password-protected');
     }
   }
 

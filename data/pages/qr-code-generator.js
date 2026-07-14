@@ -5,8 +5,8 @@ module.exports = {
   <div class="panel">
     <div class="panel-label">Input</div>
     <div class="field">
-      <label for="qr-text">Text ya URL</label>
-      <textarea id="qr-text" placeholder="https://example.com ya koi bhi text…" style="min-height:110px;"></textarea>
+      <label for="qr-text">Text or URL</label>
+      <textarea id="qr-text" placeholder="https://example.com or any text…" style="min-height:110px;"></textarea>
     </div>
     <div class="field">
       <label for="qr-size">Size</label>
@@ -21,7 +21,7 @@ module.exports = {
   <div class="panel panel-result" style="align-items:center;justify-content:center;">
     <div class="panel-label" style="align-self:flex-start;">Result</div>
     <canvas id="qr-canvas" style="max-width:100%;border-radius:10px;background:#FFF;"></canvas>
-    <div class="panel-placeholder" id="qr-placeholder">QR code yahan dikhega</div>
+    <div class="panel-placeholder" id="qr-placeholder">QR code will appear here</div>
   </div>
 </div>
 <div class="btn-row">
@@ -29,15 +29,15 @@ module.exports = {
   <button class="btn btn-secondary" id="qr-download" disabled>Download PNG</button>
 </div>`,
   howto: [
-    'Box me URL, text, phone number ya koi bhi content daalo.',
-    'QR code ka size choose karo.',
-    '<strong>Generate QR code</strong> dabao — QR turant ban jayega.',
-    '"Download PNG" se image save karo — print ya share karne ke liye ready.',
+    'Enter a URL, text, phone number, or any content in the box.',
+    'Choose the QR code size.',
+    'Click <strong>Generate QR code</strong> — the QR appears instantly.',
+    'Use "Download PNG" to save the image — ready to print or share.',
   ],
   faq: [
-    { q: 'Kya QR code hamesha kaam karega, expire to nahi hoga?', a: 'Ye static QR code hai — content directly QR me encode hota hai, kisi server pe depend nahi karta. Isliye ye kabhi expire nahi hota aur hamesha free rahega.' },
-    { q: 'UPI payment QR bana sakte hain?', a: 'Haan — apna UPI link is format me daalo: upi://pay?pa=yourname@upi&pn=YourName. Scan karne pe payment app khul jayegi.' },
-    { q: 'QR code me kitna text daal sakte hain?', a: 'Technically ~4,000 characters tak, lekin jitna kam content, utna easily scan hone wala QR. URLs ke liye short links better hain.' },
-    { q: 'Kya mera data upload hota hai?', a: 'Nahi — QR code aapke browser me hi generate hota hai. Content kisi server pe nahi jaata.' },
+    { q: 'Will this QR code always work, or does it expire?', a: 'This is a static QR code — the content is encoded directly into the QR, with no dependency on any server. It never expires and stays free forever.' },
+    { q: 'Can I create a UPI payment QR code?', a: 'Yes — enter your UPI link in this format: upi://pay?pa=yourname@upi&pn=YourName. Scanning it will open a payment app.' },
+    { q: 'How much text can a QR code hold?', a: 'Technically up to ~4,000 characters, but the less content, the easier the QR is to scan. Short links work better for URLs.' },
+    { q: 'Is my data uploaded anywhere?', a: 'No — the QR code is generated entirely in your browser. The content never goes to any server.' },
   ],
 };

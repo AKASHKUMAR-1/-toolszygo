@@ -11,7 +11,7 @@ module.exports = {
       <label for="gr-years">Years of Service</label>
       <input type="number" id="gr-years" value="10" min="1" max="50" step="0.5">
     </div>
-    <div style="font-size:12px;color:#A39C8B;">Gratuity 5 saal continuous service ke baad milti hai. 6 mahine se zyada ka fraction pura saal count hota hai.</div>
+    <div style="font-size:12px;color:#A39C8B;">Gratuity is paid after 5 years of continuous service. A fraction over 6 months counts as a full year.</div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
     <div class="panel-label">Result</div>
@@ -30,14 +30,14 @@ module.exports = {
   <button class="btn btn-secondary" id="gr-copy">Copy result</button>
 </div>`,
   howto: [
-    'Apni last drawn monthly basic salary + DA daalo (gross nahi, sirf basic+DA).',
-    'Kitne saal company me kaam kiya wo daalo.',
-    '<strong>Calculate</strong> dabao — Gratuity Act ke formula se amount dikh jayega.',
+    'Enter your last drawn monthly basic salary + DA (not gross, only basic+DA).',
+    'Enter how many years you worked at the company.',
+    'Click <strong>Calculate</strong> — see the amount per the Gratuity Act formula.',
   ],
   faq: [
-    { q: 'Gratuity ka formula kya hai?', a: 'Gratuity = (15 ÷ 26) × last drawn (basic + DA) × years of service. 26 = mahine ke working days, 15 = har saal ke liye 15 din ki salary. E.g. ₹50,000 basic × 10 saal = ₹2,88,462.' },
-    { q: 'Gratuity kab milti hai?', a: '5 saal continuous service ke baad — resignation, retirement ya termination pe. Death/disability ke case me 5 saal ki condition nahi lagti.' },
-    { q: '6 mahine wala rule kya hai?', a: 'Service ka fraction 6 mahine se zyada ho to pura saal count hota hai — 7 saal 8 mahine = 8 saal. 6 mahine se kam ho to ignore — 7 saal 4 mahine = 7 saal.' },
-    { q: 'Gratuity pe tax lagta hai?', a: 'Private employees ke liye ₹20 lakh tak lifetime tax-free hai (Gratuity Act covered). Government employees ki puri gratuity tax-free hoti hai. Isse zyada amount taxable hai.' },
+    { q: 'What is the gratuity formula?', a: 'Gratuity = (15 ÷ 26) × last drawn (basic + DA) × years of service. 26 = working days in a month, 15 = 15 days\' salary per year. E.g. ₹50,000 basic × 10 years = ₹2,88,462.' },
+    { q: 'When is gratuity paid?', a: 'After 5 years of continuous service — on resignation, retirement, or termination. The 5-year condition doesn\'t apply in case of death/disability.' },
+    { q: 'What is the 6-month rule?', a: 'If the service fraction exceeds 6 months, it counts as a full year — 7 years 8 months = 8 years. If under 6 months, it\'s ignored — 7 years 4 months = 7 years.' },
+    { q: 'Is gratuity taxed?', a: 'For private employees, up to ₹20 lakh is tax-free over a lifetime (covered by the Gratuity Act). Government employees\' entire gratuity is tax-free. Amounts above this are taxable.' },
   ],
 };

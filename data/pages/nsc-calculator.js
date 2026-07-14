@@ -11,10 +11,10 @@ module.exports = {
       <label for="nsc-rate">Interest Rate (% per year)</label>
       <input type="number" id="nsc-rate" value="7.7" min="5" max="12" step="0.1">
     </div>
-    <div style="font-size:12px;color:#A39C8B;">NSC ka tenure fixed 5 saal hai, interest annually compound hota hai aur maturity pe milta hai.</div>
+    <div style="font-size:12px;color:#A39C8B;">NSC has a fixed 5-year tenure, interest compounds annually and is paid at maturity.</div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
-    <div class="panel-label">Result (5 saal pe)</div>
+    <div class="panel-label">Result (after 5 years)</div>
     <div class="result-big" id="nsc-maturity">—</div>
     <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Maturity amount</div>
     <div class="result-rows" style="margin-top:8px;">
@@ -28,14 +28,14 @@ module.exports = {
   <button class="btn btn-secondary" id="nsc-copy">Copy result</button>
 </div>`,
   howto: [
-    'NSC me jitna invest karna hai wo amount daalo (minimum ₹1,000).',
-    'Current NSC rate daalo — abhi ~7.7% hai.',
-    '<strong>Calculate</strong> dabao — 5 saal baad ki maturity value dikh jayegi.',
+    'Enter the amount you want to invest in NSC (minimum ₹1,000).',
+    'Enter the current NSC rate — currently ~7.7%.',
+    'Click <strong>Calculate</strong> — see the maturity value after 5 years.',
   ],
   faq: [
-    { q: 'NSC kya hai aur kahan milta hai?', a: 'National Savings Certificate ek government-guaranteed 5-saal ki investment hai jo post office se milti hai. Rate fixed hota hai aur paisa 100% safe hai.' },
-    { q: 'NSC pe tax kaisa lagta hai?', a: 'Investment 80C me deductible hai (old regime, ₹1.5L limit). Interest taxable hai, LEKIN pehle 4 saal ka interest reinvest maana jaata hai isliye wo bhi 80C me claim ho sakta hai — sirf 5th saal ka interest effectively taxable hai.' },
-    { q: 'NSC vs FD — kya better hai?', a: 'NSC ka rate aam taur pe bank FD se thoda zyada hota hai aur government guarantee hai. Lekin 5 saal ka lock-in hai — FD me premature withdrawal ho jaata hai (penalty ke saath).' },
-    { q: 'Kya NSC beech me tod sakte hain?', a: 'Normally nahi — sirf holder ki death, court order ya pledge ke case me. Isliye wahi paisa daalo jo 5 saal ke liye lock kar sakte ho.' },
+    { q: 'What is NSC and where do I get it?', a: 'National Savings Certificate is a government-guaranteed 5-year investment available at post offices. The rate is fixed and the money is 100% safe.' },
+    { q: 'How is NSC taxed?', a: 'The investment is deductible under 80C (old regime, ₹1.5L limit). Interest is taxable, BUT interest from the first 4 years is treated as reinvested and can also be claimed under 80C — effectively only the 5th year\'s interest is taxable.' },
+    { q: 'NSC vs FD — which is better?', a: 'NSC\'s rate is usually a bit higher than a bank FD, with a government guarantee. But it has a 5-year lock-in — FDs allow premature withdrawal (with a penalty).' },
+    { q: 'Can I break an NSC early?', a: 'Normally no — only in case of the holder\'s death, a court order, or a pledge. So only invest money you can lock away for 5 years.' },
   ],
 };

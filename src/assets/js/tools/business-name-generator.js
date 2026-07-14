@@ -16,7 +16,7 @@
     var style = $('bn-style').value;
     var box = $('bn-results');
     if (!kw) {
-      box.innerHTML = '<div style="color:#A39C8B;font-weight:400;">Pehle keyword daalo</div>';
+      box.innerHTML = '<div style="color:#A39C8B;font-weight:400;">Enter a keyword first</div>';
       return;
     }
     var pools = style === 'all' ? ['modern', 'indian', 'classic'] : [style];

@@ -31,7 +31,7 @@
     var raw = $('cj-input').value;
     var status = $('cj-status');
     if (!raw.trim()) {
-      status.textContent = 'Pehle CSV paste karo';
+      status.textContent = 'Paste CSV first';
       status.style.color = '#B84F4F';
       return;
     }
@@ -58,7 +58,7 @@
       result = rows.map(function (r) { return r.map(castVal); });
     }
     $('cj-output').value = JSON.stringify(result, null, 2);
-    status.textContent = '✓ ' + result.length + ' rows converted' + (delim === '\t' ? ' (tab-separated detect hua)' : '');
+    status.textContent = '✓ ' + result.length + ' rows converted' + (delim === '\t' ? ' (tab-separated detected)' : '');
     status.style.color = '#5D8A4E';
   }
 

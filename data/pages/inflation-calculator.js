@@ -19,9 +19,9 @@ module.exports = {
   <div class="panel panel-result" style="min-height:0;">
     <div class="panel-label">Result</div>
     <div class="result-big" id="inf-future">—</div>
-    <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;" id="inf-future-label">Aaj ke ₹1,00,000 ke kharche ki future cost</div>
+    <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;" id="inf-future-label">Future cost of today's ₹1,00,000 expense</div>
     <div class="result-rows" style="margin-top:8px;">
-      <div class="result-row"><span class="k">Aaj ke paise ki value tab</span><span class="v" id="inf-power">—</span></div>
+      <div class="result-row"><span class="k">Today's money value then</span><span class="v" id="inf-power">—</span></div>
       <div class="result-row"><span class="k">Purchasing power loss</span><span class="v" id="inf-loss">—</span></div>
     </div>
   </div>
@@ -31,15 +31,15 @@ module.exports = {
   <button class="btn btn-secondary" id="inf-copy">Copy result</button>
 </div>`,
   howto: [
-    'Koi bhi amount daalo — aaj ka monthly kharcha, ya bachaya hua paisa.',
-    'Inflation rate daalo — India ka long-term average ~6% hai (education/health 8–10%).',
-    'Kitne saal aage dekhna hai wo daalo.',
-    '<strong>Calculate</strong> dabao — future cost aur paise ki girti value dono dikh jayengi.',
+    'Enter any amount — today\'s monthly expense, or savings.',
+    'Enter the inflation rate — India\'s long-term average is ~6% (education/health 8–10%).',
+    'Enter how many years ahead to look.',
+    'Click <strong>Calculate</strong> — see both the future cost and money\'s shrinking value.',
   ],
   faq: [
-    { q: 'Inflation ka matlab kya hai?', a: 'Cheezon ke daam har saal badhna. 6% inflation matlab jo cheez aaj ₹100 ki hai, agle saal ₹106 ki hogi. Aapke paise ki purchasing power utni hi ghat jaati hai.' },
-    { q: 'Future cost kaise calculate hoti hai?', a: 'Future cost = Amount × (1 + inflation)^years. Aaj ka ₹1 lakh ka kharcha 6% inflation pe 10 saal baad ₹1.79 lakh ka hoga. Ulta, aaj ke ₹1 lakh ki value tab sirf ₹55,839 ke barabar hogi.' },
-    { q: 'Savings account me paisa rakhna loss kyun hai?', a: 'Savings account 2.5–3% deta hai jabki inflation ~6% hai — matlab real value har saal ~3% GHAT rahi hai. Isliye inflation-beating investments (equity, PPF, NPS) zaroori hain.' },
-    { q: 'Retirement planning me kaunsa inflation rate lein?', a: 'General 6%, lekin healthcare aur education ka inflation 8–10% hota hai. Conservative planning ke liye 7% le sakte ho.' },
+    { q: 'What does inflation mean?', a: 'Prices rising every year. 6% inflation means something costing ₹100 today will cost ₹106 next year. Your money\'s purchasing power drops by that much.' },
+    { q: 'How is future cost calculated?', a: 'Future cost = Amount × (1 + inflation)^years. Today\'s ₹1 lakh expense will cost ₹1.79 lakh in 10 years at 6% inflation. Conversely, today\'s ₹1 lakh will only be worth ₹55,839 in value then.' },
+    { q: 'Why is keeping money in a savings account a loss?', a: 'Savings accounts give 2.5–3% while inflation is ~6% — meaning real value DROPS by ~3% every year. That\'s why inflation-beating investments (equity, PPF, NPS) matter.' },
+    { q: 'What inflation rate should I use for retirement planning?', a: 'Generally 6%, but healthcare and education inflation run 8–10%. For conservative planning, you can use 7%.' },
   ],
 };

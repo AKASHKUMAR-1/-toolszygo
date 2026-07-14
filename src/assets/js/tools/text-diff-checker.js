@@ -31,7 +31,7 @@
     var a = $('diff-a').value.split('\n');
     var b = $('diff-b').value.split('\n');
     if (a.length * b.length > 4000000) {
-      $('diff-summary').textContent = 'Text bahut bada hai — 2000 lines tak compare karo.';
+      $('diff-summary').textContent = 'Text is too large — compare up to 2000 lines.';
       $('diff-output').innerHTML = '';
       return;
     }
@@ -43,7 +43,7 @@
       return '<div style="padding:1px 8px;color:#6E6552;">&nbsp;&nbsp;' + esc(op[1]) + '</div>';
     }).join('');
     if (removed === 0 && added === 0) {
-      $('diff-summary').textContent = '✓ Dono texts bilkul same hain';
+      $('diff-summary').textContent = '✓ Both texts are exactly the same';
       $('diff-output').innerHTML = '';
       return;
     }

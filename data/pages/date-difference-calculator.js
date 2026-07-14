@@ -24,12 +24,12 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'From aur To dates choose karo.',
-    'Exact difference (years, months, days ke roop me) aur total days/weeks/working-days turant mil jayenge.',
+    'Choose the From and To dates.',
+    'Get the exact difference (in years, months, days) and total days/weeks/working-days instantly.',
   ],
   faq: [
-    { q: 'Working days kaise count hote hain?', a: 'Sirf Monday-Friday count hote hain — Saturday/Sunday exclude ho jaate hain. Public holidays ka hisaab nahi hota, sirf weekends.' },
-    { q: 'Kya due dates/deadlines ke liye use kar sakte hain?', a: 'Bilkul — contract deadlines, notice period, project timelines calculate karne ke liye perfect hai.' },
-    { q: 'Kya ye leap years handle karta hai?', a: 'Haan — sab calculations calendar-accurate hain, leap years automatically account ho jaate hain.' },
+    { q: 'How are working days counted?', a: 'Only Monday-Friday are counted — Saturday/Sunday are excluded. Public holidays aren\'t accounted for, only weekends.' },
+    { q: 'Can I use this for due dates/deadlines?', a: 'Absolutely — perfect for calculating contract deadlines, notice periods, and project timelines.' },
+    { q: 'Does this handle leap years?', a: 'Yes — all calculations are calendar-accurate, leap years are automatically accounted for.' },
   ],
 };

@@ -19,14 +19,14 @@ module.exports = {
   <button class="btn btn-secondary" id="jc-download">Download .csv</button>
 </div>`,
   howto: [
-    'JSON array of objects paste karo — jaise API response.',
-    '<strong>Convert</strong> dabao — headers ke saath CSV ban jayegi.',
-    'Download karke seedha Excel me kholo.',
+    'Paste a JSON array of objects — like an API response.',
+    'Click <strong>Convert</strong> — a CSV with headers is created.',
+    'Download and open directly in Excel.',
   ],
   faq: [
-    { q: 'Kaunsa JSON format chahiye?', a: 'Array of objects: [{"name":"Amit","age":25},…]. Har object ek row banta hai, keys headers bante hain. Alag-alag objects me alag keys hon to sab columns me aa jaati hain.' },
-    { q: 'Nested objects ka kya hota hai?', a: 'Nested object/array cell me JSON string ke roop me aata hai. Flat data ke liye pehle apne JSON ko flatten kar lo.' },
-    { q: 'CSV Excel me kaise kholein?', a: 'Download ki hui .csv file pe double-click karo — Excel me khul jayegi. Hindi text sahi dikhane ke liye file UTF-8 BOM ke saath download hoti hai.' },
-    { q: 'Values me comma/quotes ho to?', a: 'CSV rules ke hisaab se aisi values automatically double quotes me wrap hoti hain aur andar ke quotes escape hote hain — Excel sahi padhega.' },
+    { q: 'What JSON format is needed?', a: 'An array of objects: [{"name":"Amit","age":25},…]. Each object becomes a row, and keys become headers. If different objects have different keys, they all appear as columns.' },
+    { q: 'What happens with nested objects?', a: 'A nested object/array appears in the cell as a JSON string. For flat data, flatten your JSON first.' },
+    { q: 'How do I open the CSV in Excel?', a: 'Double-click the downloaded .csv file — it opens in Excel. The file downloads with a UTF-8 BOM so non-English text displays correctly.' },
+    { q: 'What if values contain commas/quotes?', a: 'Per CSV rules, such values are automatically wrapped in double quotes and internal quotes are escaped — Excel will read it correctly.' },
   ],
 };

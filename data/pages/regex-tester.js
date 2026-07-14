@@ -19,7 +19,7 @@ module.exports = {
     </div>
     <div class="field">
       <label for="rx-text">Test Text</label>
-      <textarea id="rx-text" placeholder="Jis text pe pattern test karna hai wo yahan paste karo…" spellcheck="false" style="min-height:140px;font-family:monospace;font-size:13px;"></textarea>
+      <textarea id="rx-text" placeholder="Paste the text you want to test the pattern against…" spellcheck="false" style="min-height:140px;font-family:monospace;font-size:13px;"></textarea>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
@@ -30,14 +30,14 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Regex pattern likho (bina slashes ke) — e.g. <code>\\d{10}</code> mobile numbers ke liye.',
-    'Flags choose karo — g (sab matches), i (case-insensitive), m (multiline).',
-    'Test text paste karo — matches live highlight ho jayenge, groups ke saath.',
+    'Write the regex pattern (without slashes) — e.g. <code>\\d{10}</code> for phone numbers.',
+    'Choose flags — g (all matches), i (case-insensitive), m (multiline).',
+    'Paste test text — matches highlight live, along with groups.',
   ],
   faq: [
-    { q: 'Kaunsa regex flavor use hota hai?', a: 'JavaScript (ECMAScript) regex — jo browsers aur Node.js me chalta hai. Python/PCRE se thoda alag hai (e.g. lookbehind support browser pe depend karta hai).' },
-    { q: 'Common patterns kya hain?', a: 'Email: [\\w.+-]+@[\\w-]+\\.[\\w.]+ | 10-digit mobile: [6-9]\\d{9} | PIN code: \\d{6} | PAN: [A-Z]{5}\\d{4}[A-Z] | Date: \\d{2}/\\d{2}/\\d{4}' },
-    { q: 'g flag kya karta hai?', a: 'Global — text me SAARE matches dhoondta hai. Bina g ke sirf pehla match milta hai. Zyada tar cases me g on rakho.' },
-    { q: 'Capture groups kaise dekhte hain?', a: 'Pattern me () lagao — e.g. (\\d{2})/(\\d{2}) me do groups hain. Har match ke neeche groups ki values dikhti hain.' },
+    { q: 'Which regex flavor is used?', a: 'JavaScript (ECMAScript) regex — the one that runs in browsers and Node.js. Slightly different from Python/PCRE (e.g. lookbehind support depends on the browser).' },
+    { q: 'What are some common patterns?', a: 'Email: [\\w.+-]+@[\\w-]+\\.[\\w.]+ | 10-digit phone: [6-9]\\d{9} | ZIP/PIN code: \\d{6} | Date: \\d{2}/\\d{2}/\\d{4}' },
+    { q: 'What does the g flag do?', a: 'Global — finds ALL matches in the text. Without g, only the first match is found. Keep g on for most cases.' },
+    { q: 'How do I see capture groups?', a: 'Add () in the pattern — e.g. (\\d{2})/(\\d{2}) has two groups. Group values are shown below each match.' },
   ],
 };

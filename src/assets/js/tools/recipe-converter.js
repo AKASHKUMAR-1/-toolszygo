@@ -30,7 +30,7 @@
     }).filter(function (it) { return it.name; });
 
     if (!items.length) {
-      $('rc-output').innerHTML = '<span style="color:#A39C8B;">Ingredients daalo upar</span>';
+      $('rc-output').innerHTML = '<span style="color:#A39C8B;">Add ingredients above</span>';
       return;
     }
     $('rc-output').innerHTML = items.map(function (it) {

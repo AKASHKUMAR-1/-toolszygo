@@ -111,7 +111,7 @@
         }
       }
     }
-    if (!found) { alert('Pehle signature banao!'); return; }
+    if (!found) { alert('Make a signature first!'); return; }
     var pad = 10;
     var out = document.createElement('canvas');
     out.width = maxX - minX + pad * 2;

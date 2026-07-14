@@ -31,15 +31,15 @@ module.exports = {
   <button class="btn btn-secondary" id="sip-copy">Copy result</button>
 </div>`,
   howto: [
-    'Monthly SIP amount daalo (e.g. ₹5,000).',
-    'Expected annual return daalo — equity mutual funds ka long-term average ~12% hai.',
-    'Duration years me daalo.',
-    '<strong>Calculate</strong> pe click karo — maturity value, total invested aur wealth gain dikh jayega.',
+    'Enter the monthly SIP amount (e.g. ₹5,000).',
+    'Enter the expected annual return — the long-term average for equity mutual funds is ~12%.',
+    'Enter the duration in years.',
+    'Click <strong>Calculate</strong> — see the maturity value, total invested, and wealth gain.',
   ],
   faq: [
-    { q: 'SIP return kaise calculate hota hai?', a: 'Standard SIP formula: FV = P × [((1+i)^n − 1) / i] × (1+i), jahan P = monthly amount, i = monthly return (annual ÷ 12 ÷ 100) aur n = total months. Yehi formula AMCs aur apps use karte hain.' },
-    { q: 'Kya 12% return guaranteed hai?', a: 'Nahi — mutual fund returns market pe depend karte hain. 12% equity funds ka historical long-term average hai, guarantee nahi. Conservative estimate ke liye 10% try karo.' },
-    { q: 'SIP vs lumpsum — kya better hai?', a: 'SIP rupee-cost averaging deta hai — market girne pe zyada units milti hain. Salary earners ke liye SIP discipline bhi banata hai. Lumpsum tab better jab market low ho aur paisa ready ho.' },
-    { q: 'Kya ye step-up SIP calculate karta hai?', a: 'Abhi ye fixed monthly SIP calculate karta hai. Step-up SIP (har saal amount badhana) ke liye alag calculation hoti hai — jald add karenge.' },
+    { q: 'How is SIP return calculated?', a: 'The standard SIP formula: FV = P × [((1+i)^n − 1) / i] × (1+i), where P = monthly amount, i = monthly return (annual ÷ 12 ÷ 100), and n = total months. This is the same formula AMCs and apps use.' },
+    { q: 'Is a 12% return guaranteed?', a: 'No — mutual fund returns depend on the market. 12% is the historical long-term average for equity funds, not a guarantee. Try 10% for a conservative estimate.' },
+    { q: 'SIP vs lumpsum — which is better?', a: 'SIP gives rupee-cost averaging — you get more units when the market falls. It also builds discipline for salary earners. Lumpsum is better when the market is low and the money is ready.' },
+    { q: 'Does this calculate step-up SIP?', a: 'This currently calculates a fixed monthly SIP. Step-up SIP (increasing the amount each year) needs a different calculation — we\'ll add it soon.' },
   ],
 };

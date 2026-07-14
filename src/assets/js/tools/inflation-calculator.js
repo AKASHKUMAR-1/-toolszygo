@@ -13,9 +13,9 @@
     var power = amount / factor;
     var loss = (1 - 1 / factor) * 100;
     $('inf-future').textContent = toolsdoINR(Math.round(futureCost));
-    $('inf-future-label').textContent = 'Aaj ke ' + toolsdoINR(amount) + ' ke kharche ki cost ' + years + ' saal baad';
+    $('inf-future-label').textContent = 'Cost of today\'s ' + toolsdoINR(amount) + ' expense in ' + years + ' years';
     $('inf-power').textContent = toolsdoINR(Math.round(power));
-    $('inf-loss').textContent = (Math.round(loss * 10) / 10) + '% value ghat jayegi';
+    $('inf-loss').textContent = (Math.round(loss * 10) / 10) + '% value lost';
     lastSummary = toolsdoINR(amount) + ' @ ' + rate + '% inflation x ' + years + 'yr | Future cost: ' +
       toolsdoINR(Math.round(futureCost)) + ' | Value then: ' + toolsdoINR(Math.round(power)) +
       ' (' + (Math.round(loss * 10) / 10) + '% loss)';

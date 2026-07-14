@@ -4,20 +4,20 @@ module.exports = {
   <div class="panel">
     <div class="panel-label">Input</div>
     <div class="field">
-      <textarea id="lb-input" placeholder="PDF ya email se copy kiya text yahan paste karo…" style="min-height:200px;"></textarea>
+      <textarea id="lb-input" placeholder="Paste text copied from a PDF or email here…" style="min-height:200px;"></textarea>
     </div>
     <div class="field">
       <label for="lb-mode">Mode</label>
       <select id="lb-mode">
-        <option value="space" selected>Line breaks ko space se replace karo</option>
-        <option value="none">Line breaks bilkul hatao (jodo)</option>
-        <option value="para">Paragraphs rakho, andar ke breaks hatao</option>
+        <option value="space" selected>Replace line breaks with a space</option>
+        <option value="none">Remove line breaks completely (join)</option>
+        <option value="para">Keep paragraphs, remove breaks inside them</option>
       </select>
     </div>
   </div>
   <div class="panel panel-result">
     <div class="panel-label">Result</div>
-    <textarea id="lb-output" readonly placeholder="clean text yahan aayega…" style="flex:1;min-height:200px;border:1px solid #F0E0CC;border-radius:10px;background:rgba(255,255,255,0.65);font-size:13.5px;line-height:1.5;color:#3D3929;padding:12px;resize:vertical;"></textarea>
+    <textarea id="lb-output" readonly placeholder="clean text will appear here…" style="flex:1;min-height:200px;border:1px solid #F0E0CC;border-radius:10px;background:rgba(255,255,255,0.65);font-size:13.5px;line-height:1.5;color:#3D3929;padding:12px;resize:vertical;"></textarea>
   </div>
 </div>
 <div class="btn-row">
@@ -25,14 +25,14 @@ module.exports = {
   <button class="btn btn-secondary" id="lb-copy">Copy result</button>
 </div>`,
   howto: [
-    'PDF, email ya kahin se bhi copy kiya hua text paste karo.',
-    'Mode choose karo — sab breaks ko space banao, bilkul hatao, ya paragraphs preserve karke andar ke breaks hatao.',
-    '<strong>Remove line breaks</strong> dabao aur clean text copy karo.',
+    'Paste text copied from a PDF, email, or anywhere.',
+    'Choose a mode — turn all breaks into spaces, remove them entirely, or keep paragraphs and remove breaks inside them.',
+    'Click <strong>Remove line breaks</strong> and copy the clean text.',
   ],
   faq: [
-    { q: 'PDF se copy karne pe har line pe break kyun aata hai?', a: 'PDF me text visually lines me store hota hai, isliye copy karne pe har visual line ke baad newline aa jaati hai. Ye tool un faltu breaks ko hata kar natural flowing text bana deta hai.' },
-    { q: '"Paragraphs rakho" mode kaise kaam karta hai?', a: 'Do ya zyada consecutive line breaks (khaali line) paragraph boundary maane jaate hain — wo preserve hote hain. Sirf paragraph ke andar ke single breaks space bante hain.' },
-    { q: 'Kya double spaces ban jayenge?', a: 'Nahi — replace karne ke baad tool multiple spaces ko single space me collapse kar deta hai.' },
-    { q: 'Word/Docs me paste karne pe formatting sahi rahegi?', a: 'Haan — output plain text hai, aap use kahin bhi paste kar sakte ho aur wahan ki formatting apply hogi.' },
+    { q: 'Why does every line have a break when copying from a PDF?', a: 'PDFs store text visually in lines, so copying adds a newline after every visual line. This tool removes those unwanted breaks to create natural flowing text.' },
+    { q: 'How does "keep paragraphs" mode work?', a: 'Two or more consecutive line breaks (a blank line) are treated as a paragraph boundary — those are preserved. Only single breaks inside a paragraph become spaces.' },
+    { q: 'Will this create double spaces?', a: 'No — after replacing, the tool collapses multiple spaces into a single space.' },
+    { q: 'Will formatting stay correct when pasting into Word/Docs?', a: 'Yes — the output is plain text, so you can paste it anywhere and the destination\'s formatting will apply.' },
   ],
 };

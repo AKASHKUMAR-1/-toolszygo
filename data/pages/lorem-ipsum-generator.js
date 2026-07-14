@@ -5,7 +5,7 @@ module.exports = {
     <div class="panel-label">Options</div>
     <div class="field-row">
       <div class="field">
-        <label for="li-count">Kitna chahiye?</label>
+        <label for="li-count">How many?</label>
         <input type="number" id="li-count" value="3" min="1" max="50" step="1">
       </div>
       <div class="field">
@@ -18,7 +18,7 @@ module.exports = {
       </div>
     </div>
     <div class="checks">
-      <label><input type="checkbox" id="li-start" checked> "Lorem ipsum dolor sit amet…" se start karo</label>
+      <label><input type="checkbox" id="li-start" checked> Start with "Lorem ipsum dolor sit amet…"</label>
     </div>
   </div>
   <div class="panel panel-result">
@@ -31,14 +31,14 @@ module.exports = {
   <button class="btn btn-secondary" id="li-copy">Copy text</button>
 </div>`,
   howto: [
-    'Kitne paragraphs, sentences ya words chahiye wo set karo.',
-    'Classic "Lorem ipsum dolor…" se start karna hai ya nahi, checkbox se choose karo.',
-    '<strong>Generate</strong> dabao aur text copy karke apne design/mockup me use karo.',
+    'Set how many paragraphs, sentences, or words you need.',
+    'Choose whether to start with the classic "Lorem ipsum dolor…" using the checkbox.',
+    'Click <strong>Generate</strong> and copy the text into your design/mockup.',
   ],
   faq: [
-    { q: 'Lorem ipsum kya hai aur kahan use hota hai?', a: 'Lorem ipsum 1500s se printing industry ka standard dummy text hai. Designs, websites aur mockups me placeholder ke roop me use hota hai taaki dhyan layout pe rahe, content pe nahi.' },
-    { q: 'Kya ye real Latin hai?', a: 'Ye Cicero ke "De finibus bonorum et malorum" (45 BC) se scrambled hai — dikhta Latin jaisa hai lekin meaningful nahi. Isi liye ye distract nahi karta.' },
-    { q: 'Lorem ipsum hi kyun, koi bhi text kyun nahi?', a: 'Real text pe log content padhne lagte hain aur design pe focus nahi rehta. Lorem ipsum me letters ka natural distribution hota hai isliye layout realistic dikhta hai.' },
-    { q: 'Kitna text generate kar sakta hoon?', a: '50 paragraphs tak ek baar me — zyada chahiye to phir se generate karke append kar lo.' },
+    { q: 'What is Lorem ipsum and where is it used?', a: 'Lorem ipsum has been the printing industry\'s standard dummy text since the 1500s. It\'s used as a placeholder in designs, websites, and mockups so attention stays on the layout, not the content.' },
+    { q: 'Is this real Latin?', a: 'It\'s scrambled from Cicero\'s "De finibus bonorum et malorum" (45 BC) — it looks like Latin but isn\'t meaningful. That\'s exactly why it doesn\'t distract.' },
+    { q: 'Why Lorem ipsum and not any random text?', a: 'With real text, people start reading the content and lose focus on the design. Lorem ipsum has a natural distribution of letters, so the layout looks realistic.' },
+    { q: 'How much text can I generate?', a: 'Up to 50 paragraphs at once — generate again and append if you need more.' },
   ],
 };

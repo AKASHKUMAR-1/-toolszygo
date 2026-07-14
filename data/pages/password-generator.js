@@ -29,15 +29,15 @@ module.exports = {
   <button class="btn btn-secondary" id="pw-copy">Copy password</button>
 </div>`,
   howto: [
-    'Password ki length slider se set karo (12+ recommended).',
-    'Character types choose karo — uppercase, lowercase, numbers, symbols.',
-    '<strong>Generate password</strong> dabao — naya random password ban jayega.',
-    '"Copy password" se clipboard me copy karo.',
+    'Set the password length with the slider (12+ recommended).',
+    'Choose character types — uppercase, lowercase, numbers, symbols.',
+    'Click <strong>Generate password</strong> — a new random password is created.',
+    'Use "Copy password" to copy it to your clipboard.',
   ],
   faq: [
-    { q: 'Kya ye password kahin store ya bheja jaata hai?', a: 'Nahi. Password aapke browser me hi crypto.getRandomValues() se generate hota hai — na server pe banta hai, na kahin save hota hai. Page band karte hi gone.' },
-    { q: 'Strong password ke liye kya recommended hai?', a: 'Kam se kam 12–16 characters, aur charo types (uppercase, lowercase, numbers, symbols) on rakho. Har account ke liye alag password use karo.' },
-    { q: 'Kya generated passwords truly random hote hain?', a: 'Ye browser ka cryptographically secure random generator (Web Crypto API) use karta hai — Math.random() nahi — jo password generation ke liye industry standard hai.' },
-    { q: 'Passwords yaad kaise rakhun?', a: 'Password manager use karo (Bitwarden, 1Password, ya browser ka built-in manager). Ek hi password har jagah use karna sabse bada risk hai.' },
+    { q: 'Is this password stored or sent anywhere?', a: 'No. The password is generated entirely in your browser using crypto.getRandomValues() — it\'s never created on a server or saved anywhere. It\'s gone as soon as you close the page.' },
+    { q: 'What makes a strong password?', a: 'At least 12–16 characters, with all four types (uppercase, lowercase, numbers, symbols) enabled. Use a different password for every account.' },
+    { q: 'Are the generated passwords truly random?', a: 'This uses the browser\'s cryptographically secure random generator (Web Crypto API) — not Math.random() — which is the industry standard for password generation.' },
+    { q: 'How do I remember my passwords?', a: 'Use a password manager (Bitwarden, 1Password, or your browser\'s built-in manager). Reusing the same password everywhere is the biggest risk.' },
   ],
 };

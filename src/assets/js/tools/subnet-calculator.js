@@ -31,7 +31,7 @@
     err.textContent = '';
     var ipInt = ipToInt(ip);
     if (ipInt === null) {
-      err.textContent = 'Valid IPv4 address daalo (e.g. 192.168.1.0)';
+      err.textContent = 'Enter a valid IPv4 address (e.g. 192.168.1.0)';
       return;
     }
     var maskInt = cidr === 0 ? 0 : (0xFFFFFFFF << (32 - cidr)) >>> 0;

@@ -2,10 +2,10 @@ module.exports = {
   workspace: `
 <div class="workspace single">
   <div class="panel" style="min-height:0;">
-    <div class="panel-label">Ye paragraph type karo (60 seconds)</div>
+    <div class="panel-label">Type this paragraph (60 seconds)</div>
     <div id="tst-sample" style="font-size:15px;line-height:1.8;color:#4E4636;background:#FCFAF6;border:1px solid #E8E0D2;border-radius:10px;padding:14px;user-select:none;"></div>
     <div class="field">
-      <textarea id="tst-input" placeholder="Yahan typing shuru karo — timer khud start ho jayega…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="min-height:120px;font-size:15px;"></textarea>
+      <textarea id="tst-input" placeholder="Start typing here — the timer starts automatically…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="min-height:120px;font-size:15px;"></textarea>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
@@ -20,17 +20,17 @@ module.exports = {
   </div>
 </div>
 <div class="btn-row">
-  <button class="btn btn-primary" id="tst-restart">↻ Naya test</button>
+  <button class="btn btn-primary" id="tst-restart">↻ New test</button>
 </div>`,
   howto: [
-    'Diya gaya paragraph box me type karna shuru karo — timer pehle keystroke pe start hota hai.',
-    '60 second me jitna sahi type kar sako karo.',
-    'Time khatam hone pe WPM (words per minute) aur accuracy dikh jayegi. "Naya test" se dobara try karo.',
+    'Start typing the given paragraph in the box — the timer starts on the first keystroke.',
+    'Type as much as you can correctly in 60 seconds.',
+    'When time\'s up, your WPM (words per minute) and accuracy appear. Click "New test" to try again.',
   ],
   faq: [
-    { q: 'WPM kaise calculate hota hai?', a: 'Standard method: sahi type kiye characters ÷ 5 = words, phir per minute. 5 characters ka average word maana jaata hai. Galat characters WPM me count nahi hote.' },
-    { q: 'Achhi typing speed kitni hoti hai?', a: 'Average 35–40 WPM hai. 50+ achha, 70+ professional level, 90+ excellent. Data entry jobs me aam taur pe 30–40 WPM manga jaata hai, steno/typist posts me 25–35 WPM Hindi/English.' },
-    { q: 'Speed kaise badhaye?', a: 'Touch typing seekho (bina keyboard dekhe, sab 10 ungliyan), roz 15–20 minute practice karo, accuracy pehle — speed khud aayegi. 2–3 mahine me 20+ WPM improvement normal hai.' },
-    { q: 'Kya ye government exam pattern jaisa hai?', a: 'Concept same hai (timed typing, WPM+accuracy). Exams me aam taur pe 10 minute ka test hota hai — yahan 60 second ka quick check hai, regular practice ke liye perfect.' },
+    { q: 'How is WPM calculated?', a: 'The standard method: correctly typed characters ÷ 5 = words, then per minute. An average word is taken as 5 characters. Incorrect characters don\'t count toward WPM.' },
+    { q: 'What is a good typing speed?', a: 'Average is 35–40 WPM. 50+ is good, 70+ is professional level, 90+ is excellent. Data entry jobs usually require 30–40 WPM; steno/typist posts require 25–35 WPM.' },
+    { q: 'How do I increase my speed?', a: 'Learn touch typing (without looking at the keyboard, using all 10 fingers), practice 15–20 minutes daily, and prioritize accuracy — speed follows. A 20+ WPM improvement in 2–3 months is normal.' },
+    { q: 'Is this like a government exam pattern?', a: 'The concept is the same (timed typing, WPM+accuracy). Exams usually have a 10-minute test — this is a 60-second quick check, perfect for regular practice.' },
   ],
 };

@@ -2,7 +2,7 @@ module.exports = {
   workspace: `
 <div class="workspace single">
   <div class="panel panel-result" style="min-height:0;">
-    <div class="panel-label">Aapki Screen (live)</div>
+    <div class="panel-label">Your Screen (live)</div>
     <div class="stat-grid">
       <div class="stat"><div class="num" id="sr-screen">—</div><div class="lbl">Screen resolution</div></div>
       <div class="stat"><div class="num" id="sr-viewport">—</div><div class="lbl">Browser viewport</div></div>
@@ -11,25 +11,25 @@ module.exports = {
     </div>
     <div class="result-rows" style="margin-top:6px;">
       <div class="result-row"><span class="k">Effective resolution (CSS × DPR)</span><span class="v" id="sr-effective">—</span></div>
-      <div class="result-row"><span class="k">Available screen (taskbar chhod kar)</span><span class="v" id="sr-avail">—</span></div>
+      <div class="result-row"><span class="k">Available screen (excluding taskbar)</span><span class="v" id="sr-avail">—</span></div>
       <div class="result-row"><span class="k">Orientation</span><span class="v" id="sr-orientation">—</span></div>
       <div class="result-row"><span class="k">Device type (approx.)</span><span class="v" id="sr-device">—</span></div>
     </div>
-    <div style="font-size:12px;color:#B98E63;margin-top:6px;">💡 Browser window resize karke dekho — viewport live update hota hai.</div>
+    <div style="font-size:12px;color:#B98E63;margin-top:6px;">💡 Try resizing the browser window — the viewport updates live.</div>
   </div>
 </div>
 <div class="btn-row">
   <button class="btn btn-secondary" id="sr-copy">Copy details</button>
 </div>`,
   howto: [
-    'Page kholte hi aapki screen ki saari details dikh jaati hain.',
-    'Browser window resize karo — viewport size live update hota hai.',
-    '"Copy details" se saari info copy karke support/developer ko bhej sakte ho.',
+    'All your screen details appear as soon as the page loads.',
+    'Resize the browser window — the viewport size updates live.',
+    'Use "Copy details" to copy all the info and send it to support/a developer.',
   ],
   faq: [
-    { q: 'Screen resolution aur viewport me kya difference hai?', a: 'Screen resolution poori display ka size hai (e.g. 1920×1080). Viewport browser window ka andar wala area hai jisme website dikhti hai — taskbar, address bar wagera hata kar. Web designers ke liye viewport hi matter karta hai.' },
-    { q: 'Pixel ratio (DPR) kya hota hai?', a: 'Device Pixel Ratio — 1 CSS pixel me kitne physical pixels hain. Retina/high-DPI screens me 2 ya 3 hota hai — matlab 1080p jaisa dikhne wala phone asal me 2160+ pixels render karta hai.' },
-    { q: 'Mera phone 4K bolta hai lekin yahan kam kyun dikha raha?', a: 'Browser CSS resolution dikhata hai (physical ÷ DPR). "Effective resolution" row me CSS × DPR — wahi aapka asli physical resolution hai.' },
-    { q: 'Ye info kis kaam ki hai?', a: 'Website testing, screenshot sizes plan karne, support ko system info dene, ya monitor ki claimed vs actual resolution verify karne me.' },
+    { q: 'What\'s the difference between screen resolution and viewport?', a: 'Screen resolution is the full display size (e.g. 1920×1080). The viewport is the area inside the browser window where the website shows — excluding the taskbar, address bar, etc. For web designers, the viewport is what matters.' },
+    { q: 'What is pixel ratio (DPR)?', a: 'Device Pixel Ratio — how many physical pixels make up 1 CSS pixel. On Retina/high-DPI screens it\'s 2 or 3 — meaning a phone that looks like 1080p actually renders 2160+ pixels.' },
+    { q: 'My phone says 4K but this shows less — why?', a: 'The browser shows CSS resolution (physical ÷ DPR). The "Effective resolution" row shows CSS × DPR — that\'s your true physical resolution.' },
+    { q: 'What is this info useful for?', a: 'Website testing, planning screenshot sizes, giving system info to support, or verifying a monitor\'s claimed vs actual resolution.' },
   ],
 };

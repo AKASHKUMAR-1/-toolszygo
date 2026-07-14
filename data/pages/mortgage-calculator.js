@@ -25,18 +25,18 @@ module.exports = {
       <div class="result-row"><span class="k">Principal + Interest (EMI)</span><span class="v" id="mtg-emi">—</span></div>
       <div class="result-row"><span class="k">Property tax/month</span><span class="v" id="mtg-tax-month">—</span></div>
       <div class="result-row"><span class="k">Insurance/month</span><span class="v" id="mtg-ins-month">—</span></div>
-      <div class="result-row"><span class="k">Total interest (poore tenure me)</span><span class="v" id="mtg-total-interest">—</span></div>
+      <div class="result-row"><span class="k">Total interest (over full tenure)</span><span class="v" id="mtg-total-interest">—</span></div>
     </div>
   </div>
 </div>`,
   howto: [
-    'Home price aur down payment daalo — loan amount khud calculate hoga.',
-    'Interest rate aur tenure daalo, property tax/insurance optional hai.',
-    'Total monthly payment (EMI + tax + insurance) turant dikh jayega.',
+    'Enter the home price and down payment — the loan amount is calculated automatically.',
+    'Enter the interest rate and tenure; property tax/insurance are optional.',
+    'The total monthly payment (EMI + tax + insurance) appears instantly.',
   ],
   faq: [
-    { q: 'Mortgage aur EMI calculator me kya farak hai?', a: 'Ye down payment, property tax aur insurance ko bhi include karta hai — poora monthly outflow dikhata hai, sirf loan EMI nahi. Isse asli budget planning better hoti hai.' },
-    { q: 'Down payment kitna rakhna chahiye?', a: 'India me banks aam taur pe 75-90% tak loan dete hain (10-25% down payment chahiye). Zyada down payment = kam EMI aur kam total interest.' },
-    { q: 'Property tax kya hai?', a: 'Local municipal corporation ko diya jaane wala annual tax property ke liye — India me ye home price ka 0.5-2% tak hota hai, city ke hisaab se.' },
+    { q: 'What\'s the difference between this and an EMI calculator?', a: 'This also includes down payment, property tax, and insurance — showing the full monthly outflow, not just the loan EMI. This gives better real-world budget planning.' },
+    { q: 'How much down payment should I keep?', a: 'In India, banks usually lend 75-90% (10-25% down payment needed). A bigger down payment means a lower EMI and lower total interest.' },
+    { q: 'What is property tax?', a: 'An annual tax paid to the local municipal corporation for the property — in India this is typically 0.5-2% of the home price, depending on the city.' },
   ],
 };

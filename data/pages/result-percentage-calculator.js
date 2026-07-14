@@ -23,14 +23,14 @@ module.exports = {
   </div>
 </div>`,
   howto: [
-    'Sab subjects ke obtained marks jod kar daalo.',
-    'Total maximum marks daalo (e.g. 5 subjects × 100 = 500).',
-    'Percentage, division aur equivalent CGPA live dikh jayega.',
+    'Add up and enter the obtained marks across all subjects.',
+    'Enter the total maximum marks (e.g. 5 subjects × 100 = 500).',
+    'Percentage, division, and equivalent CGPA are shown live.',
   ],
   faq: [
-    { q: 'Percentage kaise nikalta hai?', a: 'Percentage = (obtained ÷ maximum) × 100. E.g. 425/500 = 85%. Sab subjects ke marks jodkar total se calculate hota hai.' },
-    { q: 'Division kaise decide hoti hai?', a: 'Standard: 75%+ = Distinction, 60–74.9% = First Division, 45–59.9% = Second Division, 33–44.9% = Third Division/Pass, 33% se kam = Fail. Boards me thoda vary kar sakta hai.' },
-    { q: 'Best of 5 kaise calculate karein?', a: 'Apne best 5 subjects ke marks jodo aur total 500 (5×100) daalo. CBSE class 10 me aam taur pe best-of-5 hi count hota hai.' },
-    { q: 'Practical aur theory alag hon to?', a: 'Har subject ka total (theory+practical) jodkar obtained me daalo, aur sab subjects ke maximum marks (theory+practical) total me.' },
+    { q: 'How is percentage calculated?', a: 'Percentage = (obtained ÷ maximum) × 100. E.g. 425/500 = 85%. It\'s calculated from the total of all subjects\' marks.' },
+    { q: 'How is division decided?', a: 'Standard: 75%+ = Distinction, 60–74.9% = First Division, 45–59.9% = Second Division, 33–44.9% = Third Division/Pass, below 33% = Fail. This can vary slightly by board.' },
+    { q: 'How do I calculate best-of-5?', a: 'Add up marks from your best 5 subjects and enter 500 (5×100) as the total. CBSE class 10 usually counts best-of-5.' },
+    { q: 'What if practical and theory are separate?', a: 'Add each subject\'s total (theory+practical) into the obtained marks, and each subject\'s maximum (theory+practical) into the total.' },
   ],
 };

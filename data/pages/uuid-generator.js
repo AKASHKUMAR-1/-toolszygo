@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Options</div>
     <div class="field">
-      <label for="uuid-count">Kitne UUIDs chahiye?</label>
+      <label for="uuid-count">How many UUIDs?</label>
       <select id="uuid-count">
         <option value="1" selected>1</option>
         <option value="5">5</option>
@@ -15,8 +15,8 @@ module.exports = {
       </select>
     </div>
     <div class="checks">
-      <label><input type="checkbox" id="uuid-upper"> Uppercase me chahiye</label>
-      <label><input type="checkbox" id="uuid-nodash"> Bina dashes ke (32 chars)</label>
+      <label><input type="checkbox" id="uuid-upper"> Uppercase</label>
+      <label><input type="checkbox" id="uuid-nodash"> Without dashes (32 chars)</label>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
@@ -29,15 +29,15 @@ module.exports = {
   <button class="btn btn-secondary" id="uuid-copy">Copy all</button>
 </div>`,
   howto: [
-    'Kitne UUIDs chahiye wo select karo (1 se 100 tak).',
-    'Chahiye to uppercase ya without-dashes format choose karo.',
-    '<strong>Generate UUID</strong> dabao — UUIDs turant ban jayenge.',
-    '"Copy all" se saare UUIDs clipboard me copy karo.',
+    'Select how many UUIDs you need (1 to 100).',
+    'Optionally choose uppercase or without-dashes format.',
+    'Click <strong>Generate UUID</strong> — UUIDs are created instantly.',
+    'Use "Copy all" to copy all UUIDs to the clipboard.',
   ],
   faq: [
-    { q: 'UUID v4 kya hota hai?', a: 'UUID v4 ek 128-bit random identifier hai — format: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx. Ye random bits se banta hai, isliye collision ki probability practically zero hai.' },
-    { q: 'Kya do UUIDs same aa sakte hain?', a: 'Theoretically possible, practically nahi — 5.3 undecillion (10^36) combinations hain. Aapko duplicate milne ke liye billions of UUIDs per second generate karne padenge, saalon tak.' },
-    { q: 'UUID aur GUID me kya difference hai?', a: 'Kuch nahi — GUID (Globally Unique Identifier) Microsoft ka naam hai same cheez ke liye. Dono interchangeable hain.' },
-    { q: 'Kya ye UUIDs secure random hote hain?', a: 'Haan — browser ka crypto.randomUUID() / crypto.getRandomValues() use hota hai jo cryptographically secure hai. Math.random() jaisa weak generator nahi.' },
+    { q: 'What is UUID v4?', a: 'UUID v4 is a 128-bit random identifier — format: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx. It\'s built from random bits, so the probability of a collision is practically zero.' },
+    { q: 'Can two UUIDs be the same?', a: 'Theoretically possible, practically no — there are 5.3 undecillion (10^36) combinations. To get a duplicate, you\'d have to generate billions of UUIDs per second for years.' },
+    { q: 'What\'s the difference between UUID and GUID?', a: 'Nothing — GUID (Globally Unique Identifier) is Microsoft\'s name for the same thing. They\'re interchangeable.' },
+    { q: 'Are these UUIDs securely random?', a: 'Yes — the browser\'s crypto.randomUUID() / crypto.getRandomValues() is used, which is cryptographically secure. Not a weak generator like Math.random().' },
   ],
 };

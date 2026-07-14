@@ -76,7 +76,7 @@
       $('pm-size').textContent = fmtSize(resultBlob.size);
       $('pm-download').disabled = false;
     } catch (err) {
-      alert('Merge fail ho gaya: ' + (err && err.message ? err.message : err) + '\n(Password-protected PDF ho sakti hai)');
+      alert('Merge failed: ' + (err && err.message ? err.message : err) + '\n(It may be a password-protected PDF)');
     }
     btn.textContent = 'Merge PDFs';
     btn.disabled = files.length < 2;

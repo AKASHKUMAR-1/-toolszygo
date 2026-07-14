@@ -31,14 +31,14 @@ module.exports = {
   <button class="btn btn-secondary" id="cur-copy">Copy result</button>
 </div>`,
   howto: [
-    'Amount daalo aur From/To currencies choose karo (INR, USD, EUR, GBP, AED…).',
-    '<strong>Convert</strong> dabao — live reference rate se conversion ho jayega.',
-    '⇄ Swap se direction ulta karo.',
+    'Enter the amount and choose From/To currencies (INR, USD, EUR, GBP, AED…).',
+    'Click <strong>Convert</strong> — converts using a live reference rate.',
+    'Use ⇄ Swap to reverse the direction.',
   ],
   faq: [
-    { q: 'Exchange rates kahan se aate hain?', a: 'Frankfurter API se, jo European Central Bank ke official daily reference rates use karta hai. Rates har working day update hote hain.' },
-    { q: 'Kya ye rate bank/exchange wale rate jaisa hoga?', a: 'Ye mid-market reference rate hai. Banks aur money changers isme apna margin (1–4%) jodte hain, isliye unka rate thoda alag hoga. Comparison ke liye ye rate best benchmark hai.' },
-    { q: 'Kaunsi currencies available hain?', a: '30+ major currencies — USD, EUR, GBP, INR, AED (via USD), AUD, CAD, SGD, JPY, CNY samet. Crypto include nahi hai.' },
-    { q: 'Offline kaam karega?', a: 'Nahi — live rates ke liye internet chahiye. Rate fetch na ho paye to error message dikhega.' },
+    { q: 'Where do the exchange rates come from?', a: 'From the Frankfurter API, which uses the European Central Bank\'s official daily reference rates. Rates update every working day.' },
+    { q: 'Will this rate match a bank/exchange counter?', a: 'This is the mid-market reference rate. Banks and money changers add their own margin (1–4%) on top, so their rate will differ slightly. This rate is the best benchmark for comparison.' },
+    { q: 'Which currencies are available?', a: '30+ major currencies — including USD, EUR, GBP, INR, AED (via USD), AUD, CAD, SGD, JPY, CNY. Crypto is not included.' },
+    { q: 'Will this work offline?', a: 'No — internet is needed for live rates. If the rate can\'t be fetched, an error message appears.' },
   ],
 };

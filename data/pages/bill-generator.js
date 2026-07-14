@@ -4,17 +4,17 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Bill Details</div>
     <div class="field-row">
-      <div class="field"><label for="bill-shop">Dukaan / Business Naam</label><input type="text" id="bill-shop" placeholder="e.g. Sharma General Store"></div>
+      <div class="field"><label for="bill-shop">Shop / Business Name</label><input type="text" id="bill-shop" placeholder="e.g. Sharma General Store"></div>
       <div class="field"><label for="bill-phone">Phone (optional)</label><input type="text" id="bill-phone" placeholder="98XXXXXXXX"></div>
     </div>
     <div class="field-row">
-      <div class="field"><label for="bill-customer">Customer (optional)</label><input type="text" id="bill-customer" placeholder="Customer naam"></div>
+      <div class="field"><label for="bill-customer">Customer (optional)</label><input type="text" id="bill-customer" placeholder="Customer name"></div>
       <div class="field"><label for="bill-date">Date</label><input type="date" id="bill-date"></div>
     </div>
     <div class="panel-label" style="margin-top:6px;">Items</div>
     <div id="bill-items"></div>
     <div class="btn-row" style="margin-top:4px;">
-      <button class="btn btn-secondary" id="bill-add-item">+ Item add karo</button>
+      <button class="btn btn-secondary" id="bill-add-item">+ Add item</button>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">
@@ -26,13 +26,13 @@ module.exports = {
   <button class="btn btn-primary" id="bill-print">🖨 Print / Save as PDF</button>
 </div>`,
   howto: [
-    'Dukaan ka naam aur date bharo (customer optional).',
-    'Items add karo — naam, qty, rate. Total khud banta hai.',
-    '<strong>Print</strong> dabao — cash memo style bill ready.',
+    'Fill in the shop name and date (customer is optional).',
+    'Add items — name, qty, rate. The total is calculated automatically.',
+    'Click <strong>Print</strong> — a cash memo style bill is ready.',
   ],
   faq: [
-    { q: 'Bill aur invoice me kya difference hai?', a: 'Bill/cash memo turant payment wali simple sale ke liye hota hai. Invoice formal hota hai — payment terms, GST wagera ke saath. Chhoti dukaan ke liye bill kaafi hai.' },
-    { q: 'Kya ye thermal printer pe chhapega?', a: 'Ye A4/A5 format ka bill hai. Thermal (receipt) printers ka apna software hota hai — ye tool normal printer/PDF ke liye hai.' },
-    { q: 'GST lagana ho to?', a: 'GST Invoice Generator use karo — usme HSN, GSTIN aur tax breakup sab hai.' },
+    { q: 'What\'s the difference between a bill and an invoice?', a: 'A bill/cash memo is for simple, immediate-payment sales. An invoice is more formal — with payment terms, GST, etc. A bill is enough for small shops.' },
+    { q: 'Will this print on a thermal printer?', a: 'This is an A4/A5 format bill. Thermal (receipt) printers have their own software — this tool is for a regular printer/PDF.' },
+    { q: 'What if I need to add GST?', a: 'Use the GST Invoice Generator — it includes HSN, GSTIN, and tax breakup.' },
   ],
 };

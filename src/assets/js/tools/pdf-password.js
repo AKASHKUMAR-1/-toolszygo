@@ -35,7 +35,7 @@
       var pdf = await pdfjsLib.getDocument({ data: await file.arrayBuffer(), password: password }).promise;
       var out = await PDFLib.PDFDocument.create();
       for (var p = 1; p <= pdf.numPages; p++) {
-        $('pp-status').textContent = 'Page ' + p + ' / ' + pdf.numPages + ' unlock ho raha hai…';
+        $('pp-status').textContent = 'Unlocking page ' + p + ' / ' + pdf.numPages + '…';
         var page = await pdf.getPage(p);
         var viewport = page.getViewport({ scale: 2 });
         var canvas = document.createElement('canvas');
@@ -60,7 +60,7 @@
       $('pp-download').disabled = false;
     } catch (e) {
       $('pp-status').textContent = (e.name === 'PasswordException' || /password/i.test(e.message || ''))
-        ? '✕ Password galat hai — sahi password daalo'
+        ? '✕ Wrong password — enter the correct one'
         : 'Fail: ' + (e.message || e);
     }
     btn.disabled = false;

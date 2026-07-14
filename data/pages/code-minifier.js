@@ -12,7 +12,7 @@ module.exports = {
       </select>
     </div>
     <div class="field">
-      <textarea id="min-input" placeholder="Apna code yahan paste karo…" spellcheck="false" style="min-height:200px;font-family:monospace;font-size:13px;"></textarea>
+      <textarea id="min-input" placeholder="Paste your code here…" spellcheck="false" style="min-height:200px;font-family:monospace;font-size:13px;"></textarea>
     </div>
   </div>
   <div class="panel panel-result">
@@ -26,14 +26,14 @@ module.exports = {
   <button class="btn btn-secondary" id="min-copy">Copy result</button>
 </div>`,
   howto: [
-    'Code type choose karo — CSS, JavaScript ya HTML.',
-    'Apna code paste karo.',
-    '<strong>Minify</strong> dabao — comments aur extra whitespace hat jayega, size saving dikh jayegi.',
+    'Choose the code type — CSS, JavaScript, or HTML.',
+    'Paste your code.',
+    'Click <strong>Minify</strong> — comments and extra whitespace are removed, and you\'ll see the size saved.',
   ],
   faq: [
-    { q: 'Minify karne se kya fayda hai?', a: 'File size 20–60% kam ho jaata hai — page fast load hota hai, jo SEO aur user experience dono ke liye achha hai. Browser ko formatted code ki zaroorat nahi hoti.' },
-    { q: 'Kya minified code ka behavior badal sakta hai?', a: 'Ye tool safe minification karta hai — comments aur whitespace hatata hai, variable names nahi badalta. Phir bhi JS me ASI (missing semicolons) wale edge cases me test kar lena. Production builds ke liye Terser/cssnano jaise tools bhi dekh sakte ho.' },
-    { q: 'Minified code wapas readable kaise banega?', a: 'Ye one-way hai — original sambhal kar rakho. Formatted version wapas chahiye to "beautifier" tools use karo.' },
-    { q: 'HTML minify me kya hota hai?', a: 'HTML comments aur tags ke beech ka extra whitespace hatta hai. &lt;pre&gt; aur &lt;textarea&gt; ka content preserve hota hai.' },
+    { q: 'What are the benefits of minifying?', a: 'File size drops 20–60% — pages load faster, which is good for both SEO and user experience. The browser doesn\'t need formatted code.' },
+    { q: 'Can minified code change behavior?', a: 'This tool does safe minification — it removes comments and whitespace, not variable names. Still, test JS edge cases involving ASI (missing semicolons). For production builds, you might also look at tools like Terser/cssnano.' },
+    { q: 'How do I make minified code readable again?', a: 'This is one-way — keep the original safely. If you need the formatted version back, use a "beautifier" tool.' },
+    { q: 'What does HTML minifying do?', a: 'It removes HTML comments and extra whitespace between tags. Content inside &lt;pre&gt; and &lt;textarea&gt; is preserved.' },
   ],
 };

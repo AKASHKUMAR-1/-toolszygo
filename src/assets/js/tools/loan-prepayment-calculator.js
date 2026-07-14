@@ -10,7 +10,7 @@
     var prepay = parseFloat($('lp-prepay').value) || 0;
     if (!P || !annual || !years || P <= 0 || annual <= 0 || years <= 0) return;
     if (prepay >= P) {
-      $('lp-saved').textContent = 'Prepayment outstanding se kam rakho';
+      $('lp-saved').textContent = 'Keep the prepayment below the outstanding';
       return;
     }
     var r = annual / 12 / 100;
@@ -28,7 +28,7 @@
     var fmtMonths = function (m) {
       var y = Math.floor(m / 12), mo = Math.round(m % 12);
       if (mo === 12) { y++; mo = 0; }
-      return (y ? y + ' saal ' : '') + (mo ? mo + ' mahine' : (y ? '' : '0 mahine'));
+      return (y ? y + ' years ' : '') + (mo ? mo + ' months' : (y ? '' : '0 months'));
     };
 
     $('lp-saved').textContent = toolsdoINR(Math.round(saved));
