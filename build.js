@@ -76,6 +76,11 @@ function footer() {
   return `<footer class="site-footer">
   <div>© ${year} ${SITE_NAME} — all tools free, run entirely in your browser.</div>
   <div><a href="/">Home</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="/contact.html">Contact</a></div>
+  <div style="margin-top:14px;">
+    <a href="https://www.producthunt.com/products/toolszygo?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-toolszygo" target="_blank" rel="noopener noreferrer">
+      <img alt="Toolszygo - 130+ free tools, zero signup, 100% browser-based | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1197358&theme=light&t=1784185925390">
+    </a>
+  </div>
 </footer>`;
 }
 
