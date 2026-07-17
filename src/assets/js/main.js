@@ -138,18 +138,20 @@
     return '₹' + Number(n).toLocaleString('en-IN', { maximumFractionDigits: d });
   };
 
-  /* Renders a ₹/$ toggle into containerId; calls onChange(currency) whenever it's switched */
-  window.toolsdoCurrencyToggle = function (containerId, onChange) {
+  /* Renders a ₹/$ toggle into containerId; calls onChange(currency) whenever it's switched.
+     defaultCur ('INR' unless specified) controls which button starts active. */
+  window.toolsdoCurrencyToggle = function (containerId, onChange, defaultCur) {
     var el = document.getElementById(containerId);
     if (!el) return;
+    var start = defaultCur === 'USD' ? 'USD' : 'INR';
     var base = 'padding:6px 14px;border-radius:8px;border:1px solid #D9CDBA;background:#fff;color:#6B5F53;font-size:13px;font-weight:600;cursor:pointer;font-family:Arial,Helvetica,sans-serif;';
     var active = 'padding:6px 14px;border-radius:8px;border:1px solid #D97757;background:#D97757;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:Arial,Helvetica,sans-serif;';
     el.style.display = 'flex';
     el.style.gap = '8px';
     el.style.marginBottom = '12px';
     el.innerHTML =
-      '<button type="button" data-cur="INR" style="' + active + '">₹ INR</button>' +
-      '<button type="button" data-cur="USD" style="' + base + '">$ USD</button>';
+      '<button type="button" data-cur="INR" style="' + (start === 'INR' ? active : base) + '">₹ INR</button>' +
+      '<button type="button" data-cur="USD" style="' + (start === 'USD' ? active : base) + '">$ USD</button>';
     var buttons = el.querySelectorAll('button');
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function () {
