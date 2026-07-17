@@ -27,6 +27,7 @@ module.exports = {
   </div>
   <div class="panel panel-result" style="min-height:0;">
     <div class="panel-label">Result</div>
+    <div id="si-currency-toggle"></div>
     <div class="result-big" id="si-result">—</div>
     <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Simple interest</div>
     <div class="result-rows" style="margin-top:8px;">

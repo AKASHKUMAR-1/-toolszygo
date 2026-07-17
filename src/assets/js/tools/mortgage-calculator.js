@@ -1,6 +1,8 @@
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
+  var currency = 'INR';
+  var fmt = function (n) { return toolsdoAmt(n, 0, currency); };
 
   function calc() {
     var price = parseFloat($('mtg-price').value) || 0;
@@ -20,14 +22,15 @@
     var total = emi + taxMonth + insMonth;
     var totalInterest = emi * n - loan;
 
-    $('mtg-total').textContent = toolsdoINR(Math.round(total));
-    $('mtg-loan').textContent = toolsdoINR(Math.round(loan));
-    $('mtg-emi').textContent = toolsdoINR(Math.round(emi));
-    $('mtg-tax-month').textContent = toolsdoINR(Math.round(taxMonth));
-    $('mtg-ins-month').textContent = toolsdoINR(Math.round(insMonth));
-    $('mtg-total-interest').textContent = toolsdoINR(Math.round(totalInterest));
+    $('mtg-total').textContent = fmt(Math.round(total));
+    $('mtg-loan').textContent = fmt(Math.round(loan));
+    $('mtg-emi').textContent = fmt(Math.round(emi));
+    $('mtg-tax-month').textContent = fmt(Math.round(taxMonth));
+    $('mtg-ins-month').textContent = fmt(Math.round(insMonth));
+    $('mtg-total-interest').textContent = fmt(Math.round(totalInterest));
   }
 
+  toolsdoCurrencyToggle('mtg-currency-toggle', function (c) { currency = c; calc(); });
   ['mtg-price', 'mtg-down', 'mtg-rate', 'mtg-years', 'mtg-tax', 'mtg-insurance'].forEach(function (id) {
     $(id).addEventListener('input', calc);
   });

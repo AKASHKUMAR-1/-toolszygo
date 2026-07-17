@@ -2,6 +2,8 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var fullSchedule = [];
+  var currency = 'INR';
+  var fmt = function (n) { return toolsdoAmt(n, 0, currency); };
 
   function calc() {
     var P = parseFloat($('am-amount').value);
@@ -22,20 +24,21 @@
     }
     var totalInterest = emi * n - P;
 
-    $('am-emi').textContent = toolsdoINR(Math.round(emi));
-    $('am-total-interest').textContent = toolsdoINR(Math.round(totalInterest));
+    $('am-emi').textContent = fmt(Math.round(emi));
+    $('am-total-interest').textContent = fmt(Math.round(totalInterest));
 
     var rows = fullSchedule.slice(0, 12).map(function (row) {
       return '<tr><td style="padding:4px 8px;border-bottom:1px solid #EDE6DA;">' + row.month + '</td>' +
-        '<td style="padding:4px 8px;border-bottom:1px solid #EDE6DA;text-align:right;">' + toolsdoINR(Math.round(row.principal)) + '</td>' +
-        '<td style="padding:4px 8px;border-bottom:1px solid #EDE6DA;text-align:right;">' + toolsdoINR(Math.round(row.interest)) + '</td>' +
-        '<td style="padding:4px 8px;border-bottom:1px solid #EDE6DA;text-align:right;">' + toolsdoINR(Math.round(row.balance)) + '</td></tr>';
+        '<td style="padding:4px 8px;border-bottom:1px solid #EDE6DA;text-align:right;">' + fmt(Math.round(row.principal)) + '</td>' +
+        '<td style="padding:4px 8px;border-bottom:1px solid #EDE6DA;text-align:right;">' + fmt(Math.round(row.interest)) + '</td>' +
+        '<td style="padding:4px 8px;border-bottom:1px solid #EDE6DA;text-align:right;">' + fmt(Math.round(row.balance)) + '</td></tr>';
     }).join('');
     $('am-table').innerHTML = '<table style="width:100%;border-collapse:collapse;">' +
       '<tr style="font-weight:600;color:#8A7A5C;"><td style="padding:4px 8px;">Month</td><td style="padding:4px 8px;text-align:right;">Principal</td><td style="padding:4px 8px;text-align:right;">Interest</td><td style="padding:4px 8px;text-align:right;">Balance</td></tr>' +
       rows + '</table>';
   }
 
+  toolsdoCurrencyToggle('am-currency-toggle', function (c) { currency = c; calc(); });
   ['am-amount', 'am-rate', 'am-years'].forEach(function (id) {
     $(id).addEventListener('input', calc);
   });

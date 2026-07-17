@@ -129,6 +129,36 @@
     return '₹' + Number(n).toLocaleString('en-IN', { maximumFractionDigits: decimals === undefined ? 0 : decimals });
   };
 
+  /* Currency-aware amount formatter (opt-in per calculator, no exchange conversion — just symbol/locale swap) */
+  window.toolsdoAmt = function (n, decimals, currency) {
+    var d = decimals === undefined ? 0 : decimals;
+    if (currency === 'USD') {
+      return '$' + Number(n).toLocaleString('en-US', { maximumFractionDigits: d });
+    }
+    return '₹' + Number(n).toLocaleString('en-IN', { maximumFractionDigits: d });
+  };
+
+  /* Renders a ₹/$ toggle into containerId; calls onChange(currency) whenever it's switched */
+  window.toolsdoCurrencyToggle = function (containerId, onChange) {
+    var el = document.getElementById(containerId);
+    if (!el) return;
+    var base = 'padding:6px 14px;border-radius:8px;border:1px solid #D9CDBA;background:#fff;color:#6B5F53;font-size:13px;font-weight:600;cursor:pointer;font-family:Arial,Helvetica,sans-serif;';
+    var active = 'padding:6px 14px;border-radius:8px;border:1px solid #D97757;background:#D97757;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:Arial,Helvetica,sans-serif;';
+    el.style.display = 'flex';
+    el.style.gap = '8px';
+    el.style.marginBottom = '12px';
+    el.innerHTML =
+      '<button type="button" data-cur="INR" style="' + active + '">₹ INR</button>' +
+      '<button type="button" data-cur="USD" style="' + base + '">$ USD</button>';
+    var buttons = el.querySelectorAll('button');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        buttons.forEach(function (b) { b.setAttribute('style', b === btn ? active : base); });
+        onChange(btn.getAttribute('data-cur'));
+      });
+    });
+  };
+
   window.toolsdoFmtSize = function (bytes) {
     if (bytes < 1024) return bytes + ' B';
     if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';

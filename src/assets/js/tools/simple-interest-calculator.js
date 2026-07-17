@@ -2,7 +2,8 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var lastSummary = '';
-  var fmt = function (n) { return toolsdoINR(n, 2); };
+  var currency = 'INR';
+  var fmt = function (n) { return toolsdoAmt(n, 2, currency); };
 
   function calc() {
     var P = parseFloat($('si-principal').value);
@@ -19,6 +20,7 @@
       ' | SI: ' + fmt(si) + ' | Total: ' + fmt(total);
   }
 
+  toolsdoCurrencyToggle('si-currency-toggle', function (c) { currency = c; calc(); });
   $('si-calc').addEventListener('click', calc);
   ['si-principal', 'si-rate', 'si-time', 'si-time-unit'].forEach(function (id) {
     $(id).addEventListener('input', calc);

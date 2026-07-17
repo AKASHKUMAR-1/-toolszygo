@@ -2,7 +2,8 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var lastSummary = '';
-  var fmt = window.toolsdoINR;
+  var currency = 'INR';
+  var fmt = function (n) { return toolsdoAmt(n, 0, currency); };
 
   function calc() {
     var dist = parseFloat($('fc-distance').value);
@@ -14,11 +15,12 @@
     var cost = litres * price;
     $('fc-cost').textContent = fmt(cost);
     $('fc-litres').textContent = (Math.round(litres * 100) / 100).toLocaleString('en-IN') + ' litre';
-    $('fc-perkm').textContent = '₹' + (Math.round(price / mil * 100) / 100).toLocaleString('en-IN') + '/km';
+    $('fc-perkm').textContent = fmt(Math.round(price / mil * 100) / 100) + '/km';
     lastSummary = dist + ' km @ ' + mil + ' km/l, fuel ' + fmt(price) + '/l | Fuel: ' +
       (Math.round(litres * 100) / 100) + 'L | Cost: ' + fmt(cost);
   }
 
+  toolsdoCurrencyToggle('fc-currency-toggle', function (c) { currency = c; calc(); });
   $('fc-calc').addEventListener('click', calc);
   ['fc-distance', 'fc-mileage', 'fc-price', 'fc-round'].forEach(function (id) {
     $(id).addEventListener('input', calc);

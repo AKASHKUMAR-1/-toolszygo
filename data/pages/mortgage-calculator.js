@@ -18,6 +18,7 @@ module.exports = {
   </div>
   <div class="panel panel-result" style="min-height:0;">
     <div class="panel-label">Result</div>
+    <div id="mtg-currency-toggle"></div>
     <div class="result-big" id="mtg-total">—</div>
     <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Total Monthly Payment</div>
     <div class="result-rows" style="margin-top:8px;">

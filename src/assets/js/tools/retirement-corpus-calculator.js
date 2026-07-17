@@ -2,6 +2,8 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var lastSummary = '';
+  var currency = 'INR';
+  var fmt = function (n) { return toolsdoAmt(n, 0, currency); };
 
   function calc() {
     var age = parseInt($('rc-age').value, 10);
@@ -34,17 +36,19 @@
     var sip = corpus / (((Math.pow(1 + i, n) - 1) / i) * (1 + i));
 
     var fmtCr = function (v) {
-      if (v >= 10000000) return '₹' + (Math.round(v / 100000) / 100).toLocaleString('en-IN') + ' crore';
-      return toolsdoINR(Math.round(v));
+      if (currency === 'INR' && v >= 10000000) return '₹' + (Math.round(v / 100000) / 100).toLocaleString('en-IN') + ' crore';
+      if (currency === 'USD' && v >= 1000000) return '$' + (Math.round(v / 10000) / 100).toLocaleString('en-US') + ' million';
+      return fmt(Math.round(v));
     };
 
     $('rc-corpus').textContent = fmtCr(corpus);
-    $('rc-future-exp').textContent = toolsdoINR(Math.round(futureMonthly)) + '/month';
-    $('rc-sip').textContent = toolsdoINR(Math.round(sip)) + '/month';
-    lastSummary = 'Age ' + age + '->' + retireAge + ', expenses ' + toolsdoINR(expense) + '/mo @ ' +
-      (inflation * 100) + '% inflation | Corpus needed: ' + fmtCr(corpus) + ' | SIP @12%: ' + toolsdoINR(Math.round(sip)) + '/mo';
+    $('rc-future-exp').textContent = fmt(Math.round(futureMonthly)) + '/month';
+    $('rc-sip').textContent = fmt(Math.round(sip)) + '/month';
+    lastSummary = 'Age ' + age + '->' + retireAge + ', expenses ' + fmt(expense) + '/mo @ ' +
+      (inflation * 100) + '% inflation | Corpus needed: ' + fmtCr(corpus) + ' | SIP @12%: ' + fmt(Math.round(sip)) + '/mo';
   }
 
+  toolsdoCurrencyToggle('rc-currency-toggle', function (c) { currency = c; calc(); });
   $('rc-calc').addEventListener('click', calc);
   ['rc-age', 'rc-retire', 'rc-expense', 'rc-inflation', 'rc-life'].forEach(function (id) {
     $(id).addEventListener('input', calc);

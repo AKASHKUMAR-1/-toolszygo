@@ -2,6 +2,8 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var lastSummary = '';
+  var currency = 'INR';
+  var fmt = function (n) { return toolsdoAmt(n, 0, currency); };
 
   function calc() {
     var bal = parseFloat($('cci-balance').value);
@@ -18,7 +20,7 @@
       $('cci-total').textContent = '∞';
       $('cci-interest').textContent = '∞';
       warning.style.display = '';
-      warning.textContent = '⚠ Your payment (' + toolsdoINR(pay) + ') is less than or equal to just the interest (' + toolsdoINR(Math.round(firstInterest)) +
+      warning.textContent = '⚠ Your payment (' + fmt(pay) + ') is less than or equal to just the interest (' + fmt(Math.round(firstInterest)) +
         '/month) — the balance will never clear. Increase your payment!';
       lastSummary = '';
       return;
@@ -36,12 +38,13 @@
     var y = Math.floor(months / 12), mo = months % 12;
     var dur = (y ? y + ' years ' : '') + (mo ? mo + ' months' : '');
     $('cci-months').textContent = dur.trim();
-    $('cci-total').textContent = toolsdoINR(Math.round(totalPaid));
-    $('cci-interest').textContent = toolsdoINR(Math.round(totalInterest)) + ' (' + Math.round(totalInterest / bal * 100) + '% of balance)';
-    lastSummary = 'Balance ' + toolsdoINR(bal) + ' @ ' + rate + '%/month, paying ' + toolsdoINR(pay) +
-      '/month | Payoff: ' + dur.trim() + ' | Interest: ' + toolsdoINR(Math.round(totalInterest));
+    $('cci-total').textContent = fmt(Math.round(totalPaid));
+    $('cci-interest').textContent = fmt(Math.round(totalInterest)) + ' (' + Math.round(totalInterest / bal * 100) + '% of balance)';
+    lastSummary = 'Balance ' + fmt(bal) + ' @ ' + rate + '%/month, paying ' + fmt(pay) +
+      '/month | Payoff: ' + dur.trim() + ' | Interest: ' + fmt(Math.round(totalInterest));
   }
 
+  toolsdoCurrencyToggle('cci-currency-toggle', function (c) { currency = c; calc(); });
   $('cci-calc').addEventListener('click', calc);
   ['cci-balance', 'cci-rate', 'cci-payment'].forEach(function (id) {
     $(id).addEventListener('input', calc);

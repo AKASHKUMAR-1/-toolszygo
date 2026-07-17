@@ -27,6 +27,7 @@ module.exports = {
   </div>
   <div class="panel panel-result">
     <div class="panel-label">Result</div>
+    <div id="emi-currency-toggle"></div>
     <div class="result-big" id="emi-result">—</div>
     <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Monthly EMI</div>
     <div class="result-rows" style="margin-top:8px;">

@@ -2,7 +2,8 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
   var lastSummary = '';
-  var fmt = function (n) { return toolsdoINR(n, 2); };
+  var currency = 'INR';
+  var fmt = function (n) { return toolsdoAmt(n, 2, currency); };
 
   function calc() {
     var price = parseFloat($('dc-price').value);
@@ -20,6 +21,7 @@
       ' | Final: ' + fmt(final) + ' | Saved: ' + fmt(saved) + ' (' + (Math.round(eff * 100) / 100) + '%)';
   }
 
+  toolsdoCurrencyToggle('dc-currency-toggle', function (c) { currency = c; calc(); });
   $('dc-calc').addEventListener('click', calc);
   ['dc-price', 'dc-off', 'dc-extra'].forEach(function (id) {
     $(id).addEventListener('input', calc);

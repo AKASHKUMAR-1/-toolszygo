@@ -15,6 +15,7 @@ module.exports = {
       <label for="am-years">Tenure (years)</label>
       <input type="number" id="am-years" value="5" min="1" max="30">
     </div>
+    <div id="am-currency-toggle"></div>
     <div class="result-rows" style="margin-top:8px;">
       <div class="result-row"><span class="k">Monthly EMI</span><span class="v" id="am-emi">—</span></div>
       <div class="result-row"><span class="k">Total interest</span><span class="v" id="am-total-interest">—</span></div>

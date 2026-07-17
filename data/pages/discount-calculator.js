@@ -18,6 +18,7 @@ module.exports = {
   </div>
   <div class="panel panel-result" style="min-height:0;">
     <div class="panel-label">Result</div>
+    <div id="dc-currency-toggle"></div>
     <div class="result-big" id="dc-result">—</div>
     <div style="font-size:12.5px;color:#B98E63;margin-top:-6px;">Final price</div>
     <div class="result-rows" style="margin-top:8px;">
