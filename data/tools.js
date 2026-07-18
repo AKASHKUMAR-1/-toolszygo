@@ -112,6 +112,10 @@ const categories = [
         title: 'Hourly to Salary Calculator — $/hour to Annual Salary Free',
         metaDesc: 'Free hourly to salary converter. Enter your hourly wage and hours per week to see your yearly, monthly, biweekly and weekly pay instantly.',
         desc: "Enter your hourly rate and weekly hours — instantly see what that means per year, per month, biweekly and per week." },
+      { name: 'Paycheck Calculator (US)', slug: 'paycheck-calculator', built: true,
+        title: 'Paycheck Calculator 2026 — US Take-Home Pay After Taxes Free',
+        metaDesc: 'Free 2026 US paycheck calculator. See your take-home pay after federal tax, Social Security, Medicare and state tax — with 401(k) and health premium deductions.',
+        desc: "Enter your salary or hourly wage — see your real take-home pay after federal tax, Social Security, Medicare and state tax, using official 2026 IRS numbers." },
     ],
   },
   {
