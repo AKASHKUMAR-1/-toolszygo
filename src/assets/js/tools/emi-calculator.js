@@ -23,7 +23,12 @@
       ' | Total interest: ' + fmt(Math.round(interest)) + ' | Total payment: ' + fmt(Math.round(total));
   }
 
-  toolsdoCurrencyToggle('emi-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('emi-currency-toggle', function (c) {
+    $('emi-amount').value = toolsdoConvertAmount(parseFloat($('emi-amount').value) || 0, currency, c);
+    currency = c;
+    $('emi-unit').textContent = c === 'USD' ? '$' : '₹';
+    calc();
+  });
   $('emi-calc').addEventListener('click', calc);
   ['emi-amount', 'emi-rate', 'emi-tenure', 'emi-tenure-unit'].forEach(function (id) {
     $(id).addEventListener('input', calc);

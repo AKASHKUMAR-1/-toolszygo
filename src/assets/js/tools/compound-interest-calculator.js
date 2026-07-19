@@ -20,7 +20,12 @@
       ') | Amount: ' + fmt(Math.round(amount)) + ' | CI: ' + fmt(Math.round(interest));
   }
 
-  toolsdoCurrencyToggle('ci-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('ci-currency-toggle', function (c) {
+    $('ci-principal').value = toolsdoConvertAmount(parseFloat($('ci-principal').value) || 0, currency, c);
+    currency = c;
+    $('ci-unit').textContent = c === 'USD' ? '$' : '₹';
+    calc();
+  });
   $('ci-calc').addEventListener('click', calc);
   ['ci-principal', 'ci-rate', 'ci-years', 'ci-freq'].forEach(function (id) {
     $(id).addEventListener('input', calc);

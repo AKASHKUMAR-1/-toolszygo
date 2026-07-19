@@ -38,7 +38,12 @@
       rows + '</table>';
   }
 
-  toolsdoCurrencyToggle('am-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('am-currency-toggle', function (c) {
+    $('am-amount').value = toolsdoConvertAmount(parseFloat($('am-amount').value) || 0, currency, c);
+    currency = c;
+    $('am-unit').textContent = c === 'USD' ? '$' : '₹';
+    calc();
+  });
   ['am-amount', 'am-rate', 'am-years'].forEach(function (id) {
     $(id).addEventListener('input', calc);
   });

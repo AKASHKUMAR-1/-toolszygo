@@ -12,7 +12,7 @@ module.exports = {
       <input type="number" id="fc-mileage" value="18" min="1" max="150" step="0.5">
     </div>
     <div class="field">
-      <label for="fc-price">Fuel Price (₹/litre)</label>
+      <label for="fc-price">Fuel Price (<span id="fc-unit">₹</span>/litre)</label>
       <input type="number" id="fc-price" value="105" min="1" step="0.5">
     </div>
     <div class="checks">

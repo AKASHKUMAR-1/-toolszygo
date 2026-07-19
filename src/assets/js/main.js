@@ -129,13 +129,26 @@
     return '₹' + Number(n).toLocaleString('en-IN', { maximumFractionDigits: decimals === undefined ? 0 : decimals });
   };
 
-  /* Currency-aware amount formatter (opt-in per calculator, no exchange conversion — just symbol/locale swap) */
+  /* Currency-aware amount formatter */
   window.toolsdoAmt = function (n, decimals, currency) {
     var d = decimals === undefined ? 0 : decimals;
     if (currency === 'USD') {
       return '$' + Number(n).toLocaleString('en-US', { maximumFractionDigits: d });
     }
     return '₹' + Number(n).toLocaleString('en-IN', { maximumFractionDigits: d });
+  };
+
+  /* Approximate reference rate (July 2026) — used only to keep a switched calculator's own
+     input amounts representing the same real-world value, not for live/financial conversion.
+     For an actual live rate, point people to the Currency Converter tool. */
+  window.TOOLSDO_USD_RATE = 96.5;
+
+  /* Converts a numeric input value between INR and USD using the reference rate above. */
+  window.toolsdoConvertAmount = function (value, fromCur, toCur) {
+    if (fromCur === toCur || !value) return value;
+    var rate = window.TOOLSDO_USD_RATE;
+    var result = fromCur === 'INR' ? value / rate : value * rate;
+    return Math.round(result * 100) / 100;
   };
 
   /* Renders a ₹/$ toggle into containerId; calls onChange(currency) whenever it's switched.

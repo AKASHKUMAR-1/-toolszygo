@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Your Pay</div>
     <div class="field">
-      <label for="hs-rate">Hourly Rate ($)</label>
+      <label for="hs-rate">Hourly Rate (<span id="hs-unit">$</span>)</label>
       <input type="number" id="hs-rate" value="25" min="0.5" step="0.5">
     </div>
     <div class="field-row">

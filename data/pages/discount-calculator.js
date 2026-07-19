@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Details</div>
     <div class="field">
-      <label for="dc-price">Original Price (₹)</label>
+      <label for="dc-price">Original Price (<span id="dc-unit">₹</span>)</label>
       <input type="number" id="dc-price" value="2000" min="0" step="10">
     </div>
     <div class="field">

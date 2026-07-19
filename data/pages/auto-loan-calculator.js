@@ -4,16 +4,16 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Loan Details</div>
     <div class="field">
-      <label for="al-price">Vehicle Price ($)</label>
+      <label for="al-price">Vehicle Price (<span id="al-unit1">$</span>)</label>
       <input type="number" id="al-price" value="30000" min="0" step="500">
     </div>
     <div class="field-row">
       <div class="field">
-        <label for="al-down">Down Payment ($)</label>
+        <label for="al-down">Down Payment (<span id="al-unit2">$</span>)</label>
         <input type="number" id="al-down" value="5000" min="0" step="500">
       </div>
       <div class="field">
-        <label for="al-trade">Trade-In Value ($)</label>
+        <label for="al-trade">Trade-In Value (<span id="al-unit3">$</span>)</label>
         <input type="number" id="al-trade" value="0" min="0" step="500">
       </div>
     </div>

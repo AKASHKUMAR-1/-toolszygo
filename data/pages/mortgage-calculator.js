@@ -4,16 +4,16 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Home Loan Details</div>
     <div class="field-row">
-      <div class="field"><label for="mtg-price">Home Price (₹)</label><input type="number" id="mtg-price" value="5000000" min="0" step="50000"></div>
-      <div class="field"><label for="mtg-down">Down Payment (₹)</label><input type="number" id="mtg-down" value="1000000" min="0" step="10000"></div>
+      <div class="field"><label for="mtg-price">Home Price (<span id="mtg-unit1">₹</span>)</label><input type="number" id="mtg-price" value="5000000" min="0" step="50000"></div>
+      <div class="field"><label for="mtg-down">Down Payment (<span id="mtg-unit2">₹</span>)</label><input type="number" id="mtg-down" value="1000000" min="0" step="10000"></div>
     </div>
     <div class="field-row">
       <div class="field"><label for="mtg-rate">Interest Rate (% / year)</label><input type="number" id="mtg-rate" value="8.5" min="1" max="20" step="0.05"></div>
       <div class="field"><label for="mtg-years">Tenure (years)</label><input type="number" id="mtg-years" value="20" min="1" max="30"></div>
     </div>
     <div class="field-row">
-      <div class="field"><label for="mtg-tax">Property Tax/year (₹, optional)</label><input type="number" id="mtg-tax" value="0" min="0"></div>
-      <div class="field"><label for="mtg-insurance">Insurance/year (₹, optional)</label><input type="number" id="mtg-insurance" value="0" min="0"></div>
+      <div class="field"><label for="mtg-tax">Property Tax/year (<span id="mtg-unit3">₹</span>, optional)</label><input type="number" id="mtg-tax" value="0" min="0"></div>
+      <div class="field"><label for="mtg-insurance">Insurance/year (<span id="mtg-unit4">₹</span>, optional)</label><input type="number" id="mtg-insurance" value="0" min="0"></div>
     </div>
   </div>
   <div class="panel panel-result" style="min-height:0;">

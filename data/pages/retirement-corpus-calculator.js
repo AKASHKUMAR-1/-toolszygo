@@ -14,7 +14,7 @@ module.exports = {
       </div>
     </div>
     <div class="field">
-      <label for="rc-expense">Today's Monthly Expenses (₹)</label>
+      <label for="rc-expense">Today's Monthly Expenses (<span id="rc-unit">₹</span>)</label>
       <input type="number" id="rc-expense" value="50000" min="5000" step="5000">
     </div>
     <div class="field-row">

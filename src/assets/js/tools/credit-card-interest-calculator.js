@@ -44,7 +44,16 @@
       '/month | Payoff: ' + dur.trim() + ' | Interest: ' + fmt(Math.round(totalInterest));
   }
 
-  toolsdoCurrencyToggle('cci-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('cci-currency-toggle', function (c) {
+    ['cci-balance', 'cci-payment'].forEach(function (id) {
+      $(id).value = toolsdoConvertAmount(parseFloat($(id).value) || 0, currency, c);
+    });
+    currency = c;
+    var symbol = c === 'USD' ? '$' : '₹';
+    $('cci-unit1').textContent = symbol;
+    $('cci-unit2').textContent = symbol;
+    calc();
+  });
   $('cci-calc').addEventListener('click', calc);
   ['cci-balance', 'cci-rate', 'cci-payment'].forEach(function (id) {
     $(id).addEventListener('input', calc);

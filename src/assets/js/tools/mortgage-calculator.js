@@ -30,7 +30,15 @@
     $('mtg-total-interest').textContent = fmt(Math.round(totalInterest));
   }
 
-  toolsdoCurrencyToggle('mtg-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('mtg-currency-toggle', function (c) {
+    ['mtg-price', 'mtg-down', 'mtg-tax', 'mtg-insurance'].forEach(function (id) {
+      $(id).value = toolsdoConvertAmount(parseFloat($(id).value) || 0, currency, c);
+    });
+    currency = c;
+    var symbol = c === 'USD' ? '$' : '₹';
+    ['mtg-unit1', 'mtg-unit2', 'mtg-unit3', 'mtg-unit4'].forEach(function (id) { $(id).textContent = symbol; });
+    calc();
+  });
   ['mtg-price', 'mtg-down', 'mtg-rate', 'mtg-years', 'mtg-tax', 'mtg-insurance'].forEach(function (id) {
     $(id).addEventListener('input', calc);
   });

@@ -38,7 +38,17 @@
       ' months | Payment: ' + fmt(Math.round(payment)) + '/month | Total interest: ' + fmt(Math.round(totalInterest));
   }
 
-  toolsdoCurrencyToggle('al-currency-toggle', function (c) { currency = c; calc(); }, 'USD');
+  toolsdoCurrencyToggle('al-currency-toggle', function (c) {
+    ['al-price', 'al-down', 'al-trade'].forEach(function (id) {
+      $(id).value = toolsdoConvertAmount(parseFloat($(id).value) || 0, currency, c);
+    });
+    currency = c;
+    var symbol = c === 'USD' ? '$' : '₹';
+    $('al-unit1').textContent = symbol;
+    $('al-unit2').textContent = symbol;
+    $('al-unit3').textContent = symbol;
+    calc();
+  }, 'USD');
   $('al-calc').addEventListener('click', calc);
   ['al-price', 'al-down', 'al-trade', 'al-tax', 'al-rate', 'al-term'].forEach(function (id) {
     $(id).addEventListener('input', calc);

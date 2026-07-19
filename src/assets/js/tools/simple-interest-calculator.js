@@ -20,7 +20,12 @@
       ' | SI: ' + fmt(si) + ' | Total: ' + fmt(total);
   }
 
-  toolsdoCurrencyToggle('si-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('si-currency-toggle', function (c) {
+    $('si-principal').value = toolsdoConvertAmount(parseFloat($('si-principal').value) || 0, currency, c);
+    currency = c;
+    $('si-unit').textContent = c === 'USD' ? '$' : '₹';
+    calc();
+  });
   $('si-calc').addEventListener('click', calc);
   ['si-principal', 'si-rate', 'si-time', 'si-time-unit'].forEach(function (id) {
     $(id).addEventListener('input', calc);

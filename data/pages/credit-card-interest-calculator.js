@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Card Details</div>
     <div class="field">
-      <label for="cci-balance">Outstanding Balance (₹)</label>
+      <label for="cci-balance">Outstanding Balance (<span id="cci-unit1">₹</span>)</label>
       <input type="number" id="cci-balance" value="50000" min="100" step="1000">
     </div>
     <div class="field">
@@ -12,7 +12,7 @@ module.exports = {
       <input type="number" id="cci-rate" value="3.5" min="0.5" max="5" step="0.1">
     </div>
     <div class="field">
-      <label for="cci-payment">Monthly Payment (₹)</label>
+      <label for="cci-payment">Monthly Payment (<span id="cci-unit2">₹</span>)</label>
       <input type="number" id="cci-payment" value="5000" min="100" step="500">
     </div>
   </div>

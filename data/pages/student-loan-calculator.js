@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Loan Details</div>
     <div class="field">
-      <label for="sl-balance">Loan Balance ($)</label>
+      <label for="sl-balance">Loan Balance (<span id="sl-unit1">$</span>)</label>
       <input type="number" id="sl-balance" value="30000" min="100" step="500">
     </div>
     <div class="field-row">
@@ -18,7 +18,7 @@ module.exports = {
       </div>
     </div>
     <div class="field">
-      <label for="sl-extra">Extra Payment per Month ($, optional)</label>
+      <label for="sl-extra">Extra Payment per Month (<span id="sl-unit2">$</span>, optional)</label>
       <input type="number" id="sl-extra" value="" placeholder="e.g. 100" min="0" step="25">
     </div>
   </div>

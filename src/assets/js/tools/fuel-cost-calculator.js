@@ -20,7 +20,12 @@
       (Math.round(litres * 100) / 100) + 'L | Cost: ' + fmt(cost);
   }
 
-  toolsdoCurrencyToggle('fc-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('fc-currency-toggle', function (c) {
+    $('fc-price').value = toolsdoConvertAmount(parseFloat($('fc-price').value) || 0, currency, c);
+    currency = c;
+    $('fc-unit').textContent = c === 'USD' ? '$' : '₹';
+    calc();
+  });
   $('fc-calc').addEventListener('click', calc);
   ['fc-distance', 'fc-mileage', 'fc-price', 'fc-round'].forEach(function (id) {
     $(id).addEventListener('input', calc);

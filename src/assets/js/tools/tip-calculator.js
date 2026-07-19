@@ -21,7 +21,12 @@
       (people > 1 ? ' | Per person (' + people + '): ' + fmt(per) : '');
   }
 
-  toolsdoCurrencyToggle('tip-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('tip-currency-toggle', function (c) {
+    $('tip-bill').value = toolsdoConvertAmount(parseFloat($('tip-bill').value) || 0, currency, c);
+    currency = c;
+    $('tip-unit').textContent = c === 'USD' ? '$' : '₹';
+    calc();
+  });
   $('tip-calc').addEventListener('click', calc);
   ['tip-bill', 'tip-pct', 'tip-people'].forEach(function (id) {
     $(id).addEventListener('input', calc);

@@ -21,7 +21,12 @@
       ' | Final: ' + fmt(final) + ' | Saved: ' + fmt(saved) + ' (' + (Math.round(eff * 100) / 100) + '%)';
   }
 
-  toolsdoCurrencyToggle('dc-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('dc-currency-toggle', function (c) {
+    $('dc-price').value = toolsdoConvertAmount(parseFloat($('dc-price').value) || 0, currency, c);
+    currency = c;
+    $('dc-unit').textContent = c === 'USD' ? '$' : '₹';
+    calc();
+  });
   $('dc-calc').addEventListener('click', calc);
   ['dc-price', 'dc-off', 'dc-extra'].forEach(function (id) {
     $(id).addEventListener('input', calc);

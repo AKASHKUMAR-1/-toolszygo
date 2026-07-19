@@ -25,7 +25,12 @@
       '/year (' + fmt0(Math.round(annual / 12)) + '/month, ' + fmt(weekly) + '/week)';
   }
 
-  toolsdoCurrencyToggle('hs-currency-toggle', function (c) { currency = c; calc(); }, 'USD');
+  toolsdoCurrencyToggle('hs-currency-toggle', function (c) {
+    $('hs-rate').value = toolsdoConvertAmount(parseFloat($('hs-rate').value) || 0, currency, c);
+    currency = c;
+    $('hs-unit').textContent = c === 'USD' ? '$' : '₹';
+    calc();
+  }, 'USD');
   $('hs-calc').addEventListener('click', calc);
   ['hs-rate', 'hs-hours', 'hs-weeks'].forEach(function (id) {
     $(id).addEventListener('input', calc);

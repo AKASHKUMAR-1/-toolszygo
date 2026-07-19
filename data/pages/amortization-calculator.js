@@ -4,7 +4,7 @@ module.exports = {
   <div class="panel" style="min-height:0;">
     <div class="panel-label">Loan Details</div>
     <div class="field">
-      <label for="am-amount">Loan Amount (₹)</label>
+      <label for="am-amount">Loan Amount (<span id="am-unit">₹</span>)</label>
       <input type="number" id="am-amount" value="1000000" min="1000" step="10000">
     </div>
     <div class="field">

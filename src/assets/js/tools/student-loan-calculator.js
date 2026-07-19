@@ -52,7 +52,16 @@
     }
   }
 
-  toolsdoCurrencyToggle('sl-currency-toggle', function (c) { currency = c; calc(); }, 'USD');
+  toolsdoCurrencyToggle('sl-currency-toggle', function (c) {
+    ['sl-balance', 'sl-extra'].forEach(function (id) {
+      $(id).value = toolsdoConvertAmount(parseFloat($(id).value) || 0, currency, c) || '';
+    });
+    currency = c;
+    var symbol = c === 'USD' ? '$' : '₹';
+    $('sl-unit1').textContent = symbol;
+    $('sl-unit2').textContent = symbol;
+    calc();
+  }, 'USD');
   $('sl-calc').addEventListener('click', calc);
   ['sl-balance', 'sl-rate', 'sl-term', 'sl-extra'].forEach(function (id) {
     $(id).addEventListener('input', calc);

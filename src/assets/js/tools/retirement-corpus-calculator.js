@@ -48,7 +48,12 @@
       (inflation * 100) + '% inflation | Corpus needed: ' + fmtCr(corpus) + ' | SIP @12%: ' + fmt(Math.round(sip)) + '/mo';
   }
 
-  toolsdoCurrencyToggle('rc-currency-toggle', function (c) { currency = c; calc(); });
+  toolsdoCurrencyToggle('rc-currency-toggle', function (c) {
+    $('rc-expense').value = toolsdoConvertAmount(parseFloat($('rc-expense').value) || 0, currency, c);
+    currency = c;
+    $('rc-unit').textContent = c === 'USD' ? '$' : '₹';
+    calc();
+  });
   $('rc-calc').addEventListener('click', calc);
   ['rc-age', 'rc-retire', 'rc-expense', 'rc-inflation', 'rc-life'].forEach(function (id) {
     $(id).addEventListener('input', calc);
