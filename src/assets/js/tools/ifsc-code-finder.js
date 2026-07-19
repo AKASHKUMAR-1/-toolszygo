@@ -3,6 +3,13 @@
   var $ = function (id) { return document.getElementById(id); };
   var lastDetails = '';
 
+  function badge(label, active) {
+    var style = active
+      ? 'padding:4px 10px;border-radius:20px;font-size:12px;font-weight:600;background:#E3EEDD;color:#4A7A3A;border:1px solid #C9DFBE;'
+      : 'padding:4px 10px;border-radius:20px;font-size:12px;font-weight:600;background:#F2EDE3;color:#B0A488;border:1px solid #E5DDCC;text-decoration:line-through;';
+    return '<span style="' + style + '">' + (active ? '✓ ' : '') + label + '</span>';
+  }
+
   function search() {
     var code = $('ifsc-code').value.trim().toUpperCase();
     var ph = $('ifsc-placeholder');
@@ -26,17 +33,20 @@
         $('ifsc-result').style.display = '';
         $('ifsc-bank').textContent = d.BANK || '—';
         $('ifsc-branch').textContent = d.BRANCH || '—';
-        $('ifsc-city').textContent = d.CITY || '—';
-        $('ifsc-state').textContent = d.STATE || '—';
+        $('ifsc-code-out').textContent = d.IFSC || code;
+        $('ifsc-micr').textContent = d.MICR || 'Not available';
+        $('ifsc-swift').textContent = d.SWIFT || 'Not available';
         $('ifsc-address').textContent = d.ADDRESS || '—';
-        $('ifsc-micr').textContent = d.MICR || '—';
-        var services = [];
-        if (d.UPI) services.push('UPI');
-        if (d.IMPS) services.push('IMPS');
-        if (d.NEFT) services.push('NEFT');
-        if (d.RTGS) services.push('RTGS');
-        $('ifsc-services').textContent = services.length ? services.join(' · ') : '—';
-        lastDetails = code + ' | ' + d.BANK + ', ' + d.BRANCH + ', ' + d.CITY + ', ' + d.STATE;
+        $('ifsc-city').textContent = (d.CITY || '—') + (d.DISTRICT && d.DISTRICT !== d.CITY ? ' / ' + d.DISTRICT : '');
+        $('ifsc-state').textContent = d.STATE || '—';
+        $('ifsc-centre').textContent = d.CENTRE || '—';
+        $('ifsc-contact').textContent = d.CONTACT || 'Not listed';
+        $('ifsc-services').innerHTML =
+          badge('UPI', !!d.UPI) + badge('IMPS', !!d.IMPS) + badge('NEFT', !!d.NEFT) + badge('RTGS', !!d.RTGS);
+        var services = ['UPI', 'IMPS', 'NEFT', 'RTGS'].filter(function (s) { return d[s]; });
+        lastDetails = d.IFSC + ' | ' + d.BANK + ', ' + d.BRANCH + ', ' + d.CITY + ', ' + d.STATE +
+          ' | MICR: ' + (d.MICR || 'N/A') + ' | SWIFT: ' + (d.SWIFT || 'N/A') +
+          ' | Services: ' + (services.length ? services.join(', ') : 'None');
       })
       .catch(function (e) {
         ph.style.display = '';
