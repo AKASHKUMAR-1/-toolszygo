@@ -627,8 +627,8 @@ const categories = [
         metaDesc: 'Free macro calculator. Get your daily protein, carbs and fat targets in grams based on your TDEE and goal — cut, maintain or bulk. Works in lbs or kg.',
         desc: "Enter your stats and goal (cut/maintain/bulk) — get daily calories plus protein, carbs and fat targets in grams. Works in lbs or kg." },
       { name: 'Body Fat Calculator', slug: 'body-fat-calculator', built: true,
-        title: 'Body Fat Percentage Calculator — US Navy Method Free',
-        metaDesc: 'Free body fat calculator using the US Navy method. Enter body measurements to estimate your body fat percentage and category.',
+        title: 'Body Fat Percentage Calculator for Men & Women — US Navy Method Free',
+        metaDesc: 'Free body fat calculator for men and women using the US Navy method. Enter body measurements to estimate your body fat percentage and category.',
         desc: "Enter body measurements (neck, waist, height, hip) — instantly find your body fat % and category using the US Navy method." },
       { name: 'Ideal Weight Calculator', slug: 'ideal-weight-calculator', built: true,
         title: 'Ideal Weight Calculator — Healthy Weight Range by Height Free',
@@ -695,6 +695,6 @@ categories.forEach((cat, ci) => {
   });
 });
 
-const popularSlugs = ['emi-calculator', 'gst-calculator', 'image-compressor', 'word-counter', 'password-generator', 'qr-code-generator', 'pdf-merge', 'percentage-calculator'];
+const popularSlugs = ['emi-calculator', 'gst-calculator', 'image-compressor', 'word-counter', 'password-generator', 'qr-code-generator', 'pdf-merge', 'percentage-calculator', 'barcode-generator', 'credit-card-interest-calculator', 'body-fat-calculator', 'image-to-pdf'];
 
 module.exports = { categories, popularSlugs };
