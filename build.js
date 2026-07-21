@@ -107,8 +107,11 @@ function layout({ title, metaDesc, canonical, activeSlug, bodyMain, extraHead = 
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(metaDesc)}">
 <meta property="og:url" content="${SITE_URL}${canonical}">
+<meta property="og:image" content="${SITE_URL}/assets/logo-1200.png">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta name="twitter:image" content="${SITE_URL}/assets/logo-1200.png">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/logo-512.png">
 <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/source-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var a=localStorage.getItem('toolsdo-accent');if(a)document.documentElement.setAttribute('data-accent',a);}catch(e){}</script>
@@ -311,10 +314,6 @@ function build() {
 
   // assets
   copyDir(path.join(__dirname, 'src', 'assets'), path.join(dist, 'assets'));
-
-  // favicon
-  fs.writeFileSync(path.join(dist, 'assets', 'favicon.svg'),
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="url(#g)"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D97757"/><stop offset="1" stop-color="#E8A87C"/></linearGradient></defs><text x="32" y="44" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="600" fill="#FFF">T</text></svg>`);
 
   // search data (for hero search)
   const searchData = allTools.map(t => ({
